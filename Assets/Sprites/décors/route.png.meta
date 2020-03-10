@@ -8,6 +8,24 @@ TextureImporter:
   - first:
       213: -8466674419396827703
     second: route_1
+  - first:
+      213: -8899740968483150571
+    second: route_0
+  - first:
+      213: -1009048559503675711
+    second: route_1
+  - first:
+      213: -6228450711460187187
+    second: route_2
+  - first:
+      213: 6074792312550153530
+    second: route_3
+  - first:
+      213: 7909165535415688876
+    second: route_4
+  - first:
+      213: 3237413999919017760
+    second: route_5
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -96,18 +114,18 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 171
-        width: 203
-        height: 189
+        y: 0
+        width: 141
+        height: 563
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7cbe4f7d071779f60800000000000000
-      internalID: 8041020389166738375
+      spriteID: 5152294fdb4cd7480800000000000000
+      internalID: -8899740968483150571
       vertices: []
       indices: 
       edges: []
@@ -116,19 +134,82 @@ TextureImporter:
       name: route_1
       rect:
         serializedVersion: 2
-        x: 101
-        y: 373
-        width: 2
-        height: 6
+        x: 143
+        y: 89
+        width: 142
+        height: 341
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9c527f25974508a80800000000000000
-      internalID: -8466674419396827703
+      spriteID: 1cee9a96ea32ff1f0800000000000000
+      internalID: -1009048559503675711
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: route_2
+      rect:
+        serializedVersion: 2
+        x: 287
+        y: 89
+        width: 142
+        height: 364
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc3f262e3191099a0800000000000000
+      internalID: -6228450711460187187
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: route_3
+      rect:
+        serializedVersion: 2
+        x: 435
+        y: 89
+        width: 37
+        height: 341
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3d53d13c6ffd4450800000000000000
+      internalID: 6074792312550153530
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: route_4
+      rect:
+        serializedVersion: 2
+        x: 475
+        y: 89
+        width: 36
+        height: 341
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: caed630662003cd60800000000000000
+      internalID: 7909165535415688876
       vertices: []
       indices: 
       edges: []
