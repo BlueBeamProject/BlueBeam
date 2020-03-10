@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ControllerAPI : MonoBehaviour
 {
@@ -188,5 +189,15 @@ public class ControllerAPI : MonoBehaviour
                 Debug.Log("[Controller API] Stick Click Right P" + i);
             }
         }
+    }
+
+    public static bool GetButton(string Button, int PlayerID)
+    {
+        return Input.GetButton(Button + "P" + PlayerID);
+    }
+
+    public static float GetAxis(string Axis, int PlayerID)
+    {
+        return Input.GetAxis(Axis + "P" + PlayerID);
     }
 }
