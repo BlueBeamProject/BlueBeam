@@ -30,10 +30,8 @@ public class PlayerPhysics : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        grounded = Physics2D.IsTouchingLayers(myCollider, whatIsGround);
+        grounded = Physics2D.IsTouching(myCollider, myCollider2);
         Physics2D.IgnoreCollision(myCollider, myCollider2, false);
-
-
         velocity.y += gravity;
         velocity.x += moveSpeed;
         velocity.y -= jumpForce;
