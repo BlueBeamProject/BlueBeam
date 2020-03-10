@@ -12,6 +12,8 @@ public class PlayerPhysics : MonoBehaviour
     public int moveSpeed;
     public Collider2D myCollider;
     public LayerMask whatIsGround;
+    public Collider2D 
+
     
     
     // Start is called before the first frame update
@@ -29,12 +31,13 @@ public class PlayerPhysics : MonoBehaviour
     void Update()
     {
         grounded = Physics2D.IsTouchingLayers(myCollider, whatIsGround);
+
         
-        velocity.y += 0;
+        velocity.y += gravity;
         velocity.x += moveSpeed;
         velocity.y -= jumpForce;
         if (grounded)
-            velocity.y -= gravity;
+            Physics2D.IgnoreCollision(myCollider, whatIsGround, false)
         else if (jumpForce > 0)
         {
             jumpForce--;
