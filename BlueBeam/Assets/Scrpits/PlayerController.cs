@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+	public ParticleSystem dust;
+
     public float moveSpeed;
 
     public float jumpForce;
@@ -25,6 +27,11 @@ public class PlayerController : MonoBehaviour
         myAnimator = GetComponent<Animator>();
     }
 
+	void CreateDust()
+	{
+		dust.Play();
+	}
+
     // Update is called once per frame
     void Update()
     {
@@ -35,6 +42,7 @@ public class PlayerController : MonoBehaviour
         {
             if (grounded)
             {
+				CreateDust();
                 myRigidbody.velocity = new Vector2(myRigidbody.velocity.x, jumpForce);
                 Debug.Log("test");
             }
