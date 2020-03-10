@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c7ac79de-dea4-4cec-a97f-b527d352de1b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.BlueBeam/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.BlueBeam/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.BlueBeam/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.BlueBeam/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Menu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Menu.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Laser.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Laser.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PersistentAudio.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PersistentAudio.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,11 +31,11 @@
         <option value="$PROJECT_DIR$/Assets/Scrpits/PersistentAudio.cs" />
         <option value="$PROJECT_DIR$/Assets/Scrpits/ControllerAPI.cs" />
         <option value="$PROJECT_DIR$/Assets/Scrpits/PlayerController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/PersistentAudio.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ControllerAPI.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/StanMove/Move2D.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ChangeMenu.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Laser.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/PersistentAudio.cs" />
       </list>
     </option>
   </component>
@@ -47,6 +44,7 @@
     <property name="Discover.Launch.Via.Unity" value="true" />
     <property name="Rider.DefaultBreakpoints.AreToggled" value="true" />
     <property name="Rider.ProjectViewActivator.IsNotFirstRun" value="true" />
+    <property name="TWShift.4" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
   </component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">

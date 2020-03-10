@@ -8,8 +8,8 @@ public class PersistentAudio : MonoBehaviour
      private bool music = false;
      private void Awake()
      {
-         Debug.Log("Awake music : " + music);
-         DontDestroyOnLoad(transform.gameObject);
+         //Debug.Log("Awake music : " + music);
+         //DontDestroyOnLoad(transform.gameObject);
          _audioSource = GetComponent<AudioSource>();
          if (!music)
          {
@@ -17,7 +17,7 @@ public class PersistentAudio : MonoBehaviour
              music = true;
          }
          
-         Debug.Log("AwakeLatter music : " + music);
+         //Debug.Log("AwakeLatter music : " + music);*/
      }
  
      public void PlayMusic()
