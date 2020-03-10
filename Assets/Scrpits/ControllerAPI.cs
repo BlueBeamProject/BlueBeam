@@ -12,6 +12,7 @@ public class ControllerAPI : MonoBehaviour
     private bool HDP1 = false;
     private bool VDP1 = false;
     // Start is called before the first frame update
+    public int NumberPlayer = 4;
     void Start()
     {
         
@@ -21,156 +22,171 @@ public class ControllerAPI : MonoBehaviour
     void Update()
     {
         
-        //Player1
-        if((Input.GetAxis("HorizontalLeftP1") == 1 || Input.GetAxis("HorizontalLeftP1") == -1) && !HLP1)
-        {
-            Debug.Log("[Controller API] Horizontal Left P1 : " + Input.GetAxis("HorizontalLeftP1"));
-            Debug.Log("coucou");
-            HLP1 = true; 
-        }
-        else if (Input.GetAxis("HorizontalLeftP1") != 0 && !HLP1)
-        {
-            Debug.Log("[Controller API] Horizontal Left P1 : " + Input.GetAxis("HorizontalLeftP1"));
-        }
-        else if (Input.GetAxis("HorizontalLeftP1") == 0 && HLP1)
-        {
-            HLP1 = false;
-        }
+        /*
+         *Le support va jusqu'à 4 manettes
+         * Pour récupérer par exemple le bouton du bas : Input.GetButtonDown("DownButtonP1")  -> sortie bool (true ou false)
+         *    avec P1 le numéro du joueur (P1,P2,P3,P4)
+         * Pour récupérer un Axis : Input.GetAxis("HorizontalLeftP1") -> sortie float entre -1 et 1
+         *   avec P1 le numéro du joueur (P1,P2,P3,P4)
+         *
+         *Pour les différents noms de bouton et d'axe voir plus bas
+         *
+         * 
+         */
         
-        if(Input.GetAxis("VerticalLeftP1") == 1 || Input.GetAxis("VerticalLeftP1") == -1 && !VLP1)
+        for (int i = 1; i <= NumberPlayer; i++)
         {
-            Debug.Log("[Controller API] Vertical Left P1 : " + Input.GetAxis("VerticalLeftP1"));
-            VLP1 = true; 
-        }
-        else if (Input.GetAxis("VerticalLeftP1") != 0 && !VLP1)
-        {
-            Debug.Log("[Controller API] Vertical Left P1 : " + Input.GetAxis("VerticalLeftP1"));
-        }
-        else if (Input.GetAxis("VerticalLeftP1") == 0 && VLP1)
-        {
-            VLP1 = false;
-        }
-        
-        if(Input.GetAxis("TriggerP1") == 1 || Input.GetAxis("TriggerP1") == -1 && !TP1)
-        {
-            Debug.Log("[Controller API] Trigger P1 : " + Input.GetAxis("TriggerP1"));
-            TP1 = true; 
-        }
-        else if (Input.GetAxis("TriggerP1") != 0 && !TP1)
-        {
-            Debug.Log("[Controller API] Trigger P1 : " + Input.GetAxis("TriggerP1"));
-        }
-        else if (Input.GetAxis("TriggerP1") == 0 && TP1)
-        {
-            TP1 = false;
-        }
-        
-        if(Input.GetAxis("HorizontalRightP1") == 1 || Input.GetAxis("HorizontalRightP1") == -1 && !HRP1)
-        {
-            Debug.Log("[Controller API] Horizontal Right P1 : " + Input.GetAxis("HorizontalRightP1"));
-            HRP1 = true; 
-        }
-        else if (Input.GetAxis("HorizontalRightP1") != 0 && !HRP1)
-        {
-            Debug.Log("[Controller API] Horizontal Right P1 : " + Input.GetAxis("HorizontalRightP1"));
-        }
-        else if (Input.GetAxis("HorizontalRightP1") == 0 && HRP1)
-        {
-            HRP1 = false;
-        }
-        
-        if(Input.GetAxis("VerticalRightP1") == 1 || Input.GetAxis("VerticalRightP1") == -1 && !VRP1)
-        {
-            Debug.Log("[Controller API] Vertical Right P1 : " + Input.GetAxis("VerticalRightP1"));
-            VRP1 = true; 
-        }
-        else if (Input.GetAxis("VerticalRightP1") != 0 && !VRP1)
-        {
-            Debug.Log("[Controller API] Vertical Right P1 : " + Input.GetAxis("VerticalRightP1"));
-        }
-        else if (Input.GetAxis("VerticalRightP1") == 0 && VRP1)
-        {
-            VRP1 = false;
-        }
-        
-        if(Input.GetAxis("HorizontalDpadP1") == 1 || Input.GetAxis("HorizontalDpadP1") == -1 && !HDP1)
-        {
-            Debug.Log("[Controller API] Horizontal Dpad P1 : " + Input.GetAxis("HorizontalDpadP1"));
-            HDP1 = true; 
-        }
-        else if (Input.GetAxis("HorizontalDpadP1") != 0 && !HDP1)
-        {
-            Debug.Log("[Controller API] Horizontal Dpad P1 : " + Input.GetAxis("HorizontalDpadP1"));
-            HDP1 = true;
-        }
-        else if (Input.GetAxis("HorizontalDpadP1") == 0 && HDP1)
-        {
-            HDP1 = false;
-        }
-        
-        if(Input.GetAxis("VerticalDpadP1") == 1 || Input.GetAxis("VerticalDpadP1") == -1 && !VDP1)
-        {
-            Debug.Log("[Controller API] Vertical Dpad P1 : " + Input.GetAxis("VerticalDpadP1"));
-            VDP1 = true; 
-        }
-        else if (Input.GetAxis("VerticalDpadP1") != 0 && !VDP1)
-        {
-            Debug.Log("[Controller API] Vertical Dpad P1 : " + Input.GetAxis("VerticalDpadP1"));
-            VDP1 = true;
-        }
-        else if (Input.GetAxis("VerticalDpadP1") == 0 && VDP1)
-        {
-            VDP1 = false;
-        }
+            
+            //Player i
+            if((Input.GetAxis("HorizontalLeftP"+i) == 1 || Input.GetAxis("HorizontalLeftP"+i) == -1) && !HLP1)
+            {
+                Debug.Log("[Controller API] Horizontal Left P" + i +" : " + Input.GetAxis("HorizontalLeftP"+i));
+                HLP1 = true; 
+            }
+            else if (Input.GetAxis("HorizontalLeftP"+i) != 0 && !HLP1)
+            {
+                Debug.Log("[Controller API] Horizontal Left P" + i + " : " + Input.GetAxis("HorizontalLeftP"+i));
+            }
+            else if (Input.GetAxis("HorizontalLeftP"+i) == 0 && HLP1)
+            {
+                HLP1 = false;
+            }
+            
+            if((Input.GetAxis("VerticalLeftP"+i) == 1 || Input.GetAxis("VerticalLeftP"+i) == -1) && !VLP1)
+            {
+                Debug.Log("[Controller API] Vertical Left P" + i +" : " + Input.GetAxis("VerticalLeftP"+i));
+                VLP1 = true; 
+            }
+            else if (Input.GetAxis("VerticalLeftP"+i) != 0 && !VLP1)
+            {
+                Debug.Log("[Controller API] Vertical Left P" + i +" : " + Input.GetAxis("VerticalLeftP"+i));
+            }
+            else if (Input.GetAxis("VerticalLeftP"+i) == 0 && VLP1)
+            {
+                VLP1 = false;
+            }
+            
+            if((Input.GetAxis("TriggerP"+i) == 1 || Input.GetAxis("TriggerP"+i) == -1) && !TP1)
+            {
+                Debug.Log("[Controller API] Trigger P" + i +" : " + Input.GetAxis("TriggerP"+i));
+                TP1 = true; 
+            }
+            else if (Input.GetAxis("TriggerP"+i) != 0 && !TP1)
+            {
+                Debug.Log("[Controller API] Trigger P" + i +" : " + Input.GetAxis("TriggerP"+i));
+            }
+            else if (Input.GetAxis("TriggerP"+i) == 0 && TP1)
+            {
+                TP1 = false;
+            }
+            
+            if((Input.GetAxis("HorizontalRightP"+i) == 1 || Input.GetAxis("HorizontalRightP"+i) == -1) && !HRP1)
+            {
+                Debug.Log("[Controller API] Horizontal Right P" + i +" : " + Input.GetAxis("HorizontalRightP"+i));
+                HRP1 = true; 
+            }
+            else if (Input.GetAxis("HorizontalRightP"+i) != 0 && !HRP1)
+            {
+                Debug.Log("[Controller API] Horizontal Right P" + i +" : " + Input.GetAxis("HorizontalRightP"+i));
+            }
+            else if (Input.GetAxis("HorizontalRightP"+i) == 0 && HRP1)
+            {
+                HRP1 = false;
+            }
+            
+            if((Input.GetAxis("VerticalRightP"+i) == 1 || Input.GetAxis("VerticalRightP"+i) == -1) && !VRP1)
+            {
+                Debug.Log("[Controller API] Vertical Right P" + i +" : " + Input.GetAxis("VerticalRightP"+i));
+                VRP1 = true; 
+            }
+            else if (Input.GetAxis("VerticalRightP"+i) != 0 && !VRP1)
+            {
+                Debug.Log("[Controller API] Vertical Right P" + i +" : " + Input.GetAxis("VerticalRightP"+i));
+            }
+            else if (Input.GetAxis("VerticalRightP"+i) == 0 && VRP1)
+            {
+                VRP1 = false;
+            }
+            
+            if((Input.GetAxis("HorizontalDpadP"+i) == 1 || Input.GetAxis("HorizontalDpadP"+i) == -1) && !HDP1)
+            {
+                Debug.Log("[Controller API] Horizontal Dpad P" + i +" : " + Input.GetAxis("HorizontalDpadP"+i));
+                HDP1 = true; 
+            }
+            else if (Input.GetAxis("HorizontalDpadP"+i) != 0 && !HDP1)
+            {
+                Debug.Log("[Controller API] Horizontal Dpad P" + i +" : " + Input.GetAxis("HorizontalDpadP"+i));
+                HDP1 = true;
+            }
+            else if (Input.GetAxis("HorizontalDpadP"+i) == 0 && HDP1)
+            {
+                HDP1 = false;
+            }
+            
+            if((Input.GetAxis("VerticalDpadP"+i) == 1 || Input.GetAxis("VerticalDpadP"+i) == -1) && !VDP1)
+            {
+                Debug.Log("[Controller API] Vertical Dpad P" + i +" : " + Input.GetAxis("VerticalDpadP"+i));
+                VDP1 = true; 
+            }
+            else if (Input.GetAxis("VerticalDpadP"+i) != 0 && !VDP1)
+            {
+                Debug.Log("[Controller API] Vertical Dpad P" + i +" : " + Input.GetAxis("VerticalDpadP"+i));
+                VDP1 = true;
+            }
+            else if (Input.GetAxis("VerticalDpadP"+i) == 0 && VDP1)
+            {
+                VDP1 = false;
+            }
 
-        if (Input.GetButtonDown("AButtonP1"))
-        {
-            Debug.Log("[Controller API] Button A P1");
-        }
-        
-        if (Input.GetButtonDown("BButtonP1"))
-        {
-            Debug.Log("[Controller API] Button B P1");
-        }
-        
-        if (Input.GetButtonDown("XButtonP1"))
-        {
-            Debug.Log("[Controller API] Button X P1");
-        }
-        
-        if (Input.GetButtonDown("YButtonP1"))
-        {
-            Debug.Log("[Controller API] Button Y P1");
-        }
-        
-        if (Input.GetButtonDown("BumperLeftP1"))
-        {
-            Debug.Log("[Controller API] Bumper Left P1");
-        }
-        
-        if (Input.GetButtonDown("BumperRightP1"))
-        {
-            Debug.Log("[Controller API] Bumper Right P1");
-        }
-        
-        if (Input.GetButtonDown("BackButtonP1"))
-        {
-            Debug.Log("[Controller API] Button Back P1");
-        }
-        
-        if (Input.GetButtonDown("StartButtonP1"))
-        {
-            Debug.Log("[Controller API] Button Start P1");
-        }
-        
-        if (Input.GetButtonDown("StickClickLeftP1"))
-        {
-            Debug.Log("[Controller API] Stick Click Left P1");
-        }
-        
-        if (Input.GetButtonDown("StickClickRightP1"))
-        {
-            Debug.Log("[Controller API] Stick Click Right P1");
+            if (Input.GetButtonDown("DownButtonP"+i))
+            {
+                Debug.Log("[Controller API] Button Down P" + i);
+            }
+            
+            if (Input.GetButtonDown("RightButtonP"+i))
+            {
+                Debug.Log("[Controller API] Button Right P" + i);
+            }
+            
+            if (Input.GetButtonDown("LeftButtonP"+i))
+            {
+                Debug.Log("[Controller API] Button Left P" + i);
+            }
+            
+            if (Input.GetButtonDown("UpButtonP"+i))
+            {
+                Debug.Log("[Controller API] Button Up P" + i);
+            }
+            
+            if (Input.GetButtonDown("BumperLeftP"+i))
+            {
+                Debug.Log("[Controller API] Bumper Left P" + i);
+            }
+            
+            if (Input.GetButtonDown("BumperRightP"+i))
+            {
+                Debug.Log("[Controller API] Bumper Right P" + i);
+            }
+            
+            if (Input.GetButtonDown("BackButtonP"+i))
+            {
+                Debug.Log("[Controller API] Button Back P" + i);
+            }
+            
+            if (Input.GetButtonDown("StartButtonP"+i))
+            {
+                Debug.Log("[Controller API] Button Start P" + i);
+            }
+            
+            if (Input.GetButtonDown("StickClickLeftP"+i))
+            {
+                Debug.Log("[Controller API] Stick Click Left P" + i);
+            }
+            
+            if (Input.GetButtonDown("StickClickRightP"+i))
+            {
+                Debug.Log("[Controller API] Stick Click Right P" + i);
+            }
         }
     }
 }
