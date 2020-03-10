@@ -16,6 +16,7 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/CameraController.cs.meta" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/CameraController.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ScrollScript.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/PlayerController.cs.meta" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/PlayerController.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
@@ -26,6 +27,10 @@
         <option value="$PROJECT_DIR$/PlayerControllers.cs" />
         <option value="$PROJECT_DIR$/CameraController.cs" />
         <option value="$PROJECT_DIR$/PlayerController.cs" />
+        <option value="$PROJECT_DIR$/Scroll.cs" />
+        <option value="$PROJECT_DIR$/Parallex.cs" />
+        <option value="$PROJECT_DIR$/Parallax.cs" />
+        <option value="$PROJECT_DIR$/ScrollScript.cs" />
       </list>
     </option>
   </component>
@@ -57,7 +62,7 @@
       <workItem from="1583783332793" duration="676000" />
       <workItem from="1583784027587" duration="64000" />
       <workItem from="1583784158827" duration="5650000" />
-      <workItem from="1583825472512" duration="532000" />
+      <workItem from="1583825472512" duration="3418000" />
     </task>
     <servers />
   </component>
