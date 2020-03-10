@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="12330635-f715-48b6-8078-a0bd91b5ae04" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="Scrpits" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/CameraController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/CameraController.cs.meta" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/PlayerController.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/PlayerController.cs.meta" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/PlayerControl.cs" />
+        <option value="$PROJECT_DIR$/PlayerControllers.cs" />
+        <option value="$PROJECT_DIR$/PlayerController.cs" />
+        <option value="$PROJECT_DIR$/CameraController.cs" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1Yu4WS657UtitnVCv5ixVjC7Qdu" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="Rider.SolutionExplorerActivator" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.C#" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="12330635-f715-48b6-8078-a0bd91b5ae04" name="Default Changelist" comment="" />
+      <created>1583779176854</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1583779176854</updated>
+      <workItem from="1583779179916" duration="2800000" />
+      <workItem from="1583783332793" duration="676000" />
+      <workItem from="1583784027587" duration="64000" />
+      <workItem from="1583784158827" duration="5650000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
+  <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
+  <component name="WindowStateProjectService">
+    <state x="678" y="215" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1583784976793">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="678" y="215" key="#com.intellij.execution.impl.EditConfigurationsDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1583784976793" />
+    <state x="971" y="439" width="488" height="256" key="ANALYSIS_DLG_com.jetbrains.rider.actions.impl.cleanup.RiderCodeCleanupAction$actionPerformed$dlg$1" timestamp="1583786401110">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="971" y="439" width="488" height="256" key="ANALYSIS_DLG_com.jetbrains.rider.actions.impl.cleanup.RiderCodeCleanupAction$actionPerformed$dlg$1/67.27.1853.1053@67.27.1853.1053" timestamp="1583786401110" />
+    <state x="709" y="192" key="SettingsEditor" timestamp="1583786035503">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="709" y="192" key="SettingsEditor/67.27.1853.1053@67.27.1853.1053" timestamp="1583786035503" />
+    <state x="883" y="276" width="672" height="678" key="search.everywhere.popup" timestamp="1583785817707">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="883" y="276" width="672" height="678" key="search.everywhere.popup/67.27.1853.1053@67.27.1853.1053" timestamp="1583785817707" />
+  </component>
+</project>
