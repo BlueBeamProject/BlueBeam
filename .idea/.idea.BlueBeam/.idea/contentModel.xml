@@ -13,7 +13,9 @@
           <e p="ControllerAPI.cs" t="Include" />
           <e p="HighlightButton.cs" t="Include" />
           <e p="PersistentAudio.cs" t="Include" />
+          <e p="PlayerAnimations.cs" t="Include" />
           <e p="PlayerController.cs" t="Include" />
+          <e p="PlayerPhysics.cs" t="Include" />
           <e p="ScrollScript.cs" t="Include" />
         </e>
       </e>
