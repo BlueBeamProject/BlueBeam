@@ -475,6 +475,7 @@ GameObject:
   - component: {fileID: 771358286}
   - component: {fileID: 771358282}
   - component: {fileID: 771358281}
+  - component: {fileID: 771358285}
   m_Layer: 9
   m_Name: Player
   m_TagString: Untagged
@@ -495,7 +496,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.0007659346, y: 0.0013196468}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -506,7 +507,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.65625, y: 0.8359375}
+  m_Size: {x: 0.81069434, y: 1.0313902}
   m_EdgeRadius: 0
 --- !u!114 &771358281
 MonoBehaviour:
@@ -599,11 +600,32 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 771358279}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9a02dc1b34bc8e4cb980595531244091, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!50 &771358285
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 771358279}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!114 &771358286
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -616,14 +638,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 69a5d2f7587bea34787b6094d05ffb6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rb: {fileID: 771358285}
   velocity: {x: 0, y: 0}
   grounded: 0
+  onJump: 0
   jumpForce: 0
   moveSpeed: 0
-  myCollider: {fileID: 0}
-  whatIsGround:
-    serializedVersion: 2
-    m_Bits: 0
 --- !u!1 &896746481
 GameObject:
   m_ObjectHideFlags: 0
@@ -649,7 +669,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 896746481}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
   m_Name: 
@@ -5533,9 +5553,9 @@ GameObject:
   - component: {fileID: 2117057713}
   - component: {fileID: 2117057712}
   - component: {fileID: 2117057711}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Ground
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5621,7 +5641,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2117057710}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.84, y: -1.03, z: -0.16451332}
+  m_LocalPosition: {x: -0.84, y: -1.03, z: 0}
   m_LocalScale: {x: 50, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
