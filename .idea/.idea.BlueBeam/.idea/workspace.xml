@@ -2,9 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c7ac79de-dea4-4cec-a97f-b527d352de1b" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.BlueBeam/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.BlueBeam/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.BlueBeam/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.BlueBeam/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scrpits/ControllerAPI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scrpits/ControllerAPI.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scrpits/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scrpits/PlayerController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Menu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Menu.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MenuCampagne.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MenuCampagne.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PersistentAudio.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PersistentAudio.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/menu/button.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/menu/button.png.meta" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,9 +18,10 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/Scrpits/PersistentAudio.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scrpits/ControllerAPI.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scrpits/PlayerController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Sprites/menu/button.png.meta" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scenes/Menu.unity" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/PersistentAudio.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -25,6 +29,7 @@
         <option value="$PROJECT_DIR$/Assets/Scrpits/PersistentAudio.cs" />
         <option value="$PROJECT_DIR$/Assets/Scrpits/ControllerAPI.cs" />
         <option value="$PROJECT_DIR$/Assets/Scrpits/PlayerController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/PersistentAudio.cs" />
       </list>
     </option>
   </component>
@@ -85,7 +90,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>

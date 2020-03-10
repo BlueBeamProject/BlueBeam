@@ -6,9 +6,10 @@
     <e p="C:\Users\stanl\BlueBeam" t="IncludeRecursive">
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
-        <e p="Scrpits" t="Include">
+        <e p="Scripts" t="Include">
           <e p="CameraController.cs" t="Include" />
           <e p="CameraShaker.cs" t="Include" />
+          <e p="ChangeOpacity.cs" t="Include" />
           <e p="ChangeScene.cs" t="Include" />
           <e p="ControllerAPI.cs" t="Include" />
           <e p="HighlightButton.cs" t="Include" />
@@ -17,6 +18,11 @@
           <e p="PlayerController.cs" t="Include" />
           <e p="PlayerPhysics.cs" t="Include" />
           <e p="ScrollScript.cs" t="Include" />
+        </e>
+        <e p="Sprites" t="Include">
+          <e p="bitwise" t="Include">
+            <e p="!license.txt" t="Include" />
+          </e>
         </e>
       </e>
       <e p="BlueBeam.sln" t="IncludeFlat" />
