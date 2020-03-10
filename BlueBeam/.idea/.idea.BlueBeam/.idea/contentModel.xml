@@ -8,6 +8,8 @@
       <e p="Assets" t="Include">
         <e p="Scrpits" t="Include">
           <e p="CameraController.cs" t="Include" />
+          <e p="ChangeScene.cs" t="Include" />
+          <e p="HighlightButton.cs" t="Include" />
           <e p="PlayerController.cs" t="Include" />
         </e>
       </e>
