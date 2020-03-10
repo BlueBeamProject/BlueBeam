@@ -5,43 +5,78 @@ using UnityEngine;
 public class PlayerPhysics : MonoBehaviour
 {
     private Transform position;
-    private int gravity;
+    public Rigidbody2D rb;
+    private float gravity;
     public Vector2 velocity;
     public bool grounded;
+    public bool onJump;
     public int jumpForce;
     public int moveSpeed;
-    public Collider2D myCollider;
-    public LayerMask whatIsGround;
-    public Collider2D myCollider2;
 
     
     
     // Start is called before the first frame update
     void Start()
     {
-        this.gravity = 5;
+        this.gravity = 1f;
         this.velocity = new Vector2(0,0);
         this.position = GetComponent<Transform>();
-        this.jumpForce = 0;
+        this.jumpForce = 20;
         this.moveSpeed = 2;
-        this.myCollider = GetComponent<Collider2D>();
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        grounded = Physics2D.IsTouching(myCollider, myCollider2);
-        Physics2D.IgnoreCollision(myCollider, myCollider2, false);
-        velocity.y += gravity;
-        velocity.x += moveSpeed;
-        velocity.y -= jumpForce;
-        if (grounded)
-            velocity.y = 0;
-        else if (jumpForce > 0)
+        SetVelocity(moveSpeed, 0);
+
+        if (!grounded && !onJump)
         {
-            jumpForce--;
+            Debug.Log("Gravité");
+            //velocity.y -= gravity;
+            SetVelocity(moveSpeed, -gravity);
         }
 
-        position.Translate(velocity.x,velocity.y,0);
+       
+        if(Input.GetKeyDown("space") && grounded)
+        {
+            onJump = true;
+            SetVelocity(moveSpeed, jumpForce);
+            Debug.Log("bite");
+            new WaitForSeconds(2f);
+            Debug.Log("2s");
+            onJump = false;
+        }
+        
+
+        /*position.Translate(velocity.x,velocity.y,0);
+        if (jumpForce > 0)
+            jumpForce--;*/
     }
+
+
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Ground"))
+            grounded = true;
+    }
+
+    void OnCollisionExit2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Ground"))
+            grounded = false;
+    }
+
+    void SetVelocity(float xVelocity, float yVelocity)
+    {
+        rb.velocity = new Vector2(0, 0);
+        rb.velocity += new Vector2(xVelocity, yVelocity);
+    }
+
+
+
+
+
+
 }

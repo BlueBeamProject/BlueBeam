@@ -19,12 +19,13 @@ public class PlayerController : MonoBehaviour
     {
         myPhysics.velocity = new Vector2(myPhysics.moveSpeed, myPhysics.velocity.y);
 
-        if (Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0))
+        if ((Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0)) && myPhysics.grounded)
         {
             if (myPhysics.grounded)
             {
+                Debug.Log("Saut");
                 myAnimations.CreateDust();
-                myPhysics.jumpForce = 12;
+                myPhysics.jumpForce = 15;
             }
         }
 

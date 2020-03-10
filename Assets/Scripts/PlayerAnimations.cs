@@ -13,7 +13,7 @@ public class PlayerAnimations : MonoBehaviour
     
     void Awake()
     {
-        fps = 7F;
+        fps = 2F;
         mySpriteRenderer = GetComponent<SpriteRenderer>();
         currentFrame = 1;
         if (fps > 0)
