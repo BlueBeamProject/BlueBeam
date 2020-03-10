@@ -11,7 +11,6 @@ public class PlayerPhysics : MonoBehaviour
     public int jumpForce;
     public int moveSpeed;
     public Collider2D myCollider;
-    public Animator myAnimator;
     public LayerMask whatIsGround;
     
     
@@ -19,12 +18,11 @@ public class PlayerPhysics : MonoBehaviour
     void Start()
     {
         this.gravity = 5;
-        this.velocity = new Vector2(0,gravity);
+        this.velocity = new Vector2(0,0);
         this.position = GetComponent<Transform>();
         this.jumpForce = 0;
         this.moveSpeed = 2;
         this.myCollider = GetComponent<Collider2D>();
-        this.myAnimator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -32,7 +30,7 @@ public class PlayerPhysics : MonoBehaviour
     {
         grounded = Physics2D.IsTouchingLayers(myCollider, whatIsGround);
         
-        velocity.y += gravity;
+        velocity.y += 0;
         velocity.x += moveSpeed;
         velocity.y -= jumpForce;
         if (grounded)
