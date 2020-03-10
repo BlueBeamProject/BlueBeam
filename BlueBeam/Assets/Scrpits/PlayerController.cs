@@ -36,6 +36,7 @@ public class PlayerController : MonoBehaviour
             if (grounded)
             {
                 myRigidbody.velocity = new Vector2(myRigidbody.velocity.x, jumpForce);
+                Debug.Log("test");
             }
         }
 
