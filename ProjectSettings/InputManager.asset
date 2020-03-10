@@ -102,7 +102,7 @@ InputManager:
     axis: 5
     joyNum: 1
   - serializedVersion: 3
-    m_Name: VerticaDpadP1
+    m_Name: VerticalDpadP1
     descriptiveName: 
     descriptiveNegativeName: 
     negativeButton: 
@@ -118,7 +118,7 @@ InputManager:
     axis: 6
     joyNum: 1
   - serializedVersion: 3
-    m_Name: AButtonP1
+    m_Name: DownButtonP1
     descriptiveName: 
     descriptiveNegativeName: 
     negativeButton: 
@@ -134,7 +134,7 @@ InputManager:
     axis: 0
     joyNum: 1
   - serializedVersion: 3
-    m_Name: BButtonP1
+    m_Name: RightButtonP1
     descriptiveName: 
     descriptiveNegativeName: 
     negativeButton: 
@@ -150,7 +150,7 @@ InputManager:
     axis: 0
     joyNum: 1
   - serializedVersion: 3
-    m_Name: XButtonP1
+    m_Name: LeftButtonP1
     descriptiveName: 
     descriptiveNegativeName: 
     negativeButton: 
@@ -166,7 +166,7 @@ InputManager:
     axis: 0
     joyNum: 1
   - serializedVersion: 3
-    m_Name: YButtonP1
+    m_Name: UpButtonP1
     descriptiveName: 
     descriptiveNegativeName: 
     negativeButton: 
@@ -390,7 +390,7 @@ InputManager:
     axis: 6
     joyNum: 2
   - serializedVersion: 3
-    m_Name: AButtonP2
+    m_Name: DownButtonP2
     descriptiveName: 
     descriptiveNegativeName: 
     negativeButton: 
@@ -406,7 +406,7 @@ InputManager:
     axis: 0
     joyNum: 2
   - serializedVersion: 3
-    m_Name: BButtonP2
+    m_Name: RightButtonP2
     descriptiveName: 
     descriptiveNegativeName: 
     negativeButton: 
@@ -422,7 +422,7 @@ InputManager:
     axis: 0
     joyNum: 2
   - serializedVersion: 3
-    m_Name: XButtonP2
+    m_Name: LeftButtonP2
     descriptiveName: 
     descriptiveNegativeName: 
     negativeButton: 
@@ -438,7 +438,7 @@ InputManager:
     axis: 0
     joyNum: 2
   - serializedVersion: 3
-    m_Name: YButtonP2
+    m_Name: UpButtonP2
     descriptiveName: 
     descriptiveNegativeName: 
     negativeButton: 
@@ -643,7 +643,7 @@ InputManager:
     snap: 0
     invert: 0
     type: 2
-    axis: 0
+    axis: 5
     joyNum: 3
   - serializedVersion: 3
     m_Name: VerticalDpadP3
@@ -659,10 +659,10 @@ InputManager:
     snap: 0
     invert: 0
     type: 2
-    axis: 0
+    axis: 6
     joyNum: 3
   - serializedVersion: 3
-    m_Name: AButtonP3
+    m_Name: DownButtonP3
     descriptiveName: 
     descriptiveNegativeName: 
     negativeButton: 
@@ -678,7 +678,7 @@ InputManager:
     axis: 0
     joyNum: 3
   - serializedVersion: 3
-    m_Name: BButtonP3
+    m_Name: RightButtonP3
     descriptiveName: 
     descriptiveNegativeName: 
     negativeButton: 
@@ -694,7 +694,7 @@ InputManager:
     axis: 0
     joyNum: 3
   - serializedVersion: 3
-    m_Name: XButtonP3
+    m_Name: LeftButtonP3
     descriptiveName: 
     descriptiveNegativeName: 
     negativeButton: 
@@ -710,7 +710,7 @@ InputManager:
     axis: 0
     joyNum: 3
   - serializedVersion: 3
-    m_Name: YButtonP3
+    m_Name: UpButtonP3
     descriptiveName: 
     descriptiveNegativeName: 
     negativeButton: 
@@ -778,7 +778,7 @@ InputManager:
     descriptiveName: 
     descriptiveNegativeName: 
     negativeButton: 
-    positiveButton: joystick 3 button 0
+    positiveButton: joystick 3 button 7
     altNegativeButton: 
     altPositiveButton: 
     gravity: 1000
@@ -899,8 +899,8 @@ InputManager:
     snap: 0
     invert: 0
     type: 2
-    axis: 0
-    joyNum: 5
+    axis: 4
+    joyNum: 4
   - serializedVersion: 3
     m_Name: HorizontalDpadP4
     descriptiveName: 
@@ -934,7 +934,7 @@ InputManager:
     axis: 6
     joyNum: 4
   - serializedVersion: 3
-    m_Name: AButtonP4
+    m_Name: DownButtonP4
     descriptiveName: 
     descriptiveNegativeName: 
     negativeButton: 
@@ -950,7 +950,7 @@ InputManager:
     axis: 0
     joyNum: 4
   - serializedVersion: 3
-    m_Name: BButtonP4
+    m_Name: RightButtonP4
     descriptiveName: 
     descriptiveNegativeName: 
     negativeButton: 
@@ -966,7 +966,7 @@ InputManager:
     axis: 0
     joyNum: 4
   - serializedVersion: 3
-    m_Name: CButtonP4
+    m_Name: LeftButtonP4
     descriptiveName: 
     descriptiveNegativeName: 
     negativeButton: 
@@ -982,7 +982,7 @@ InputManager:
     axis: 0
     joyNum: 4
   - serializedVersion: 3
-    m_Name: YButtonP4
+    m_Name: UpButtonP4
     descriptiveName: 
     descriptiveNegativeName: 
     negativeButton: 
