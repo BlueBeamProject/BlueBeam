@@ -12,13 +12,21 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Scrpits/PlayerAnimations.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scrpits/ScrollScript.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scrpits/PersistentAudio.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://C:/Program Files/Unity/Hub/Editor/2019.3.4f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/EventSystem/InputModules/BaseInput.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scrpits/PlayerController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scrpits/PlayerPhysics.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/Assets/Scrpits/PersistentAudio.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scrpits/PlayerGravity.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scrpits/PlayerController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scrpits/PlayerAnimations.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scrpits/PlayerPhysics.cs" />
       </list>
     </option>
   </component>
@@ -67,7 +75,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1583847572556</updated>
-      <workItem from="1583847607916" duration="262000" />
+      <workItem from="1583847607916" duration="712000" />
+      <workItem from="1583848638133" duration="8419000" />
     </task>
     <servers />
   </component>
@@ -81,7 +90,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>

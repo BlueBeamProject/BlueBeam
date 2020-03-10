@@ -10,9 +10,12 @@
           <e p="CameraController.cs" t="Include" />
           <e p="CameraShaker.cs" t="Include" />
           <e p="ChangeScene.cs" t="Include" />
+          <e p="ControllerAPI.cs" t="Include" />
           <e p="HighlightButton.cs" t="Include" />
           <e p="PersistentAudio.cs" t="Include" />
+          <e p="PlayerAnimations.cs" t="Include" />
           <e p="PlayerController.cs" t="Include" />
+          <e p="PlayerPhysics.cs" t="Include" />
           <e p="ScrollScript.cs" t="Include" />
         </e>
       </e>
