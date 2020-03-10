@@ -4,55 +4,52 @@ using UnityEngine;
 
 public class PlayerPhysics : MonoBehaviour
 {
-    private Transform position;
+    public Transform position;
     public Rigidbody2D rb;
-    private float gravity;
     public Vector2 velocity;
     public bool grounded;
-    public bool onJump;
-    public int jumpForce;
-    public int moveSpeed;
+    public float jumpForce;
+    public float moveSpeed;
+    public float jumpTime;
+    public float jumpTimeCounter;
+    private bool IsJumping;
 
-    
-    
+
+
+
+
     // Start is called before the first frame update
     void Start()
     {
-        this.gravity = 1f;
-        this.velocity = new Vector2(0,0);
         this.position = GetComponent<Transform>();
-        this.jumpForce = 20;
-        this.moveSpeed = 2;
-        
+        this.jumpForce = 15.0f;
+        this.moveSpeed = 2.0f;
     }
 
     // Update is called once per frame
     void Update()
     {
-        SetVelocity(moveSpeed, 0);
-
-        if (!grounded && !onJump)
+        rb.velocity = new Vector2(rb.velocity.x + moveSpeed, 0);
+        if(Input.GetKeyDown(KeyCode.Space) && grounded)
         {
-            Debug.Log("Gravité");
-            //velocity.y -= gravity;
-            SetVelocity(moveSpeed, -gravity);
+            IsJumping = true;
+            jumpTimeCounter = jumpTime;
+            rb.velocity = new Vector2(rb.velocity.x, jumpForce);
         }
-
-       
-        if(Input.GetKeyDown("space") && grounded)
+        if (IsJumping && Input.GetKeyDown(KeyCode.Space))
         {
-            onJump = true;
-            SetVelocity(moveSpeed, jumpForce);
-            Debug.Log("bite");
-            new WaitForSeconds(2f);
-            Debug.Log("2s");
-            onJump = false;
+            if (jumpTimeCounter > 0)
+            {
+                rb.velocity = new Vector2(rb.velocity.x, jumpForce);
+                jumpTimeCounter -= Time.deltaTime;
+            }
+            else if (jumpTimeCounter < 0)
+                IsJumping = false;
         }
-        
+        if (Input.GetKeyDown(KeyCode.Space))
+            IsJumping = false;
 
-        /*position.Translate(velocity.x,velocity.y,0);
-        if (jumpForce > 0)
-            jumpForce--;*/
+ 
     }
 
 
@@ -68,11 +65,6 @@ public class PlayerPhysics : MonoBehaviour
             grounded = false;
     }
 
-    void SetVelocity(float xVelocity, float yVelocity)
-    {
-        rb.velocity = new Vector2(0, 0);
-        rb.velocity += new Vector2(xVelocity, yVelocity);
-    }
 
 
 
