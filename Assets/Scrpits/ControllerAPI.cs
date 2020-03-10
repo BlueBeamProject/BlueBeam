@@ -13,6 +13,7 @@ public class ControllerAPI : MonoBehaviour
     private bool VDP1 = false;
     // Start is called before the first frame update
     public int NumberPlayer = 4;
+   
     void Start()
     {
         
@@ -188,5 +189,23 @@ public class ControllerAPI : MonoBehaviour
                 Debug.Log("[Controller API] Stick Click Right P" + i);
             }
         }
+    }
+
+    public bool OnPressButton(string Button,int PlayerID)
+    {
+        if (Input.GetButtonDown(Button + "P" + PlayerID))
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+        
+    }
+
+    public float OnTriggerAxis(string Axis, int PlayerID)
+    {
+        return Input.GetAxis(Axis + "P" + PlayerID);
     }
 }
