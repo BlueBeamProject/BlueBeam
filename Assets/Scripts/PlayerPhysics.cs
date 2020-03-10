@@ -12,7 +12,7 @@ public class PlayerPhysics : MonoBehaviour
     public int moveSpeed;
     public Collider2D myCollider;
     public LayerMask whatIsGround;
-    public Collider2D 
+    public Collider2D myCollider2;
 
     
     
@@ -31,13 +31,14 @@ public class PlayerPhysics : MonoBehaviour
     void Update()
     {
         grounded = Physics2D.IsTouchingLayers(myCollider, whatIsGround);
+        Physics2D.IgnoreCollision(myCollider, myCollider2, false);
 
-        
+
         velocity.y += gravity;
         velocity.x += moveSpeed;
         velocity.y -= jumpForce;
         if (grounded)
-            Physics2D.IgnoreCollision(myCollider, whatIsGround, false)
+            velocity.y = 0;
         else if (jumpForce > 0)
         {
             jumpForce--;
