@@ -19,7 +19,7 @@ public class PlayerAnimations : MonoBehaviour
         Run();
     }
 
-    void Play()
+    void Update()
     {
         _mySpriteRenderer.enabled = true;
         if (_run)

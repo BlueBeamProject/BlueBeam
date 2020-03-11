@@ -17,9 +17,7 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKey(KeyCode.Space))
             _myPhysics.Jump();
         else
-        {
             _myPhysics.StopJump();
-        }
 
         /*
        //Joystick1... pour manette xbox 

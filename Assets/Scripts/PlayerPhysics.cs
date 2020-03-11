@@ -6,7 +6,7 @@ public class PlayerPhysics : MonoBehaviour
 {
     private Rigidbody2D _myBody;
     private PlayerAnimations _myAnimations;
-    private Vector2 velocity;
+    private Vector2 _velocity;
     public bool grounded;
     public float jumpForce;
     public float moveSpeed;
@@ -19,22 +19,22 @@ public class PlayerPhysics : MonoBehaviour
     {
         _myBody = GetComponent<Rigidbody2D>();
         _myAnimations = GetComponent<PlayerAnimations>();
-        velocity = new Vector2(moveSpeed, 0);
+        _velocity = new Vector2(moveSpeed, 0);
     }
 
     // Update is called once per frame
     void Update()
     {
-        velocity.y = 0;
+        _velocity.y = 0;
         if (grounded)
             _myAnimations.Run();
         else
             _myAnimations.Jump();
         
         if (_isJumping)
-            velocity.y = jumpForce;
+            _velocity.y = jumpForce;
 
-        _myBody.velocity = velocity;
+        _myBody.velocity = _velocity;
     }
 
     public void Jump()
