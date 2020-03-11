@@ -12,6 +12,7 @@
           <e p="ChangeMenu.cs" t="Include" />
           <e p="ChangeOpacity.cs" t="Include" />
           <e p="ChangeScene.cs" t="Include" />
+          <e p="ConfigureManettePlayer.cs" t="Include" />
           <e p="ControllerAPI.cs" t="Include" />
           <e p="HighlightButton.cs" t="Include" />
           <e p="Laser.cs" t="Include" />
