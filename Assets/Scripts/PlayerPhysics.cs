@@ -6,15 +6,25 @@ public class PlayerPhysics : MonoBehaviour
 {
     public float jumpForce;
     public float moveSpeed;
-    public float jumpTime;
     public float jumpTimeCounter;
-    
+    public float dashSpeed;
+    public float startDashTime;
+    public float DashTimer;
+
     private Rigidbody2D _myBody;
     private PlayerAnimations _myAnimations;
     private Vector2 _velocity;
     private bool grounded;
     private bool _isJumping;
+    private bool _isDashing;
     private SoundManager _soundManager;
+    private float dashTime;
+    private float jumpTime;
+    private int _direction;
+    private float vitesseX;
+    private float vitesseY;
+    private float startTimer;
+    private float timer;
 
     // Start is called before the first frame update
     void Start()
@@ -62,12 +72,57 @@ public class PlayerPhysics : MonoBehaviour
         jumpTimeCounter = 0;
     }
 
+    public void Dash(int direction)
+    {
+        timer = DashTimer;
+        startTimer = Time.time;
+        dashTime = startDashTime;
+        _myAnimations.Dash();
+        vitesseX = _velocity.x;
+        vitesseY = _velocity.y;
+        _direction = direction;
+
+        if (dashTime <= 0)
+            _direction = 0;
+        else
+        {
+            do
+            {
+                dashTime -= Time.time;
+                if (_direction == 1)
+                {
+                    _velocity.x = -5000*dashSpeed;
+                }
+                else if (_direction == 2)
+                {
+                    _velocity.x = 5000 * dashSpeed;
+                }
+                else if (_direction == 3)
+                {
+                    _velocity.y = 5000*dashSpeed;
+                }
+                else if (_direction == 4)
+                {
+                    _velocity.y = -5000*dashSpeed;
+                }
+            }
+            while (startTimer - Time.time < timer);
+            _velocity.y = vitesseY;
+            _velocity.x = vitesseX;
+        }
+    }
+
+    public void StopDash()
+    {
+        _direction = 0;
+        dashTime = 0;
+    }
+
     void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Ground"))
         {
             grounded = true;
-            _soundManager.Land();
         }
     }
 
@@ -76,7 +131,6 @@ public class PlayerPhysics : MonoBehaviour
         if (collision.gameObject.CompareTag("Ground"))
         {    
             grounded = false;
-            _soundManager.Jump();
         }
     }
 }

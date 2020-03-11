@@ -25,9 +25,21 @@ public class PlayerController : MonoBehaviour
             
         }
 
-       
-        
-        
-        
+        if (Input.GetKeyDown(KeyCode.LeftArrow))
+        {
+            _myPhysics.Dash(1);
+        }
+        else if (Input.GetKeyDown(KeyCode.RightArrow))
+        {
+            _myPhysics.Dash(2);
+        }
+        else if (Input.GetKeyDown(KeyCode.UpArrow))
+        {
+            _myPhysics.Dash(3);
+        }
+        else if (Input.GetKeyDown(KeyCode.DownArrow))
+        {
+            _myPhysics.Dash(4);
+        }
     }
 }
