@@ -121,7 +121,7 @@ TextureImporter:
       spriteID: 19bf22507da167260800000000000000
       internalID: 7094887773775264657
       vertices: []
-      indices:
+      indices: 
       edges: []
       weights: []
     - serializedVersion: 2
@@ -133,7 +133,7 @@ TextureImporter:
         width: 387
         height: 652
       alignment: 9
-      pivot: {x: 0, y: 0.89725}
+      pivot: {x: 0, y: 0.93865}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -142,7 +142,7 @@ TextureImporter:
       spriteID: 275a5efb3ff6121c0800000000000000
       internalID: -4530216657470773902
       vertices: []
-      indices:
+      indices: 
       edges: []
       weights: []
     - serializedVersion: 2
@@ -163,7 +163,7 @@ TextureImporter:
       spriteID: 42ec681d5bd2739a0800000000000000
       internalID: -6253479298653041116
       vertices: []
-      indices:
+      indices: 
       edges: []
       weights: []
     - serializedVersion: 2
@@ -184,7 +184,7 @@ TextureImporter:
       spriteID: 92be06f35426f9c60800000000000000
       internalID: 7827082726948793129
       vertices: []
-      indices:
+      indices: 
       edges: []
       weights: []
     - serializedVersion: 2
@@ -205,7 +205,7 @@ TextureImporter:
       spriteID: 0d02493a7834b8680800000000000000
       internalID: -8751827201020387120
       vertices: []
-      indices:
+      indices: 
       edges: []
       weights: []
     - serializedVersion: 2
@@ -226,7 +226,7 @@ TextureImporter:
       spriteID: 9dd9aff10554a9ff0800000000000000
       internalID: -28634237188268583
       vertices: []
-      indices:
+      indices: 
       edges: []
       weights: []
     outline: []
@@ -235,13 +235,13 @@ TextureImporter:
     spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
-    indices:
+    indices: 
     edges: []
     weights: []
     secondaryTextures: []
-  spritePackingTag:
+  spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
-  userData:
-  assetBundleName:
-  assetBundleVariant:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
