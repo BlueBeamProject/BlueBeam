@@ -5370,7 +5370,7 @@ MonoBehaviour:
   - {fileID: 322532691053147229, guid: 2f68ef89f43f0c8478d0fcdc0d6e042b, type: 3}
   - {fileID: 7305810320718718449, guid: 2f68ef89f43f0c8478d0fcdc0d6e042b, type: 3}
   - {fileID: 4292243860130322958, guid: 2f68ef89f43f0c8478d0fcdc0d6e042b, type: 3}
-  animationSpeed: 5
+  animationSpeed: 12
 --- !u!212 &771358282
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -5460,11 +5460,11 @@ Rigidbody2D:
   m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 5
+  m_UseAutoMass: 1
+  m_Mass: 1.405254
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 30
+  m_GravityScale: 40
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -5482,109 +5482,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 69a5d2f7587bea34787b6094d05ffb6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  grounded: 0
-  jumpForce: 17.65
+  jumpForce: 20
   moveSpeed: 15
-  jumpTime: 0.15
+  jumpTime: 0.2
   jumpTimeCounter: 0
-  jump: {fileID: 0}
-  Land: {fileID: 0}
---- !u!82 &771358287
-AudioSource:
+--- !u!114 &771358287
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 771358279}
   m_Enabled: 1
-  serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 254e397d7bb8800479a156af569db6a9, type: 3}
-  m_PlayOnAwake: 1
-  m_Volume: 1
-  m_Pitch: 1
-  Loop: 0
-  Mute: 0
-  Spatialize: 0
-  SpatializePostEffects: 0
-  Priority: 128
-  DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
-  Pan2D: 0
-  rolloffMode: 0
-  BypassEffects: 0
-  BypassListenerEffects: 0
-  BypassReverbZones: 0
-  rolloffCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  panLevelCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  spreadCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  reverbZoneMixCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b1121a7da202ee48b13a646811b4e30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  jumpSound: {fileID: 8300000, guid: ee4a4945e9ddd104e9b2904e1fa18743, type: 3}
+  landSound: {fileID: 8300000, guid: 254e397d7bb8800479a156af569db6a9, type: 3}
 --- !u!82 &771358288
 AudioSource:
   m_ObjectHideFlags: 0
@@ -5595,15 +5510,15 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: ee4a4945e9ddd104e9b2904e1fa18743, type: 3}
-  m_PlayOnAwake: 1
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 128
+  Priority: 0
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
@@ -10577,9 +10492,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   frames:
-  - {fileID: 6677524867383329478, guid: c1259f6d1bfa3bb45bb4f5aeb0cff9b3, type: 3}
-  - {fileID: -8984958441858224542, guid: c1259f6d1bfa3bb45bb4f5aeb0cff9b3, type: 3}
-  - {fileID: 1542077098258088916, guid: c1259f6d1bfa3bb45bb4f5aeb0cff9b3, type: 3}
+  - {fileID: 7094887773775264657, guid: a0e9261260b663043a24c2ee27ea226c, type: 3}
+  - {fileID: -4530216657470773902, guid: a0e9261260b663043a24c2ee27ea226c, type: 3}
+  - {fileID: -6253479298653041116, guid: a0e9261260b663043a24c2ee27ea226c, type: 3}
   width: 3.85
   length: 100
   originalPosition: {x: -10, y: -3, z: 0}
