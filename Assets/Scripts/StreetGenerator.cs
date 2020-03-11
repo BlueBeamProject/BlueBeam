@@ -27,7 +27,13 @@ public class StreetGenerator : MonoBehaviour
             routes[i].AddComponent<Transform>();
             routes[i].AddComponent<SpriteRenderer>();
             SpriteRenderer sprite = routes[i].GetComponent<SpriteRenderer>();
-            sprite.sprite = frames[i%frames.Length];
+            if (i % 4 == 0)
+                sprite.sprite = frames[0];
+            else if (i % 3 == 0)
+                sprite.sprite = frames[2];
+            else
+                sprite.sprite = frames[1];
+            
             routes[i].transform.position = new Vector3(originalPosition.x + i*width, originalPosition.y);
         }
     }
