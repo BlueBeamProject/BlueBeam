@@ -4,15 +4,17 @@ using UnityEngine;
 
 public class PlayerPhysics : MonoBehaviour
 {
-    private Rigidbody2D _myBody;
-    private PlayerAnimations _myAnimations;
-    private Vector2 _velocity;
-    public bool grounded;
     public float jumpForce;
     public float moveSpeed;
     public float jumpTime;
     public float jumpTimeCounter;
+    
+    private Rigidbody2D _myBody;
+    private PlayerAnimations _myAnimations;
+    private Vector2 _velocity;
+    private bool grounded;
     private bool _isJumping;
+    private SoundManager _soundManager;
 
     // Start is called before the first frame update
     void Start()
@@ -20,6 +22,7 @@ public class PlayerPhysics : MonoBehaviour
         _myBody = GetComponent<Rigidbody2D>();
         _myAnimations = GetComponent<PlayerAnimations>();
         _velocity = new Vector2(moveSpeed, 0);
+        _soundManager = GetComponent<SoundManager>();
     }
 
     // Update is called once per frame
@@ -62,19 +65,18 @@ public class PlayerPhysics : MonoBehaviour
     void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Ground"))
+        {
             grounded = true;
+            _soundManager.Land();
+        }
     }
 
     void OnCollisionExit2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Ground"))
+        {    
             grounded = false;
+            _soundManager.Jump();
+        }
     }
-
-
-
-
-
-
-
 }
