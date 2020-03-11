@@ -2496,6 +2496,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerNumber: 4
+  P1: {fileID: 0}
+  P2: {fileID: 0}
+  P3: {fileID: 0}
+  P4: {fileID: 0}
 --- !u!114 &626511941
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6657,7 +6661,6 @@ GameObject:
   - component: {fileID: 1546456492}
   - component: {fileID: 1546456491}
   - component: {fileID: 1546456490}
-  - component: {fileID: 1546456489}
   m_Layer: 5
   m_Name: Campagne
   m_TagString: Untagged
@@ -6685,20 +6688,6 @@ RectTransform:
   m_AnchoredPosition: {x: -262, y: -239.61006}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1546456489
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1546456487}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 01a5d6fc2d446eb4d8d640843eed9dd1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  menu: {fileID: 769927295}
-  previousMenu: {fileID: 616445617}
 --- !u!114 &1546456490
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6744,7 +6733,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1546456489}
+      - m_Target: {fileID: 0}
         m_MethodName: ChangeMenuByName
         m_Mode: 1
         m_Arguments:
@@ -8552,7 +8541,7 @@ GameObject:
   - component: {fileID: 1931297110}
   - component: {fileID: 1931297109}
   - component: {fileID: 1931297108}
-  - component: {fileID: 1931297112}
+  - component: {fileID: 1931297111}
   m_Layer: 5
   m_Name: Options
   m_TagString: Untagged
@@ -8625,7 +8614,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1931297112}
+      - m_Target: {fileID: 1931297111}
         m_MethodName: ChangeMenuByName
         m_Mode: 1
         m_Arguments:
@@ -8673,7 +8662,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1931297106}
   m_CullTransparentMesh: 0
---- !u!114 &1931297112
+--- !u!114 &1931297111
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
