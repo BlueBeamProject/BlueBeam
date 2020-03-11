@@ -172,7 +172,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 388409485}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 130.7454, y: -5, z: -208.86594}
+  m_LocalPosition: {x: 130.7454, y: -4.989, z: -208.86594}
   m_LocalScale: {x: 300, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 744201967}
@@ -435,7 +435,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 771358279}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -18.544594, y: -0.18664491, z: 8.450828}
+  m_LocalPosition: {x: -15, y: 0, z: 1}
   m_LocalScale: {x: 1.313, y: 1.28, z: 1}
   m_Children:
   - {fileID: 1656165780}
@@ -5336,7 +5336,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1886857854}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 12.354594, y: 1.4866449, z: -8.450828}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1963780554}
@@ -5367,8 +5367,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1963780553}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -19.88, y: -4.56, z: -642.04877}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1886857855}
@@ -5387,8 +5387,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   frames:
-  - {fileID: 8041020389166738375, guid: 12a843b94a3dbbd46b0875f959c120ea, type: 3}
-  - {fileID: -8466674419396827703, guid: 12a843b94a3dbbd46b0875f959c120ea, type: 3}
-  - {fileID: -6228450711460187187, guid: 12a843b94a3dbbd46b0875f959c120ea, type: 3}
-  - {fileID: 6074792312550153530, guid: 12a843b94a3dbbd46b0875f959c120ea, type: 3}
-  - {fileID: 7909165535415688876, guid: 12a843b94a3dbbd46b0875f959c120ea, type: 3}
+  - {fileID: 6677524867383329478, guid: c1259f6d1bfa3bb45bb4f5aeb0cff9b3, type: 3}
+  - {fileID: -8984958441858224542, guid: c1259f6d1bfa3bb45bb4f5aeb0cff9b3, type: 3}
+  - {fileID: 1542077098258088916, guid: c1259f6d1bfa3bb45bb4f5aeb0cff9b3, type: 3}
+  width: 3.85
+  length: 100
+  originalPosition: {x: -10, y: -3, z: 0}

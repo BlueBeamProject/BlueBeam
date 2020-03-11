@@ -7,19 +7,28 @@ using UnityEngine;
 public class StreetGenerator : MonoBehaviour
 {
     public Sprite[] frames;
+
+    public float width;
+
+    public int length;
+
+    private GameObject[] routes;
+
+    public Vector3 originalPosition;
     // Start is called before the first frame update
     public void Start()
     {
-        for (int i = 0; i < 100; i++)
+        routes = new GameObject[length];
+        for (int i = 0; i < length; i++)
         {
-            GameObject route = new GameObject();
-            route.name = "route" + i;
-            route.transform.SetParent(GetComponent<Transform>());
-            route.AddComponent<Transform>();
-            route.AddComponent<SpriteRenderer>();
-            SpriteRenderer sprite = route.GetComponent<SpriteRenderer>();
-            sprite.sprite = frames[i/frames.Length];
-            route.transform.position = new Vector3(i * frames[i/frames.Length].border.x, -4, 0);
+            routes[i] = new GameObject();
+            routes[i].name = "routes" + i;
+            routes[i].transform.SetParent(GetComponent<Transform>());
+            routes[i].AddComponent<Transform>();
+            routes[i].AddComponent<SpriteRenderer>();
+            SpriteRenderer sprite = routes[i].GetComponent<SpriteRenderer>();
+            sprite.sprite = frames[i%frames.Length];
+            routes[i].transform.position = new Vector3(originalPosition.x + i*width, originalPosition.y);
         }
     }
 
