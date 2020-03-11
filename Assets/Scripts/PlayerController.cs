@@ -4,30 +4,20 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    private PlayerPhysics myPhysics;
-    
-    private PlayerAnimations myAnimations;
+    private PlayerPhysics _myPhysics;
     // Start is called before the first frame update
     void Start()
     {
-        myAnimations = GetComponent<PlayerAnimations>();
-        myPhysics = GetComponent<PlayerPhysics>();
+        _myPhysics = GetComponent<PlayerPhysics>();
     }
     
     // Update is called once per frame
     void Update()
     {
-        myPhysics.velocity = new Vector2(myPhysics.moveSpeed, myPhysics.velocity.y);
-
-        if ((Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0)) && myPhysics.grounded)
-        {
-            if (myPhysics.grounded)
-            {
-                Debug.Log("Saut");
-                myAnimations.CreateDust();
-                myPhysics.jumpForce = 15;
-            }
-        }
+        if (Input.GetKey(KeyCode.Space))
+            _myPhysics.Jump();
+        else
+            _myPhysics.StopJump();
 
         /*
        //Joystick1... pour manette xbox 

@@ -4,54 +4,60 @@ using UnityEngine;
 
 public class PlayerPhysics : MonoBehaviour
 {
-    public Transform position;
-    public Rigidbody2D rb;
-    public Vector2 velocity;
+    private Rigidbody2D _myBody;
+    private PlayerAnimations _myAnimations;
+    private Vector2 _velocity;
     public bool grounded;
     public float jumpForce;
     public float moveSpeed;
     public float jumpTime;
     public float jumpTimeCounter;
-    private bool IsJumping;
-
-
-
-
+    private bool _isJumping;
 
     // Start is called before the first frame update
     void Start()
     {
-        this.position = GetComponent<Transform>();
-        this.jumpForce = 15.0f;
-        this.moveSpeed = 2.0f;
+        _myBody = GetComponent<Rigidbody2D>();
+        _myAnimations = GetComponent<PlayerAnimations>();
+        _velocity = new Vector2(moveSpeed, 0);
     }
 
     // Update is called once per frame
     void Update()
     {
-        rb.velocity = new Vector2(rb.velocity.x + moveSpeed, 0);
-        if(Input.GetKeyDown(KeyCode.Space) && grounded)
-        {
-            IsJumping = true;
-            jumpTimeCounter = jumpTime;
-            rb.velocity = new Vector2(rb.velocity.x, jumpForce);
-        }
-        if (IsJumping && Input.GetKeyDown(KeyCode.Space))
-        {
-            if (jumpTimeCounter > 0)
-            {
-                rb.velocity = new Vector2(rb.velocity.x, jumpForce);
-                jumpTimeCounter -= Time.deltaTime;
-            }
-            else if (jumpTimeCounter < 0)
-                IsJumping = false;
-        }
-        if (Input.GetKeyDown(KeyCode.Space))
-            IsJumping = false;
+        _velocity.y = 0;
+        if (grounded)
+            _myAnimations.Run();
+        else
+            _myAnimations.Jump();
+        
+        if (_isJumping)
+            _velocity.y = jumpForce;
 
- 
+        _myBody.velocity = _velocity;
     }
 
+    public void Jump()
+    {
+        if (grounded)
+        {
+            jumpTimeCounter = jumpTime;
+            _isJumping = true;
+            _myAnimations.CreateDust();
+        }
+
+        else if (jumpTimeCounter > 0)
+            jumpTimeCounter -= Time.deltaTime;
+        
+        else
+            _isJumping = false;
+    }
+
+    public void StopJump()
+    {
+        _isJumping = false;
+        jumpTimeCounter = 0;
+    }
 
     void OnCollisionEnter2D(Collision2D collision)
     {
