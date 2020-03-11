@@ -21,7 +21,7 @@ public class PlayerAnimations : MonoBehaviour
 
     void Update()
     {
-        _mySpriteRenderer.enabled = true;
+        
         if (_run)
         {
             _mySpriteRenderer.sprite = frames[_countFrame / animationSpeed];
