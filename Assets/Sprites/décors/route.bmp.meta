@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 77bce65bcd708c54c9e166cfb6cb45de
+guid: 12a843b94a3dbbd46b0875f959c120ea
 TextureImporter:
   internalIDToNameTable:
   - first:
@@ -7,12 +7,6 @@ TextureImporter:
     second: route_0
   - first:
       213: -8466674419396827703
-    second: route_1
-  - first:
-      213: -8899740968483150571
-    second: route_0
-  - first:
-      213: -1009048559503675711
     second: route_1
   - first:
       213: -6228450711460187187
@@ -23,9 +17,6 @@ TextureImporter:
   - first:
       213: 7909165535415688876
     second: route_4
-  - first:
-      213: 3237413999919017760
-    second: route_5
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -114,18 +105,18 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
-        width: 141
-        height: 563
+        y: 89
+        width: 140
+        height: 474
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5152294fdb4cd7480800000000000000
-      internalID: -8899740968483150571
+      spriteID: 7cbe4f7d071779f60800000000000000
+      internalID: 8041020389166738375
       vertices: []
       indices: 
       edges: []
@@ -134,19 +125,19 @@ TextureImporter:
       name: route_1
       rect:
         serializedVersion: 2
-        x: 143
+        x: 437
         y: 89
-        width: 142
-        height: 341
+        width: 33
+        height: 339
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1cee9a96ea32ff1f0800000000000000
-      internalID: -1009048559503675711
+      spriteID: 9c527f25974508a80800000000000000
+      internalID: -8466674419396827703
       vertices: []
       indices: 
       edges: []
@@ -155,12 +146,12 @@ TextureImporter:
       name: route_2
       rect:
         serializedVersion: 2
-        x: 287
+        x: 477
         y: 89
-        width: 142
-        height: 364
+        width: 34
+        height: 339
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -176,12 +167,12 @@ TextureImporter:
       name: route_3
       rect:
         serializedVersion: 2
-        x: 435
-        y: 89
-        width: 37
-        height: 341
+        x: 144
+        y: 88
+        width: 140
+        height: 340
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -197,12 +188,12 @@ TextureImporter:
       name: route_4
       rect:
         serializedVersion: 2
-        x: 475
+        x: 288
         y: 89
-        width: 36
-        height: 341
+        width: 139
+        height: 362
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []

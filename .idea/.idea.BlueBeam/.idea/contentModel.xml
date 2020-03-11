@@ -21,9 +21,6 @@
           <e p="PlayerController.cs" t="Include" />
           <e p="PlayerPhysics.cs" t="Include" />
           <e p="ScrollScript.cs" t="Include" />
-          <e p="StanMove" t="Include">
-            <e p="Move2D.cs" t="Include" />
-          </e>
           <e p="StreetGenerator.cs" t="Include" />
         </e>
         <e p="Sprites" t="Include">
