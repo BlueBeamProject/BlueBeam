@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c7ac79de-dea4-4cec-a97f-b527d352de1b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.BlueBeam/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.BlueBeam/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.BlueBeam/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.BlueBeam/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/ChangeMenu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ChangeMenu.cs" afterDir="false" />
     </list>
@@ -107,7 +106,7 @@
       <option name="presentableId" value="Default" />
       <updated>1583847572556</updated>
       <workItem from="1583847607916" duration="262000" />
-      <workItem from="1583884328471" duration="2946000" />
+      <workItem from="1583884328471" duration="4249000" />
     </task>
     <servers />
   </component>

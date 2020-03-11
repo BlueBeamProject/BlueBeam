@@ -26,6 +26,7 @@ public class ChangeMenu : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
+            Debug.Log("echap");
             GameObject.FindGameObjectWithTag("Menu").SetActive(false);
             previousMenu.SetActive(true);
         }
@@ -41,79 +42,7 @@ public class ChangeMenu : MonoBehaviour
         
 
 
-        /* switch (sceneName)
-         {
-             case "MainMenu":
-                 MainMenu.SetActive(true);
-                 CampagneMenu.SetActive(false);
-                 EndlessMenu.SetActive(false);
-                 BattleRoyaleMenu.SetActive(false);
-                 OptionsMenu.SetActive(false);
-                 PlayerNumberMenu.SetActive(false);
-                 PlayerConfigureMenu.SetActive(false);
-                 break;
-             case "CampagneMenu":
-                 MainMenu.SetActive(false);
-                 CampagneMenu.SetActive(true);
-                 EndlessMenu.SetActive(false);
-                 BattleRoyaleMenu.SetActive(false);
-                 OptionsMenu.SetActive(false);
-                 PlayerNumberMenu.SetActive(false);
-                 PlayerConfigureMenu.SetActive(false);
-                 break;
-             case "EndlessMenu":
-                 MainMenu.SetActive(false);
-                 CampagneMenu.SetActive(false);
-                 EndlessMenu.SetActive(true);
-                 BattleRoyaleMenu.SetActive(false);
-                 OptionsMenu.SetActive(false);
-                 PlayerNumberMenu.SetActive(false);
-                 PlayerConfigureMenu.SetActive(false);
-                 break;
-             case "BattleRoyaleMenu":
-                 MainMenu.SetActive(false);
-                 CampagneMenu.SetActive(false);
-                 EndlessMenu.SetActive(false);
-                 BattleRoyaleMenu.SetActive(true);
-                 OptionsMenu.SetActive(false);
-                 PlayerNumberMenu.SetActive(false);
-                 PlayerConfigureMenu.SetActive(false);
-                 break;
-             case "OptionsMenu":
-                 MainMenu.SetActive(false);
-                 CampagneMenu.SetActive(false);
-                 EndlessMenu.SetActive(false);
-                 BattleRoyaleMenu.SetActive(false);
-                 OptionsMenu.SetActive(true);
-                 PlayerNumberMenu.SetActive(false);
-                 PlayerConfigureMenu.SetActive(false);
-                 break;
-             case "PlayerNumberMenu":
-                 MainMenu.SetActive(false);
-                 CampagneMenu.SetActive(false);
-                 EndlessMenu.SetActive(false);
-                 BattleRoyaleMenu.SetActive(false);
-                 OptionsMenu.SetActive(false);
-                 PlayerNumberMenu.SetActive(true);
-                 PlayerConfigureMenu.SetActive(false);
-                 break;
-             case "PlayerConfigureMenu":
-                 MainMenu.SetActive(false);
-                 CampagneMenu.SetActive(false);
-                 EndlessMenu.SetActive(false);
-                 BattleRoyaleMenu.SetActive(false);
-                 OptionsMenu.SetActive(true);
-                 PlayerNumberMenu.SetActive(false);
-                 PlayerConfigureMenu.SetActive(false);
-                 break;
-             default:
-                 Debug.Log("tes con");
-                 break;
-             
-                 
-         }*/
-
-
+        
 
     }
 }

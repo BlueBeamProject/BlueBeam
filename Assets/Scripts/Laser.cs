@@ -24,7 +24,7 @@ public class Laser : MonoBehaviour
         {
             //19.625 et 25.207
             newPos += 0.75f;
-            if (Time.time > 21.0 && !LogoShow)
+            if (Time.time > 20.0 && !LogoShow)
             {
                 logo.SetActive(true);
             }
