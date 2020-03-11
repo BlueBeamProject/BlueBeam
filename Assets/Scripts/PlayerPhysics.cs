@@ -8,7 +8,6 @@ public class PlayerPhysics : MonoBehaviour
     public float moveSpeed;
     public float jumpTimeCounter;
     public float dashSpeed;
-    public float startDashTime;
     public float DashTimer;
 
     private Rigidbody2D _myBody;
@@ -18,7 +17,6 @@ public class PlayerPhysics : MonoBehaviour
     private bool _isJumping;
     private bool _isDashing;
     private SoundManager _soundManager;
-    private float dashTime;
     private float jumpTime;
     private int _direction;
     private float vitesseX;
@@ -43,7 +41,7 @@ public class PlayerPhysics : MonoBehaviour
             _myAnimations.Run();
         else
             _myAnimations.Jump();
-        
+
         if (_isJumping)
             _velocity.y = jumpForce;
 
@@ -61,7 +59,7 @@ public class PlayerPhysics : MonoBehaviour
 
         else if (jumpTimeCounter > 0)
             jumpTimeCounter -= Time.deltaTime;
-        
+
         else
             _isJumping = false;
     }
@@ -76,46 +74,33 @@ public class PlayerPhysics : MonoBehaviour
     {
         timer = DashTimer;
         startTimer = Time.time;
-        dashTime = startDashTime;
         _myAnimations.Dash();
         vitesseX = _velocity.x;
         vitesseY = _velocity.y;
         _direction = direction;
 
-        if (dashTime <= 0)
-            _direction = 0;
-        else
+        do
         {
-            do
+            if (_direction == 1)
             {
-                dashTime -= Time.time;
-                if (_direction == 1)
-                {
-                    _velocity.x = -5000*dashSpeed;
-                }
-                else if (_direction == 2)
-                {
-                    _velocity.x = 5000 * dashSpeed;
-                }
-                else if (_direction == 3)
-                {
-                    _velocity.y = 5000*dashSpeed;
-                }
-                else if (_direction == 4)
-                {
-                    _velocity.y = -5000*dashSpeed;
-                }
+                _velocity.x = -5000 * dashSpeed;
             }
-            while (startTimer - Time.time < timer);
-            _velocity.y = vitesseY;
-            _velocity.x = vitesseX;
+            else if (_direction == 2)
+            {
+                _velocity.x = 5000 * dashSpeed;
+            }
+            else if (_direction == 3)
+            {
+                _velocity.y = 5000 * dashSpeed;
+            }
+            else if (_direction == 4)
+            {
+                _velocity.y = -5000 * dashSpeed;
+            }
         }
-    }
-
-    public void StopDash()
-    {
-        _direction = 0;
-        dashTime = 0;
+        while (Time.time - startTimer < timer);
+        _velocity.y = vitesseY;
+        _velocity.x = vitesseX;
     }
 
     void OnCollisionEnter2D(Collision2D collision)
