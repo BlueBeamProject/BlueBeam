@@ -3,57 +3,59 @@ using UnityEngine;
 
 public class PlayerAnimations : MonoBehaviour
 {
-    private float fps;
+    private SpriteRenderer _mySpriteRenderer;
     public ParticleSystem dust;
-    private SpriteRenderer mySpriteRenderer;
     public Sprite[] frames;
-    private int currentFrame;
-    private float secondsToWait;
-    private bool stopped;
+    private bool _run;
+    private bool _idle;
+    private bool _jump;
+    private int _countFrame;
+    public int animationSpeed;
     
-    void Awake()
+
+    void Start()
     {
-        fps = 2F;
-        mySpriteRenderer = GetComponent<SpriteRenderer>();
-        currentFrame = 1;
-        if (fps > 0)
-            secondsToWait = 1 / fps;
-        else
-            secondsToWait = 0;
-        stopped = false;
+        _mySpriteRenderer = GetComponent<SpriteRenderer>();
+        Run();
     }
 
-    void Play(bool reset = false)
+    void Play()
     {
-        if (reset)
-            currentFrame = 1;
-
-        stopped = false;
-        mySpriteRenderer.enabled = true;
-
-        if (frames.Length > 1)
-            Animate();
-        else if (frames.Length > 0)
-            mySpriteRenderer.sprite = frames[0];
-    }
-
-    void Animate()
-    {
-        if(currentFrame >= frames.Length)
+        _mySpriteRenderer.enabled = true;
+        if (_run)
         {
-            currentFrame = 0;
+            _mySpriteRenderer.sprite = frames[_countFrame / animationSpeed];
+            _countFrame++;
+            if (_countFrame == animationSpeed * frames.Length)
+                _countFrame = 0;
         }
- 
-        mySpriteRenderer.sprite = frames[currentFrame];
- 
-        if(!stopped) {
-            currentFrame++;
-        }
+
+        if (_idle)
+            _mySpriteRenderer.sprite = frames[1];
+
+        if (_jump)
+            _mySpriteRenderer.sprite = frames[0];
     }
 
-    void Update()
+    public void Run()
     {
-        Play();
+        _run = true;
+        _idle = false;
+        _jump = false;
+    }
+
+    public void Jump()
+    {
+        _run = false;
+        _idle = false;
+        _jump = true;
+    }
+
+    public void Idle()
+    {
+        _run = false;
+        _idle = true;
+        _jump = false;
     }
 
     public void CreateDust()
