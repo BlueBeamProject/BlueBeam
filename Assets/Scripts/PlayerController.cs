@@ -15,9 +15,15 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         if (Input.GetKey(KeyCode.Space))
+        {    
             _myPhysics.Jump();
+            Debug.Log("space");
+        }
         else
+        {
             _myPhysics.StopJump();
+            
+        }
 
        
         

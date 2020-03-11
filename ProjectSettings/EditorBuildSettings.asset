@@ -5,27 +5,9 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/Scenes/Menu.unity
     guid: 8d14d58bb555e964abb7d2b932fae668
-  - enabled: 1
-    path: Assets/Scenes/MenuBattleRoyale.unity
-    guid: d7d9a30f78aafb94189693c83abac672
-  - enabled: 1
-    path: Assets/Scenes/MenuCampagne.unity
-    guid: f36790fe470724042b15b7f117b965af
-  - enabled: 1
-    path: Assets/Scenes/MenuEndless.unity
-    guid: 5a75a9593bdcfae47a902499174a5914
-  - enabled: 1
-    path: Assets/Scenes/MenuMore.unity
-    guid: dd53a0e2a295a6e4dba23a38d639af9d
-  - enabled: 1
-    path: Assets/Scenes/MenuOptions.unity
-    guid: 1bdf5ee5c078f8744b4ee5e0d76ed08a
   - enabled: 1
     path: Assets/Scenes/Level1.unity
     guid: 2cda990e2423bbf4892e6590ba056729
