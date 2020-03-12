@@ -52,8 +52,6 @@ public class PlayerPhysics : MonoBehaviour
             _velocity.y = jumpForce;
 
         _myBody.velocity = _velocity;
-
-        Dash(0);
     }
 
     public void Jump()
@@ -73,9 +71,21 @@ public class PlayerPhysics : MonoBehaviour
     }
     public void Dash(int yes)
     {
-        if (yes == 2) dashDistance = dashDistance * (-1);
+        float x = dashDistance;
+        float y = 100;
+        if (yes == 2) x = 100 - (dashDistance - 100);
+        else if (yes == 3)
+        {
+            y = dashDistance+100;
+            x = 100;
+        }
+        else if (yes == 4)
+        {
+            y = 200 - (dashDistance - 100);
+            x = 100;
+        }
         _myAnimations.Dash();
-        transform.position = new Vector3(transform.position.x *dashDistance/100, transform.position.y, transform.position.z);
+        transform.position = new Vector3(transform.position.x *x/100, transform.position.y*y/100, transform.position.z);
     }
 
     public void StopJump()
