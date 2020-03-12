@@ -19,9 +19,9 @@ public class PlayerController : MonoBehaviour
         else
             _myPhysics.StopJump();
 
-        if (Input.GetKeyDown(KeyCode.LeftArrow))
+        if (Input.GetKeyDown(KeyCode.RightArrow))
             _myPhysics.Dash(1);
-        else if (Input.GetKeyDown(KeyCode.RightArrow))
+        else if (Input.GetKeyDown(KeyCode.LeftArrow))
             _myPhysics.Dash(2);
         else if (Input.GetKeyDown(KeyCode.UpArrow))
             _myPhysics.Dash(3);

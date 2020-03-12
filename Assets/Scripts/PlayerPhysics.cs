@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerPhysics : MonoBehaviour
 {
+    public PlayerController thePlayer;
     public float jumpForce;
     public float moveSpeed;
 
@@ -26,6 +27,7 @@ public class PlayerPhysics : MonoBehaviour
     private float vitesseY;
     private float startTimer;
     private float timer;
+    public float dashDistance = 103f;
 
     // Start is called before the first frame update
     void Start()
@@ -39,6 +41,7 @@ public class PlayerPhysics : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         _velocity.y = 0;
         if (grounded)
             _myAnimations.Run();
@@ -66,46 +69,31 @@ public class PlayerPhysics : MonoBehaviour
         else
             _isJumping = false;
     }
+    public void Dash(int yes)
+    {
+        float x = dashDistance;
+        float y = 100;
+        if (yes == 2) x = 100 - (dashDistance - 100);
+        else if (yes == 3)
+        {
+            y = dashDistance+100;
+            x = 100;
+        }
+        else if (yes == 4)
+        {
+            y = 200 - (dashDistance - 100);
+            x = 100;
+        }
+        _myAnimations.Dash();
+        transform.position = new Vector3(transform.position.x *x/100, transform.position.y*y/100, transform.position.z);
+    }
 
     public void StopJump()
     {
         _isJumping = false;
         jumpTimeCounter = 0;
     }
-
-    public void Dash(int direction)
-    {
-        timer = DashTimer;
-        startTimer = Time.time;
-        _myAnimations.Dash();
-        vitesseX = _velocity.x;
-        vitesseY = _velocity.y;
-        _direction = direction;
-
-        do
-        {
-            if (_direction == 1)
-            {
-                _velocity.x = -5000 * dashSpeed;
-            }
-            else if (_direction == 2)
-            {
-                _velocity.x = 5000 * dashSpeed;
-            }
-            else if (_direction == 3)
-            {
-                _velocity.y = 5000 * dashSpeed;
-            }
-            else if (_direction == 4)
-            {
-                _velocity.y = -5000 * dashSpeed;
-            }
-        }
-        while (Time.time - startTimer < timer);
-        _velocity.y = vitesseY;
-        _velocity.x = vitesseX;
-    }
-
+    
     void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Ground"))
