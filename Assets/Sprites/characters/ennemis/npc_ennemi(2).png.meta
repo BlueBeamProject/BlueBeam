@@ -17,6 +17,24 @@ TextureImporter:
   - first:
       213: -7525808813816991585
     second: npc_ennemi(2)_4
+  - first:
+      213: 1339786620490146970
+    second: npc_ennemi(2)_0
+  - first:
+      213: -8951743761048459726
+    second: npc_ennemi(2)_1
+  - first:
+      213: 3484144135058977032
+    second: npc_ennemi(2)_2
+  - first:
+      213: 4724260496427830310
+    second: npc_ennemi(2)_3
+  - first:
+      213: -5433454888261521500
+    second: npc_ennemi(2)_4
+  - first:
+      213: -339519330243108321
+    second: npc_ennemi(2)_5
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -78,7 +96,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 2
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -90,7 +108,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 2
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -104,9 +122,9 @@ TextureImporter:
       name: npc_ennemi(2)_0
       rect:
         serializedVersion: 2
-        x: 319
+        x: 265
         y: 498
-        width: 276
+        width: 330
         height: 378
       alignment: 6
       pivot: {x: 0, y: 0}
@@ -115,8 +133,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a1b9afa884e07f080800000000000000
-      internalID: -9153832012875130086
+      spriteID: a94e22535d0e79210800000000000000
+      internalID: 1339786620490146970
       vertices: []
       indices: 
       edges: []
@@ -125,9 +143,9 @@ TextureImporter:
       name: npc_ennemi(2)_1
       rect:
         serializedVersion: 2
-        x: 1339
-        y: 498
-        width: 280
+        x: 1289
+        y: 499
+        width: 330
         height: 378
       alignment: 6
       pivot: {x: 0, y: 0}
@@ -136,8 +154,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ce3be49b60e022460800000000000000
-      internalID: 7215344975042491372
+      spriteID: 236236a4a7405c380800000000000000
+      internalID: -8951743761048459726
       vertices: []
       indices: 
       edges: []
@@ -146,9 +164,9 @@ TextureImporter:
       name: npc_ennemi(2)_2
       rect:
         serializedVersion: 2
-        x: 2356
+        x: 2312
         y: 498
-        width: 286
+        width: 330
         height: 378
       alignment: 6
       pivot: {x: 0, y: 0}
@@ -157,8 +175,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 48f11d8048cab3410800000000000000
-      internalID: 1457948587468070788
+      spriteID: 801737c81aa2a5030800000000000000
+      internalID: 3484144135058977032
       vertices: []
       indices: 
       edges: []
@@ -167,9 +185,9 @@ TextureImporter:
       name: npc_ennemi(2)_3
       rect:
         serializedVersion: 2
-        x: 316
+        x: 264
         y: 43
-        width: 288
+        width: 342
         height: 379
       alignment: 6
       pivot: {x: 0, y: 0}
@@ -178,8 +196,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 44fc6d03b98facb30800000000000000
-      internalID: 4308529338956304196
+      spriteID: 62ccdfb24e1ff8140800000000000000
+      internalID: 4724260496427830310
       vertices: []
       indices: 
       edges: []
@@ -199,8 +217,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f903fecd1c4fe8790800000000000000
-      internalID: -7525808813816991585
+      spriteID: 4afef0a119d7894b0800000000000000
+      internalID: -5433454888261521500
       vertices: []
       indices: 
       edges: []
