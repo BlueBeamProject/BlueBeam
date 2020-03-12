@@ -6006,7 +6006,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!114 &1143731243
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6038,8 +6038,8 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
-  m_IsActive: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!4 &1174129474
 Transform:
   m_ObjectHideFlags: 0
@@ -6119,8 +6119,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 6021417792943872063, guid: 20f78a8d3c8ff1b46850e27a404dc740,
-    type: 3}
+  m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -6128,7 +6127,7 @@ SpriteRenderer:
   m_Size: {x: 0.57, y: 0.15}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!114 &1174129477
@@ -6143,7 +6142,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b7206e037ed67e4bb82b98c44457764, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  newPos: 0
+  laserSprite: {fileID: 6021417792943872063, guid: 20f78a8d3c8ff1b46850e27a404dc740,
+    type: 3}
 --- !u!1 &1656165779
 GameObject:
   m_ObjectHideFlags: 0
