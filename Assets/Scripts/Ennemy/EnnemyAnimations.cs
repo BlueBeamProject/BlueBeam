@@ -5,6 +5,7 @@ using UnityEngine;
 public class EnnemyAnimations : MonoBehaviour
 {
     private SpriteRenderer _mySpriteRenderer;
+    private LaserShotAnimations _myLaser;
     public Sprite[] frames;
     private int _countFrame;
     private bool _shoots;
@@ -14,6 +15,7 @@ public class EnnemyAnimations : MonoBehaviour
     void Start()
     {
         _mySpriteRenderer = GetComponent<SpriteRenderer>();
+        _myLaser = GetComponentInChildren<LaserShotAnimations>();
         _shoots = false;
     }
 
@@ -23,6 +25,7 @@ public class EnnemyAnimations : MonoBehaviour
         {
             _mySpriteRenderer.sprite = frames[_countFrame / animationSpeed];
             _countFrame++;
+            _myLaser.Activate();
         }
         else
             _mySpriteRenderer.sprite = frames[0];
