@@ -6,15 +6,22 @@ public class EnnemyComportment : MonoBehaviour
 {
     public Transform target;
     public float range = 15f;
-    public string ennemyTargetTag = "Player";
+
+    private EnnemyAnimations _myAnimations;
+    private float _distanceToTarget;
+    private GameObject _target;
     void Start()
     {
-        Invoke("UpdateTarget", 0f);
+        _target = GameObject.FindGameObjectWithTag("Player");
+        _myAnimations = GetComponent<EnnemyAnimations>();
     }
 
     
     void Update()
     {
-        GameObject[] ennemies = GameObject.FindGameObjectsWithTag(ennemyTargetTag);
+        _distanceToTarget = transform.position.x - _target.transform.position.x;
+        
+        if (_distanceToTarget < range)
+            _myAnimations.Shoot();
     }
 }

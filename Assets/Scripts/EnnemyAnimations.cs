@@ -7,24 +7,36 @@ public class EnnemyAnimations : MonoBehaviour
     private SpriteRenderer _mySpriteRenderer;
     public ParticleSystem dust;
     public Sprite[] frames;
-    private bool _run;
-    private bool _idle;
-    private bool _jump;
     private int _countFrame;
+    private bool _shoots;
     public int animationSpeed;
 
 
     void Start()
     {
         _mySpriteRenderer = GetComponent<SpriteRenderer>();
+        _shoots = false;
     }
 
     void Update()
     {
-         _mySpriteRenderer.sprite = frames[_countFrame / animationSpeed];
-         _countFrame++;
-         if (_countFrame == animationSpeed * frames.Length)
-         _countFrame = 0;
+        if (_shoots)
+        {
+            _mySpriteRenderer.sprite = frames[_countFrame / animationSpeed];
+            _countFrame++;
+        }
+        else
+            _mySpriteRenderer.sprite = frames[0];
+        if (_countFrame == animationSpeed * frames.Length)
+        {
+            _countFrame = 0;
+            _shoots = false;
+        }
+    }
+
+    public void Shoot()
+    {
+        _shoots = true;
     }
 
     public void CreateDust()
