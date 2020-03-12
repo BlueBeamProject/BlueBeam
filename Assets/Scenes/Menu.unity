@@ -9420,6 +9420,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dust: {fileID: 431924079}
+  dash: {fileID: 0}
   frames:
   - {fileID: 2690980070237103029, guid: 2f68ef89f43f0c8478d0fcdc0d6e042b, type: 3}
   - {fileID: 322532691053147229, guid: 2f68ef89f43f0c8478d0fcdc0d6e042b, type: 3}
@@ -9452,8 +9453,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   jumpForce: 6
   moveSpeed: 4
-  jumpTime: 0.2
   jumpTimeCounter: 0
+  dashSpeed: 0
+  startDashTime: 0
+  DashTimer: 0
 --- !u!114 &1005281223
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12362,7 +12365,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1584616920}
   - component: {fileID: 1584616919}
-  - component: {fileID: 1584616918}
   - component: {fileID: 1584616921}
   m_Layer: 0
   m_Name: d4rk
@@ -12371,18 +12373,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1584616918
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1584616917}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dd4b29328549afa4bbb9bb2f35352273, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!212 &1584616919
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -12422,7 +12412,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 10
-  m_Sprite: {fileID: 21300000, guid: 38d08b0a66901f04a9a737d26761384f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d5a5778cde16deb43b0d6b2a26fcb415, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -12430,7 +12420,7 @@ SpriteRenderer:
   m_Size: {x: 0.69, y: 0.71}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &1584616920

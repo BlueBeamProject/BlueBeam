@@ -6,10 +6,11 @@ public class PlayerPhysics : MonoBehaviour
 {
     public float jumpForce;
     public float moveSpeed;
-    public float jumpTimeCounter;
+    
     public float dashSpeed;
     public float startDashTime;
     public float DashTimer;
+    public float jumpTime;
 
     private Rigidbody2D _myBody;
     private PlayerAnimations _myAnimations;
@@ -19,7 +20,8 @@ public class PlayerPhysics : MonoBehaviour
     private bool _isDashing;
     private SoundManager _soundManager;
     private float dashTime;
-    private float jumpTime;
+    
+    private float jumpTimeCounter;
     private int _direction;
     private float vitesseX;
     private float vitesseY;
