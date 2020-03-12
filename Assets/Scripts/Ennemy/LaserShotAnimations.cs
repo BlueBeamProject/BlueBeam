@@ -18,13 +18,12 @@ public class LaserShotAnimations : MonoBehaviour
         newPos = 0;
         activated = false;
         _ennemy = GameObject.FindGameObjectWithTag("Ennemy");
-        _ennemyPosition = new Vector2(_ennemy.transform.position.x, _ennemy.transform.position.y);
-        startPos = _ennemyPosition + new Vector2(-3.29629f, 3.755829f);
         mySprite = GetComponent<SpriteRenderer>();
     }
 
     void Update()
     {
+        _ennemyPosition = new Vector2(_ennemy.transform.position.x, _ennemy.transform.position.y);
         if (activated)
         {
             mySprite.sprite = laserSprite;
@@ -32,7 +31,10 @@ public class LaserShotAnimations : MonoBehaviour
             transform.position = startPos + Vector2.left * newPos;
         }
         else
+        {
+            startPos = _ennemyPosition + new Vector2(-3.29629f, 3.755829f);
             mySprite.sprite = null;
+        }
     }
 
     public void Activate()
