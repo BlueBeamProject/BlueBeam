@@ -5208,10 +5208,10 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2.18, y: 0.97}
+    newSize: {x: 1.11, y: 0.51}
+    adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
@@ -5556,6 +5556,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dust: {fileID: 1656165782}
+  dash: {fileID: 0}
   frames:
   - {fileID: 2690980070237103029, guid: 2f68ef89f43f0c8478d0fcdc0d6e042b, type: 3}
   - {fileID: 322532691053147229, guid: 2f68ef89f43f0c8478d0fcdc0d6e042b, type: 3}
@@ -5675,8 +5676,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   jumpForce: 20
   moveSpeed: 15
-  jumpTime: 0.2
-  jumpTimeCounter: 0
+  dashSpeed: 0
+  startDashTime: 0
+  DashTimer: 0
+  jumpTime: 0.19
 --- !u!114 &771358287
 MonoBehaviour:
   m_ObjectHideFlags: 0
