@@ -5554,7 +5554,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dust: {fileID: 1656165782}
-  dash: {fileID: 0}
+  dash: {fileID: 4744300896952393135, guid: c009d259b1626f94a987d5b9acecc6ca, type: 3}
   frames:
   - {fileID: 2690980070237103029, guid: 2f68ef89f43f0c8478d0fcdc0d6e042b, type: 3}
   - {fileID: 322532691053147229, guid: 2f68ef89f43f0c8478d0fcdc0d6e042b, type: 3}
@@ -5672,10 +5672,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 69a5d2f7587bea34787b6094d05ffb6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  thePlayer: {fileID: 0}
   jumpForce: 20
   moveSpeed: 15
   dashSpeed: 0
-  startDashTime: 0
   DashTimer: 0
   jumpTime: 0.19
 --- !u!114 &771358287
