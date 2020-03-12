@@ -1,19 +1,22 @@
 fileFormatVersion: 2
-guid: 39041f75b493f8146a9fa4c6ffb83b50
+guid: dde3a1b644f0f5b49abff0e74cad0e4a
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2530564911472380330
-    second: button_0
+      213: 7368447598060736973
+    second: 0
   - first:
-      213: 1763989116612304091
-    second: button_1
+      213: 3206750871660976100
+    second: 1
   - first:
-      213: -5033884579438549468
-    second: button_2
+      213: -8634393542855610032
+    second: 2
   - first:
-      213: 1120241560109220500
-    second: Nothing
+      213: -6231494977419003021
+    second: Number collection_0
+  - first:
+      213: -2605623357494404420
+    second: 4
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -98,13 +101,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: button_0
+      name: 0
       rect:
         serializedVersion: 2
-        x: 34
-        y: 357
-        width: 186
-        height: 51
+        x: 133
+        y: 495
+        width: 85
+        height: 146
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -112,20 +115,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: aa90165216f5e1320800000000000000
-      internalID: 2530564911472380330
+      spriteID: dc19d7cfc0cf14660800000000000000
+      internalID: 7368447598060736973
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: button_1
+      name: 1
       rect:
         serializedVersion: 2
-        x: 288
-        y: 357
-        width: 187
-        height: 51
+        x: 253
+        y: 495
+        width: 85
+        height: 146
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -133,20 +136,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bdcd45b61c2fa7810800000000000000
-      internalID: 1763989116612304091
+      spriteID: 4e7d68c7deaa08c20800000000000000
+      internalID: 3206750871660976100
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: button_2
+      name: 2
       rect:
         serializedVersion: 2
-        x: 46
-        y: 106
-        width: 163
-        height: 44
+        x: 372
+        y: 495
+        width: 85
+        height: 146
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -154,20 +157,41 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 426af3a45ac042ab0800000000000000
-      internalID: -5033884579438549468
+      spriteID: 0513a2bd1d87c2880800000000000000
+      internalID: -8634393542855610032
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Nothing
+      name: Number collection_0
       rect:
         serializedVersion: 2
-        x: 290
-        y: 116
-        width: 136
-        height: 126
+        x: 491
+        y: 495
+        width: 85
+        height: 146
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37b3f4b75584589a0800000000000000
+      internalID: -6231494977419003021
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 4
+      rect:
+        serializedVersion: 2
+        x: 1309
+        y: 641
+        width: 62
+        height: 191
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -175,8 +199,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 49280fc73c5eb8f00800000000000000
-      internalID: 1120241560109220500
+      spriteID: cbad51e8c57f6dbd0800000000000000
+      internalID: -2605623357494404420
       vertices: []
       indices: 
       edges: []
