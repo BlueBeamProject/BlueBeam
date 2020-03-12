@@ -5,7 +5,6 @@ using UnityEngine;
 public class EnnemyAnimations : MonoBehaviour
 {
     private SpriteRenderer _mySpriteRenderer;
-    public ParticleSystem dust;
     public Sprite[] frames;
     private int _countFrame;
     private bool _shoots;
@@ -39,8 +38,5 @@ public class EnnemyAnimations : MonoBehaviour
         _shoots = true;
     }
 
-    public void CreateDust()
-    {
-        dust.Play();
-    }
+  
 }
