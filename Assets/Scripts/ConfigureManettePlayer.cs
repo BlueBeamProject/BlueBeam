@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class ConfigureManettePlayer : MonoBehaviour
 {
@@ -35,17 +36,94 @@ public class ConfigureManettePlayer : MonoBehaviour
     {
         Debug.Log(PlayerNumber);
 
-        bool echap = false;
-        bool finish = false;
-        int i = 1;
-    
-        /*
-        while (i <= PlayerNumber && !echap && !finish)
+       
+
+        StartCoroutine(ConfigurePlayerV2());
+        
+        
+       /* while (i <= PlayerNumber && !echap && !finish)
         {
             Debug.Log("Player " + i + " : Please press Jump on your Keyboard or Controller (space or right button)");
+            if (ControllerAPI.GetButton("RightButton",i))
+            {
+                Debug.Log("Detected Controller Player " + i );
+                i++;
+            }
             
-        }
-        */
-
+        }*/
     }
+
+
+    IEnumerator ConfigurePlayerV2()
+    {
+        Debug.Log("Player : Please press Jump on your Keyboard or Controller (space or right button) V2");
+        bool done = false;
+
+        while (!done)
+        {
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                done = true;
+                Debug.Log("nice");
+            }
+
+            yield return null;
+        }
+    }
+    
+
+    public void ConfigurePlayer(int PlayerNumber, int index)
+    {
+
+        Debug.Log("Player "+index+" : Please press Jump on your Keyboard or Controller (space or right button)");
+
+        if (ControllerAPI.GetButton("RightButton",1))
+        {
+            Debug.Log("Detected Controller Player "  + index);
+
+            if (index != PlayerNumber)
+            {
+                ConfigurePlayer(PlayerNumber, index + 1);
+            }
+        }
+        else if(ControllerAPI.GetButton("RightButton",2))
+        {
+            Debug.Log("Detected Controller Player "  + index);
+            
+            if (index != PlayerNumber)
+            {
+                ConfigurePlayer(PlayerNumber, index + 1);
+            }
+        }
+        else if (ControllerAPI.GetButton("RightButton", 3))
+        {
+            Debug.Log("Detected Controller Player "  + index);
+            
+            if (index != PlayerNumber)
+            {
+                ConfigurePlayer(PlayerNumber, index + 1);
+            }
+        }
+        else if (ControllerAPI.GetButton("RightButton",4))
+        {
+            Debug.Log("Detected Controller Player "  + index);
+            
+            if (index != PlayerNumber)
+            {
+                ConfigurePlayer(PlayerNumber, index + 1);
+            }
+        }
+        else if (Input.GetKeyDown(KeyCode.Space))
+        {
+            Debug.Log("Detected Keyboard Player "  + index);
+            
+            if (index != PlayerNumber)
+            {
+                ConfigurePlayer(PlayerNumber, index + 1);
+            }
+        }
+    }
+    
+    
+    
 }
