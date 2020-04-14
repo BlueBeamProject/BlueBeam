@@ -5,7 +5,6 @@ public class PlayerAnimations : MonoBehaviour
 {
     private SpriteRenderer _mySpriteRenderer;
     public ParticleSystem dust;
-    public ParticleSystem dash;
     public Sprite[] frames;
     private bool _run;
     private bool _idle;
@@ -63,9 +62,4 @@ public class PlayerAnimations : MonoBehaviour
     {
         dust.Play();
     }
-
-	public void Dash()
-	{
-        dash.Play();
-	}
 }
