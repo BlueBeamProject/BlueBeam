@@ -23,8 +23,6 @@ public class StreetGenerator : MonoBehaviour
         {
             routes[i] = new GameObject();
             routes[i].name = "routes" + i;
-            routes[i].transform.SetParent(GetComponent<Transform>());
-            routes[i].AddComponent<Transform>();
             routes[i].AddComponent<SpriteRenderer>();
             SpriteRenderer sprite = routes[i].GetComponent<SpriteRenderer>();
             if (i % 4 == 0)

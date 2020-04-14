@@ -72,6 +72,11 @@ public class PlayerPhysics : MonoBehaviour
         {
             _grounded = true;
         }
+
+        if (collision.gameObject.CompareTag("Obstacle"))
+        {
+            Die();
+        }
     }
 
     void OnCollisionExit2D(Collision2D collision)
@@ -80,5 +85,11 @@ public class PlayerPhysics : MonoBehaviour
         {
             _grounded = false;
         }
+    }
+
+    public void Die()
+    {
+        _myAnimations.Die();
+        this.enabled = false;
     }
 }

@@ -1,15 +1,18 @@
 using System;
+using TMPro;
 using UnityEngine;
 
 public class PlayerAnimations : MonoBehaviour
 {
     private SpriteRenderer _mySpriteRenderer;
+    private Transform _transform;
     public ParticleSystem dust;
     public Sprite[] frames;
     private bool _run;
     private bool _idle;
     private bool _jump;
     private bool _slide;
+    private bool _die;
     private int _countFrame;
     public int animationSpeed;
     
@@ -17,12 +20,12 @@ public class PlayerAnimations : MonoBehaviour
     void Start()
     {
         _mySpriteRenderer = GetComponent<SpriteRenderer>();
+        _transform = GetComponent<Transform>();
         Run();
     }
 
     void Update()
     {
-        
         if (_run)
         {
             _mySpriteRenderer.sprite = frames[_countFrame / animationSpeed];
@@ -71,6 +74,17 @@ public class PlayerAnimations : MonoBehaviour
         _idle = false;
         _jump = false;
         _slide = true;
+    }
+
+    public void Die()
+    {
+        _run = false;
+        _idle = false;
+        _jump = false;
+        _slide = false;
+        _die = true;
+        _mySpriteRenderer.sprite = frames[1];
+        _transform.Rotate(new Vector3(1, 1, 0), 90f);
     }
 
     public void CreateDust()
