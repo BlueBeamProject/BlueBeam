@@ -16,6 +16,7 @@ public class PlayerController : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))
             _myPhysics.Jump();
+            
         if (Input.GetKeyDown(KeyCode.S))
             _myPhysics.Slide();
     }
