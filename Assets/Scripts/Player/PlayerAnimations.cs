@@ -26,22 +26,26 @@ public class PlayerAnimations : MonoBehaviour
 
     void Update()
     {
-        if (_run)
+        if (!_die)
         {
-            _mySpriteRenderer.sprite = frames[_countFrame / animationSpeed];
-            _countFrame++;
-            if (_countFrame == animationSpeed * frames.Length)
-                _countFrame = 0;
+
+            if (_run)
+            {
+                _mySpriteRenderer.sprite = frames[_countFrame / animationSpeed];
+                _countFrame++;
+                if (_countFrame == animationSpeed * frames.Length)
+                    _countFrame = 0;
+            }
+
+            if (_idle)
+                _mySpriteRenderer.sprite = frames[1];
+
+            if (_jump)
+                _mySpriteRenderer.sprite = frames[0];
+
+            if (_slide)
+                _mySpriteRenderer.sprite = frames[0];
         }
-
-        if (_idle)
-            _mySpriteRenderer.sprite = frames[1];
-
-        if (_jump)
-            _mySpriteRenderer.sprite = frames[0];
-
-        if (_slide)
-            _mySpriteRenderer.sprite = frames[0];
     }
 
     public void Run()

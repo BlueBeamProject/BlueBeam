@@ -21,6 +21,7 @@ public class PlayerPhysics : MonoBehaviour
     private Vector3 _movement;
     private bool _isSliding;
     private float _startTime;
+    static bool dead;
 
     // Start is called before the first frame update
     void Start()
@@ -33,28 +34,32 @@ public class PlayerPhysics : MonoBehaviour
         _movement = new Vector3(moveSpeed, 0, 0);
         _isSliding = false;
         _startTime = 0;
+        dead = false;
     }
 
     // Update is called once per frame
     void Update()
     {
-        _transform.position += _movement * Time.deltaTime * moveSpeed;
-        if (_isSliding)
+        if (!dead)
         {
-            _myAnimations.Slide();
-            if (Time.time - _startTime > slideTime)
-                _isSliding = false;
+
+            _transform.position += _movement * Time.deltaTime * moveSpeed;
+            if (_isSliding)
+            {
+                _myAnimations.Slide();
+                if (Time.time - _startTime > slideTime)
+                    _isSliding = false;
+            }
+            if (_grounded)
+                _myAnimations.Run();
+            else
+                _myAnimations.Jump();
         }
-        if (_grounded)
-            _myAnimations.Run();
-        else
-            _myAnimations.Jump();
-        
     }
 
     public void Jump()
     {
-        if (_grounded)
+        if (_grounded && !dead)
         {
             _myBody.AddForce(new Vector2(0f, jumpForce), ForceMode2D.Impulse);
             _myAnimations.CreateDust();
@@ -95,6 +100,7 @@ public class PlayerPhysics : MonoBehaviour
 
     public void Die()
     {
+        dead = true;
         Instantiate(death, transform.position, Quaternion.identity);
         CameraController.Death();
         PreLaserScript.Death();
