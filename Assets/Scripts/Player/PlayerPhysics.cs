@@ -12,6 +12,7 @@ public class PlayerPhysics : MonoBehaviour
     public float slideTime;
     public GameObject death;
     public BoxCollider2D[] colliders;
+    public GameObject follow;
 
     private Rigidbody2D _myBody;
     private Transform _transform;
@@ -22,6 +23,7 @@ public class PlayerPhysics : MonoBehaviour
     private bool _isSliding;
     private float _startTime;
     private bool _dead;
+    private float baseMoveSpeed;
 
     // Start is called before the first frame update
     void Start()
@@ -34,6 +36,7 @@ public class PlayerPhysics : MonoBehaviour
         _isSliding = false;
         _startTime = 0;
         _dead = false;
+        baseMoveSpeed = moveSpeed;
     }
 
     // Update is called once per frame
@@ -41,6 +44,10 @@ public class PlayerPhysics : MonoBehaviour
     {
         if (!_dead)
         {
+            if (follow.transform.position.x > transform.position.x)
+                moveSpeed = baseMoveSpeed + 0.1f;
+            else
+                moveSpeed = baseMoveSpeed;
             _transform.position += _movement * Time.deltaTime * moveSpeed;
             if (_isSliding)
             {
