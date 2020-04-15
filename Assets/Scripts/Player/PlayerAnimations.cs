@@ -5,7 +5,6 @@ using UnityEngine;
 public class PlayerAnimations : MonoBehaviour
 {
     private SpriteRenderer _mySpriteRenderer;
-    private Transform _transform;
     public ParticleSystem dust;
     public Sprite[] frames;
     public Sprite[] slideFrames;
@@ -22,7 +21,7 @@ public class PlayerAnimations : MonoBehaviour
     void Start()
     {
         _mySpriteRenderer = GetComponent<SpriteRenderer>();
-        _transform = GetComponent<Transform>();
+        _countFrame = 0;
         Run();
     }
 
@@ -34,8 +33,9 @@ public class PlayerAnimations : MonoBehaviour
             if (_run)
             {
                 _mySpriteRenderer.sprite = frames[_countFrame / animationSpeed];
-                _countFrame++;
-                if (_countFrame == animationSpeed * frames.Length)
+                if (_countFrame < animationSpeed * frames.Length - 1)
+                    _countFrame++;
+                else
                     _countFrame = 0;
             }
 
@@ -47,7 +47,9 @@ public class PlayerAnimations : MonoBehaviour
 
             if (_slide)
             {
-                
+                _mySpriteRenderer.sprite = slideFrames[_countSlideFrame];
+                if (_countSlideFrame < 2)
+                    _countSlideFrame++;
             }
         }
     }
@@ -82,6 +84,7 @@ public class PlayerAnimations : MonoBehaviour
         _idle = false;
         _jump = false;
         _slide = true;
+        _countSlideFrame = 0;
     }
 
     public void Die()
