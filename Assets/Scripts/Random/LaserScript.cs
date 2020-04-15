@@ -21,9 +21,4 @@ public class LaserScript : MonoBehaviour
     {
         _transform.position += _movement * Time.deltaTime * moveSpeed;
     }
-
-    public void Up()
-    {
-        Laser.transform.position = new Vector3(0, 500, 0);
-    }
 }

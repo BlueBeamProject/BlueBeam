@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerPhysics : MonoBehaviour
 {
@@ -9,6 +10,7 @@ public class PlayerPhysics : MonoBehaviour
     public float jumpForce;
     public float moveSpeed;
     public float slideTime;
+    public GameObject death;
 
     private Rigidbody2D _myBody;
     private BoxCollider2D _myCollider;
@@ -53,7 +55,11 @@ public class PlayerPhysics : MonoBehaviour
     public void Jump()
     {
         if (_grounded)
+        {
             _myBody.AddForce(new Vector2(0f, jumpForce), ForceMode2D.Impulse);
+            _myAnimations.CreateDust();
+        }
+
     }
 
     public void Slide()
@@ -89,7 +95,16 @@ public class PlayerPhysics : MonoBehaviour
 
     public void Die()
     {
+        Instantiate(death, transform.position, Quaternion.identity);
+        CameraController.Death();
+        PreLaserScript.Death();
         _myAnimations.Die();
-        this.enabled = false;
+        StartCoroutine("wait");
+    }
+
+    IEnumerator wait()
+    {
+        yield return new WaitForSeconds(3);
+        SceneManager.LoadScene("Level1");
     }
 }

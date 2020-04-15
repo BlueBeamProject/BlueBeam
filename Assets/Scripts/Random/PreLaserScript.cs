@@ -8,10 +8,12 @@ public class PreLaserScript : MonoBehaviour
     public bool _grounded;
     public GameObject Laser;
     public GameObject Camera;
+    static bool death;
 
     // Start is called before the first frame update
     void Start()
     {
+        death = false;
         laser = GetComponent<LaserScript>();
     }
 
@@ -27,7 +29,8 @@ public class PreLaserScript : MonoBehaviour
             _grounded = true;
             Laser.transform.position += new Vector3(0, 2, 0);
             double x = Camera.transform.position.x - 1.8;
-            Laser.transform.position = new Vector3((float)x, Laser.transform.position.y, Laser.transform.position.z);
+            if (!death)
+                Laser.transform.position = new Vector3((float)x, Laser.transform.position.y, Laser.transform.position.z);
         }
     }
 
@@ -37,5 +40,9 @@ public class PreLaserScript : MonoBehaviour
         {
             _grounded = false;
         }
+    }
+    public static void Death()
+    {
+        death = true;
     }
 }
