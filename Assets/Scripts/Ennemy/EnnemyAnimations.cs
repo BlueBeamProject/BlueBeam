@@ -16,20 +16,16 @@ public class EnnemyAnimations : MonoBehaviour
     {
         _mySpriteRenderer = GetComponent<SpriteRenderer>();
         _shoots = false;
+        _countFrame = 0;
     }
 
     void Update()
     {
-        
         _mySpriteRenderer.sprite = frames[_countFrame / animationSpeed];
-        _countFrame++;
-        if (_countFrame == animationSpeed * frames.Length)
-        {
+        if (_countFrame < animationSpeed * frames.Length - 1)
+            _countFrame++;
+        else
             _countFrame = 0;
-        }
-       
-
-        
     }
 
     public void Shoot()
