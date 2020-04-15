@@ -14,9 +14,9 @@ public class LaserShot : MonoBehaviour
         rb.velocity = (transform.right * speed)*(-0.5f);
     }
 
-    private void OnTriggerEnter2D(Collider2D hitInfo)
+    void OnCollisionEnter2D(Collision2D collision)
     {
-        Debug.Log(hitInfo.name);
+        Destroy(gameObject);
     }
 
 }
