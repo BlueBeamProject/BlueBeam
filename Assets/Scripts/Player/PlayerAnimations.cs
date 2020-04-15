@@ -8,12 +8,14 @@ public class PlayerAnimations : MonoBehaviour
     private Transform _transform;
     public ParticleSystem dust;
     public Sprite[] frames;
+    public Sprite[] slideFrames;
     private bool _run;
     private bool _idle;
     private bool _jump;
     private bool _slide;
     private bool _die;
     private int _countFrame;
+    private int _countSlideFrame;
     public int animationSpeed;
     
 
@@ -44,7 +46,9 @@ public class PlayerAnimations : MonoBehaviour
                 _mySpriteRenderer.sprite = frames[0];
 
             if (_slide)
-                _mySpriteRenderer.sprite = frames[0];
+            {
+                
+            }
         }
     }
 
@@ -82,13 +86,8 @@ public class PlayerAnimations : MonoBehaviour
 
     public void Die()
     {
-        _run = false;
-        _idle = false;
-        _jump = false;
-        _slide = false;
         _die = true;
-        _mySpriteRenderer.sprite = frames[1];
-        _transform.Rotate(new Vector3(1, 1, 0), 90f);
+        _mySpriteRenderer.enabled = false;
     }
 
     public void CreateDust()
