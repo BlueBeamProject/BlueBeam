@@ -11,9 +11,9 @@ public class PlayerPhysics : MonoBehaviour
     public float moveSpeed;
     public float slideTime;
     public GameObject death;
+    public BoxCollider2D[] colliders;
 
     private Rigidbody2D _myBody;
-    private BoxCollider2D _myCollider;
     private Transform _transform;
     private PlayerAnimations _myAnimations;
     private bool _grounded;
@@ -21,45 +21,47 @@ public class PlayerPhysics : MonoBehaviour
     private Vector3 _movement;
     private bool _isSliding;
     private float _startTime;
-    static bool dead;
+    private bool _dead;
 
     // Start is called before the first frame update
     void Start()
     {
         _myBody = GetComponent<Rigidbody2D>();
-        _myCollider = GetComponent<BoxCollider2D>();
         _myAnimations = GetComponent<PlayerAnimations>();
         _soundManager = GetComponent<SoundManager>();
         _transform = GetComponent<Transform>();
         _movement = new Vector3(moveSpeed, 0, 0);
         _isSliding = false;
         _startTime = 0;
-        dead = false;
+        _dead = false;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (!dead)
+        if (!_dead)
         {
-
             _transform.position += _movement * Time.deltaTime * moveSpeed;
             if (_isSliding)
             {
-                _myAnimations.Slide();
                 if (Time.time - _startTime > slideTime)
                     _isSliding = false;
             }
-            if (_grounded)
-                _myAnimations.Run();
             else
-                _myAnimations.Jump();
+            {
+                colliders[0].enabled = true;
+                colliders[1].enabled = false;
+                if (_grounded)
+                    _myAnimations.Run();
+                else
+                    _myAnimations.Jump();
+            }
         }
     }
 
     public void Jump()
     {
-        if (_grounded && !dead)
+        if (_grounded && !_dead)
         {
             _myBody.AddForce(new Vector2(0f, jumpForce), ForceMode2D.Impulse);
             _myAnimations.CreateDust();
@@ -69,11 +71,13 @@ public class PlayerPhysics : MonoBehaviour
 
     public void Slide()
     {
-        if (_grounded && !_isSliding)
+        if (_grounded && !_isSliding && !_dead)
         {
             _isSliding = true;
-            // Réduire la hitbox
+            colliders[0].enabled = false;
+            colliders[1].enabled = true;
             _startTime = Time.time;
+            _myAnimations.Slide();
         }
     }
 
@@ -82,6 +86,7 @@ public class PlayerPhysics : MonoBehaviour
         if (collision.gameObject.CompareTag("Ground"))
         {
             _grounded = true;
+            _soundManager.Land();
         }
 
         if (collision.gameObject.CompareTag("Obstacle"))
@@ -95,12 +100,13 @@ public class PlayerPhysics : MonoBehaviour
         if (collision.gameObject.CompareTag("Ground"))
         {
             _grounded = false;
+            _soundManager.Jump();
         }
     }
 
     public void Die()
     {
-        dead = true;
+        _dead = true;
         Instantiate(death, transform.position, Quaternion.identity);
         CameraController.Death();
         PreLaserScript.Death();
