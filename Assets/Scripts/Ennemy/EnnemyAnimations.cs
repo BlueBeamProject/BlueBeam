@@ -52,7 +52,7 @@ public class EnnemyAnimations : MonoBehaviour
             
             _mySpriteRenderer.sprite = frames[_countFrame];
             _countFrame++;
-            if (_countFrame == 4)
+            if (_countFrame == 5)
             {
                 _myWeapon.StartShoot();
             }
@@ -61,7 +61,7 @@ public class EnnemyAnimations : MonoBehaviour
             {
                 _countFrame = 0;
             }
-            yield return new WaitForSeconds(0.3f);
+            yield return new WaitForSeconds(0.1f);
         }
         _shoots = true;
 
