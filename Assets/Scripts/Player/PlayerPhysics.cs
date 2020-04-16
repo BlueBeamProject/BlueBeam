@@ -53,7 +53,7 @@ public class PlayerPhysics : MonoBehaviour
         if (!_dead)
         {
             if (follow.transform.position.x > transform.position.x)
-                moveSpeed = baseMoveSpeed + 0.1f;
+                moveSpeed = baseMoveSpeed + 1;
             else
                 moveSpeed = baseMoveSpeed;
             _transform.position += _movement * Time.deltaTime * moveSpeed;
