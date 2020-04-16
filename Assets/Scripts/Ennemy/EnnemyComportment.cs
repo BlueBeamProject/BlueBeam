@@ -25,13 +25,15 @@ public class EnnemyComportment : MonoBehaviour
         _distanceToTarget = transform.position.x - _target.transform.position.x;
         
         if (_distanceToTarget < range)
-            _myAnimations.Shoot();
+        {
+            //_myAnimations.Shoot();
+        }
     }
 
     void OnCollisionEnter2D(Collision2D collision)
     {
 
-        if (collision.gameObject.CompareTag("Attack"))
+        if (collision.gameObject.CompareTag("Attack") || collision.gameObject.CompareTag("Laser"))
         {
             Die();
         }

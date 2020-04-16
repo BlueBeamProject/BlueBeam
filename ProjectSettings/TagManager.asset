@@ -8,6 +8,8 @@ TagManager:
   - Menu
   - Ennemy
   - Obstacle
+  - Attack
+  - Laser
   layers:
   - Default
   - TransparentFX

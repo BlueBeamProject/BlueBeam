@@ -22,5 +22,8 @@ public class PlayerController : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.D))
             _myPhysics.Attack();
+
+        if (Input.GetKeyDown(KeyCode.G))
+            _myPhysics.Shild();
     }
 }

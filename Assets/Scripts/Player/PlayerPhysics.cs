@@ -25,6 +25,8 @@ public class PlayerPhysics : MonoBehaviour
     private float _startTime;
     private bool _dead;
     private float baseMoveSpeed;
+    private bool shild;
+    private ShildAnimation sA;
 
     // Start is called before the first frame update
     void Start()
@@ -39,6 +41,8 @@ public class PlayerPhysics : MonoBehaviour
         _dead = false;
         baseMoveSpeed = moveSpeed;
         attack.SetActive(false);
+        shild = false;
+        sA = GetComponent<ShildAnimation>();
     }
 
     // Update is called once per frame
@@ -98,9 +102,9 @@ public class PlayerPhysics : MonoBehaviour
             _soundManager.Land();
         }
 
-        if (collision.gameObject.CompareTag("Obstacle"))
+        if ((collision.gameObject.CompareTag("Obstacle") && !shild) || collision.gameObject.CompareTag("Laser"))
         {
-            //Die();
+            Die();
         }
     }
 
@@ -132,11 +136,25 @@ public class PlayerPhysics : MonoBehaviour
     public void Attack()
     {
         attack.SetActive(true);
+        StartCoroutine("attackTime");
     }
 
-    IEnumerator wait2()
+    IEnumerator attackTime()
     {
-        yield return new WaitForSeconds(3);
+        yield return new WaitForSeconds(0.3f);
         attack.SetActive(false);
+    }
+
+    public void Shild()
+    {
+        shild = true;
+        sA.ShildAn();
+        StartCoroutine("shildTime");
+    }
+
+    IEnumerator shildTime()
+    {
+        yield return new WaitForSeconds(1.5f);
+        shild = false;
     }
 }
