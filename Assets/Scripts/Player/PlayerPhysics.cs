@@ -80,8 +80,8 @@ public class PlayerPhysics : MonoBehaviour
         {
             _myBody.AddForce(new Vector2(0f, jumpForce), ForceMode2D.Impulse);
             _myAnimations.CreateDust();
+            _soundManager.Jump();
         }
-
     }
 
     public void Slide()
@@ -113,10 +113,8 @@ public class PlayerPhysics : MonoBehaviour
     void OnCollisionExit2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Ground"))
-        {
             _grounded = false;
-            _soundManager.Jump();
-        }
+        
     }
 
     public void Die()
