@@ -4,30 +4,20 @@ using UnityEngine;
 
 public class EnnemyComportment : MonoBehaviour
 {
-    public Transform target;
-    public float range = 15f;
-    public BoxCollider2D[] colliders;
     public GameObject death;
     public GameObject Ennemy;
-
     private EnnemyAnimations _myAnimations;
-    private float _distanceToTarget;
-    private GameObject _target;
+    private Weapon _myWeapon;
     void Start()
     {
-        _target = GameObject.FindGameObjectWithTag("Player");
         _myAnimations = GetComponent<EnnemyAnimations>();
+        _myWeapon = GetComponent<Weapon>();
     }
 
     
     void Update()
     {
-        _distanceToTarget = transform.position.x - _target.transform.position.x;
-        
-        if (_distanceToTarget < range)
-        {
-            //_myAnimations.Shoot();
-        }
+    
     }
 
     void OnCollisionEnter2D(Collision2D collision)
@@ -39,9 +29,35 @@ public class EnnemyComportment : MonoBehaviour
         }
     }
 
+    private void OnTriggerEnter2D(Collider2D collider)
+    {
+        Debug.Log("Check enter trigger");
+        if (collider.gameObject.CompareTag("Player"))
+        {
+            Debug.Log("Check player detection");
+            _myAnimations.Shoot();
+            
+        }
+       
+    }
+
+    private void OnTriggerExit2D(Collider2D collider)
+    {
+        Debug.Log("Check exit trigger");
+        if (collider.gameObject.CompareTag("Player"))
+        {
+            Debug.Log("Check player exit detection");
+            _myAnimations.StopShoot();
+            _myWeapon.CantShoot();
+        }
+
+    }
+
     public void Die()
     {
         Destroy(Ennemy);
         Instantiate(death, transform.position, Quaternion.identity);
     }
+
+    
 }
