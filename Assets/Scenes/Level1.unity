@@ -223,11 +223,11 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4161396}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3cee51b009b837a45adf01679154234c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   moveSpeed: 4
 --- !u!1 &34349009
 GameObject:
@@ -5555,11 +5555,11 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 349832077}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f811f4da0411b39ce9c12497dcbe581f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   moveSpeed: 4
   gameOver: {fileID: 0}
 --- !u!1 &388409485
@@ -5818,8 +5818,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f811f4da0411b39ce9c12497dcbe581f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   moveSpeed: 4
   gameOver: {fileID: 1954678355}
 --- !u!20 &519420031
@@ -5909,8 +5909,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2e979ddbadaacdb498e040d76a100d1f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   Laser: {fileID: 569893464}
   moveSpeed: 4
 --- !u!4 &569893466
@@ -6139,8 +6139,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 90539df1cd5704abcb25fec9f3f5f84b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   m_Spline:
     m_IsOpenEnded: 1
     m_ControlPoints:
@@ -6291,8 +6291,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bc62b219efa947ea93e8d7bc1af99054, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   dust: {fileID: 1656165782}
   frames:
   - {fileID: 2690980070237103029, guid: 2f68ef89f43f0c8478d0fcdc0d6e042b, type: 3}
@@ -6385,8 +6385,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9a02dc1b34bc8e4cb980595531244091, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
 --- !u!50 &771358285
 Rigidbody2D:
   serializedVersion: 4
@@ -6418,8 +6418,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 69a5d2f7587bea34787b6094d05ffb6e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   thePlayer: {fileID: 771358284}
   jumpForce: 18
   moveSpeed: 4
@@ -6440,8 +6440,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8b1121a7da202ee48b13a646811b4e30, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   jumpSound: {fileID: 8300000, guid: ee4a4945e9ddd104e9b2904e1fa18743, type: 3}
   landSound: {fileID: 8300000, guid: 254e397d7bb8800479a156af569db6a9, type: 3}
 --- !u!61 &771358288
@@ -6594,8 +6594,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 90539df1cd5704abcb25fec9f3f5f84b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   m_Spline:
     m_IsOpenEnded: 1
     m_ControlPoints:
@@ -6737,8 +6737,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 90539df1cd5704abcb25fec9f3f5f84b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   m_Spline:
     m_IsOpenEnded: 1
     m_ControlPoints:
@@ -6998,7 +6998,7 @@ Animator:
   m_UpdateMode: 2
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
-  m_WarningMessage: 
+  m_WarningMessage:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
@@ -7059,8 +7059,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 90539df1cd5704abcb25fec9f3f5f84b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   m_Spline:
     m_IsOpenEnded: 1
     m_ControlPoints:
@@ -7186,8 +7186,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 90539df1cd5704abcb25fec9f3f5f84b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   m_Spline:
     m_IsOpenEnded: 1
     m_ControlPoints:
@@ -7285,6 +7285,8 @@ GameObject:
   - component: {fileID: 1143731242}
   - component: {fileID: 1143731238}
   - component: {fileID: 1143731243}
+  - component: {fileID: 1143731245}
+  - component: {fileID: 1143731244}
   m_Layer: 0
   m_Name: Ennemy
   m_TagString: Ennemy
@@ -7302,8 +7304,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3b4f519fc75627f4e8f3d2222e8853a1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   firePoint: {fileID: 347164761}
   laserShotPrefab: {fileID: 3851714883057813547, guid: 201787f8ab231bf4bad17beb1ddcce66,
     type: 3}
@@ -7320,7 +7322,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 1.9029324, y: 2.0701108}
+  m_Offset: {x: 1.9234632, y: 2.0701108}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -7331,7 +7333,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.7908053, y: 3.423932}
+  m_Size: {x: 2.8318665, y: 3.423932}
   m_EdgeRadius: 0
 --- !u!212 &1143731240
 SpriteRenderer:
@@ -7392,7 +7394,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1143731237}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -24.309067, y: -2.5865104, z: -3.0158792}
+  m_LocalPosition: {x: -19.59, y: -3.79, z: 1}
   m_LocalScale: {x: 0.3604259, y: 0.35293883, z: 1}
   m_Children:
   - {fileID: 347164761}
@@ -7431,13 +7433,54 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 06eb47882d65a57459d750e811f0b20b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  target: {fileID: 0}
-  range: 15
-  colliders: []
+  m_Name:
+  m_EditorClassIdentifier:
   death: {fileID: 8912441665412594792, guid: 22455608f4bc01242869d05f15c8277c, type: 3}
   Ennemy: {fileID: 1143731237}
+--- !u!61 &1143731244
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1143731237}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 31.858826, y: -14.112698}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 3.2999997, y: 3.7820766}
+    newSize: {x: 2.7599998, y: 3.7820766}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 140.05548, y: 37.31566}
+  m_EdgeRadius: 0
+--- !u!114 &1143731245
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1143731237}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84fd45e5335cb4648b9bf2afb98afa1a, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  frames:
+  - {fileID: -9153832012875130086, guid: f146e2c68b5d1d14caf1635ea25b928a, type: 3}
+  - {fileID: 7215344975042491372, guid: f146e2c68b5d1d14caf1635ea25b928a, type: 3}
+  - {fileID: 1457948587468070788, guid: f146e2c68b5d1d14caf1635ea25b928a, type: 3}
+  - {fileID: 4308529338956304196, guid: f146e2c68b5d1d14caf1635ea25b928a, type: 3}
+  - {fileID: -7525808813816991585, guid: f146e2c68b5d1d14caf1635ea25b928a, type: 3}
 --- !u!1 &1186185115
 GameObject:
   m_ObjectHideFlags: 0
@@ -7523,8 +7566,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dbb65c53e09aeb443a81ae1af65df282, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   moveSpeed: 4
 --- !u!212 &1188880748
 SpriteRenderer:
@@ -7637,8 +7680,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 06eb47882d65a57459d750e811f0b20b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   target: {fileID: 0}
   range: 15
   colliders: []
@@ -7654,8 +7697,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3b4f519fc75627f4e8f3d2222e8853a1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   firePoint: {fileID: 311162862}
   laserShotPrefab: {fileID: 3851714883057813547, guid: 201787f8ab231bf4bad17beb1ddcce66,
     type: 3}
@@ -7785,8 +7828,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b96a0d33723c2724996ddec65785f748, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   countDown: {fileID: 1061646265}
   someSound: {fileID: 1264533862}
 --- !u!4 &1264533861
@@ -7927,8 +7970,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0bd605bfa237b1941ae4f5f0826f90b1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   frames:
   - {fileID: -4028431108431611175, guid: 9bc26d93784a4914a9a292a87a94c2fc, type: 3}
   - {fileID: -4440324662404955762, guid: 9bc26d93784a4914a9a292a87a94c2fc, type: 3}
@@ -8180,8 +8223,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ad4ab7e84a962a54e99a44cd4ab34dd5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   _grounded: 0
   Laser: {fileID: 569893464}
   Camera: {fileID: 519420028}
@@ -8303,8 +8346,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 06eb47882d65a57459d750e811f0b20b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   target: {fileID: 0}
   range: 15
   colliders: []
@@ -8320,8 +8363,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3b4f519fc75627f4e8f3d2222e8853a1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   firePoint: {fileID: 1464501691}
   laserShotPrefab: {fileID: 3851714883057813547, guid: 201787f8ab231bf4bad17beb1ddcce66,
     type: 3}
@@ -8498,8 +8541,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 90539df1cd5704abcb25fec9f3f5f84b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   m_Spline:
     m_IsOpenEnded: 1
     m_ControlPoints:
@@ -13503,8 +13546,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 90539df1cd5704abcb25fec9f3f5f84b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   m_Spline:
     m_IsOpenEnded: 1
     m_ControlPoints:
@@ -13751,8 +13794,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d0c514d28e0e55948a26245c584b06de, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   Player: {fileID: 771358279}
 --- !u!1 &1693375791
 GameObject:
@@ -13839,8 +13882,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 90539df1cd5704abcb25fec9f3f5f84b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   m_Spline:
     m_IsOpenEnded: 1
     m_ControlPoints:
@@ -14021,8 +14064,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 90539df1cd5704abcb25fec9f3f5f84b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   m_Spline:
     m_IsOpenEnded: 1
     m_ControlPoints:
@@ -14344,8 +14387,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 619e8b458f98a464fabd7fb639f60ed1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   frames:
   - {fileID: 7094887773775264657, guid: a0e9261260b663043a24c2ee27ea226c, type: 3}
   - {fileID: -4530216657470773902, guid: a0e9261260b663043a24c2ee27ea226c, type: 3}

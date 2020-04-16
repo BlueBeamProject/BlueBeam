@@ -7,24 +7,38 @@ public class Weapon : MonoBehaviour
     public Transform firePoint;
     public GameObject laserShotPrefab;
     private int fois = 0;
+    private bool canShoot;
+    private EnnemyAnimations _myAnimations;
+    private Sprite[] frames;
 
-    
 
+    void Start()
+    {
+        canShoot = false;
+        _myAnimations = GetComponent<EnnemyAnimations>();
+    }
     // Update is called once per frame
     void Update()
     {
-        float time = Time.time;
-        if (time>1.5*(fois + 1))
+        if (canShoot)
         {
-            Shoot();
-            fois++;
+            StartShoot();
         }
-        
-       
     }
-    void Shoot()
+
+    public void CanShoot()
+    {
+        canShoot = true;
+    }
+
+    public void CantShoot()
+    {
+        canShoot = false;
+    }
+    public void StartShoot()
     {
         Instantiate(laserShotPrefab, firePoint.position, firePoint.rotation);
 
     }
+
 }
