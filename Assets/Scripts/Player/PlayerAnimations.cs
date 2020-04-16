@@ -16,7 +16,7 @@ public class PlayerAnimations : MonoBehaviour
     private int _countFrame;
     private int _countSlideFrame;
     public int animationSpeed;
-    
+
 
     void Start()
     {

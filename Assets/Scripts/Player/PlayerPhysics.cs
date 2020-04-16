@@ -13,6 +13,7 @@ public class PlayerPhysics : MonoBehaviour
     public GameObject death;
     public BoxCollider2D[] colliders;
     public GameObject follow;
+    public GameObject attack;
 
     private Rigidbody2D _myBody;
     private Transform _transform;
@@ -37,6 +38,7 @@ public class PlayerPhysics : MonoBehaviour
         _startTime = 0;
         _dead = false;
         baseMoveSpeed = moveSpeed;
+        attack.SetActive(false);
     }
 
     // Update is called once per frame
@@ -98,7 +100,7 @@ public class PlayerPhysics : MonoBehaviour
 
         if (collision.gameObject.CompareTag("Obstacle"))
         {
-            Die();
+            //Die();
         }
     }
 
@@ -125,5 +127,16 @@ public class PlayerPhysics : MonoBehaviour
     {
         yield return new WaitForSeconds(3);
         SceneManager.LoadScene("Level1");
+    }
+
+    public void Attack()
+    {
+        attack.SetActive(true);
+    }
+
+    IEnumerator wait2()
+    {
+        yield return new WaitForSeconds(3);
+        attack.SetActive(false);
     }
 }

@@ -6,6 +6,9 @@ public class EnnemyComportment : MonoBehaviour
 {
     public Transform target;
     public float range = 15f;
+    public BoxCollider2D[] colliders;
+    public GameObject death;
+    public GameObject Ennemy;
 
     private EnnemyAnimations _myAnimations;
     private float _distanceToTarget;
@@ -23,5 +26,20 @@ public class EnnemyComportment : MonoBehaviour
         
         if (_distanceToTarget < range)
             _myAnimations.Shoot();
+    }
+
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+
+        if (collision.gameObject.CompareTag("Attack"))
+        {
+            Die();
+        }
+    }
+
+    public void Die()
+    {
+        Destroy(Ennemy);
+        Instantiate(death, transform.position, Quaternion.identity);
     }
 }
