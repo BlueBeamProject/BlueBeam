@@ -25,8 +25,9 @@ public class PlayerPhysics : MonoBehaviour
     private float _startTime;
     private bool _dead;
     private float baseMoveSpeed;
-    private bool shild;
-    private ShildAnimation sA;
+    private bool shield;
+    private ShieldAnimation sA;
+    private bool shieldTimer;
 
     // Start is called before the first frame update
     void Start()
@@ -41,8 +42,9 @@ public class PlayerPhysics : MonoBehaviour
         _dead = false;
         baseMoveSpeed = moveSpeed;
         attack.SetActive(false);
-        shild = false;
-        sA = GetComponent<ShildAnimation>();
+        shield = false;
+        sA = GetComponent<ShieldAnimation>();
+        shieldTimer = true;
     }
 
     // Update is called once per frame
@@ -102,7 +104,7 @@ public class PlayerPhysics : MonoBehaviour
             _soundManager.Land();
         }
 
-        if ((collision.gameObject.CompareTag("Obstacle") && !shild) || collision.gameObject.CompareTag("Laser"))
+        if ((collision.gameObject.CompareTag("Obstacle") && !shield) || collision.gameObject.CompareTag("Laser"))
         {
             Die();
         }
@@ -145,16 +147,22 @@ public class PlayerPhysics : MonoBehaviour
         attack.SetActive(false);
     }
 
-    public void Shild()
+    public void Shield()
     {
-        shild = true;
-        sA.ShildAn();
-        StartCoroutine("shildTime");
+        if (shieldTimer)
+        {
+            shield = true;
+            shieldTimer = false;
+            ShieldAnimation.ShildAn();
+            StartCoroutine("shildTime");
+        }
     }
 
     IEnumerator shildTime()
     {
         yield return new WaitForSeconds(1.5f);
-        shild = false;
+        shield = false;
+        yield return new WaitForSeconds(2.5f);
+        shieldTimer = true;
     }
 }
