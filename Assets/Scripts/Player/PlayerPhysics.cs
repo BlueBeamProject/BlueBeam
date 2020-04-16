@@ -136,6 +136,7 @@ public class PlayerPhysics : MonoBehaviour
 
     public void Attack()
     {
+        _myAnimations.Attack();
         attack.SetActive(true);
         StartCoroutine("attackTime");
     }
@@ -144,6 +145,7 @@ public class PlayerPhysics : MonoBehaviour
     {
         yield return new WaitForSeconds(0.3f);
         attack.SetActive(false);
+        _myAnimations.Run();
     }
 
     public void Shield()

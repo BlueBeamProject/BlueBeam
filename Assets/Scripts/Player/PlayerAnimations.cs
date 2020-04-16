@@ -8,13 +8,16 @@ public class PlayerAnimations : MonoBehaviour
     public ParticleSystem dust;
     public Sprite[] frames;
     public Sprite[] slideFrames;
+    public Sprite[] attackFrames;
     private bool _run;
     private bool _idle;
     private bool _jump;
     private bool _slide;
+    private bool _attack;
     private bool _die;
     private int _countFrame;
     private int _countSlideFrame;
+    private int _countAttackFrame;
     public int animationSpeed;
 
 
@@ -29,7 +32,6 @@ public class PlayerAnimations : MonoBehaviour
     {
         if (!_die)
         {
-
             if (_run)
             {
                 _mySpriteRenderer.sprite = frames[_countFrame / animationSpeed];
@@ -51,6 +53,13 @@ public class PlayerAnimations : MonoBehaviour
                 if (_countSlideFrame < 2)
                     _countSlideFrame++;
             }
+
+            if (_attack)
+            {
+                _mySpriteRenderer.sprite = attackFrames[_countAttackFrame/2];
+                if (_countAttackFrame < 4)
+                    _countAttackFrame++;
+            }
         }
     }
 
@@ -60,6 +69,7 @@ public class PlayerAnimations : MonoBehaviour
         _idle = false;
         _jump = false;
         _slide = false;
+        _attack = false;
     }
 
     public void Jump()
@@ -68,6 +78,7 @@ public class PlayerAnimations : MonoBehaviour
         _idle = false;
         _jump = true;
         _slide = false;
+        _attack = false;
     }
 
     public void Idle()
@@ -76,6 +87,7 @@ public class PlayerAnimations : MonoBehaviour
         _idle = true;
         _jump = false;
         _slide = false;
+        _attack = false;
     }
 
     public void Slide()
@@ -84,7 +96,18 @@ public class PlayerAnimations : MonoBehaviour
         _idle = false;
         _jump = false;
         _slide = true;
+        _attack = false;
         _countSlideFrame = 0;
+    }
+    
+    public void Attack()
+    {
+        _run = false;
+        _idle = false;
+        _jump = false;
+        _slide = false;
+        _attack = true;
+        _countAttackFrame = 0;
     }
 
     public void Die()
