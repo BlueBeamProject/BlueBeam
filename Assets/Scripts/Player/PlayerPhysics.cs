@@ -124,6 +124,7 @@ public class PlayerPhysics : MonoBehaviour
         _dead = true;
         Instantiate(death, transform.position, Quaternion.identity);
         CameraController.Death();
+        QuadController.Death();
         PreLaserScript.Death();
         _myAnimations.Die();
         StartCoroutine("wait");
@@ -154,11 +155,11 @@ public class PlayerPhysics : MonoBehaviour
             shield = true;
             shieldTimer = false;
             ShieldAnimation.ShildAn();
-            StartCoroutine("shildTime");
+            StartCoroutine("shieldTime");
         }
     }
 
-    IEnumerator shildTime()
+    IEnumerator shieldTime()
     {
         yield return new WaitForSeconds(1.5f);
         shield = false;
