@@ -24,12 +24,12 @@ public class CameraController : MonoBehaviour
         if (!death)
         {
             _transform.position += _movement * Time.deltaTime * moveSpeed;
-            //gameOver.SetActive(false);
+            gameOver.SetActive(false);
         }
         else
         {
             _transform.position += _movement * Time.deltaTime * (moveSpeed / 10 * (-1));
-            //gameOver.SetActive(true);
+            gameOver.SetActive(true);
         }
     }
 

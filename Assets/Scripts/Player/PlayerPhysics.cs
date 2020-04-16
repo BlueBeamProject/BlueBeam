@@ -104,7 +104,7 @@ public class PlayerPhysics : MonoBehaviour
             _soundManager.Land();
         }
 
-        if ((collision.gameObject.CompareTag("Obstacle") && !shield) || collision.gameObject.CompareTag("Laser") || collision.gameObject.CompareTag("Ennemy"))
+        if ((collision.gameObject.CompareTag("Obstacle") && !shield) || collision.gameObject.CompareTag("Laser") || (collision.gameObject.CompareTag("Ennemy") && !shield))
         {
             Die();
         }
