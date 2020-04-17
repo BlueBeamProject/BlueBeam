@@ -10,9 +10,12 @@ public class PlayerPhysics : MonoBehaviour
     public float jumpForce;
     public float moveSpeed;
     public float slideTime;
+    public bool shield;
     public GameObject death;
+    public GameObject dash;
     public BoxCollider2D[] colliders;
     public GameObject follow;
+    public GameObject prellow;
     public GameObject attack;
 
     private Rigidbody2D _myBody;
@@ -25,9 +28,7 @@ public class PlayerPhysics : MonoBehaviour
     private float _startTime;
     private bool _dead;
     private float baseMoveSpeed;
-    private bool shield;
     private ShieldAnimation sA;
-    private bool shieldTimer;
 
     // Start is called before the first frame update
     void Start()
@@ -42,9 +43,9 @@ public class PlayerPhysics : MonoBehaviour
         _dead = false;
         baseMoveSpeed = moveSpeed;
         attack.SetActive(false);
-        shield = false;
         sA = GetComponent<ShieldAnimation>();
-        shieldTimer = true;
+        if (shield)
+            ShieldAnimation.ShildAn();
     }
 
     // Update is called once per frame
@@ -53,9 +54,12 @@ public class PlayerPhysics : MonoBehaviour
         if (!_dead)
         {
             if (follow.transform.position.x > transform.position.x)
-                moveSpeed = baseMoveSpeed + 1;
+                moveSpeed = baseMoveSpeed + 0.2f;
             else
-                moveSpeed = baseMoveSpeed;
+                if (prellow.transform.position.x < transform.position.x)
+                    moveSpeed = baseMoveSpeed - 0.5f;
+                else
+                    moveSpeed = baseMoveSpeed + 0.2f;
             _transform.position += _movement * Time.deltaTime * moveSpeed;
             if (_isSliding)
             {
@@ -108,6 +112,10 @@ public class PlayerPhysics : MonoBehaviour
         {
             Die();
         }
+        else if (collision.gameObject.CompareTag("Obstacle") || collision.gameObject.CompareTag("Ennemy"))
+        {
+            ShieldAnimation.StopShildAn();
+        }
     }
 
     void OnCollisionExit2D(Collision2D collision)
@@ -148,22 +156,21 @@ public class PlayerPhysics : MonoBehaviour
         _myAnimations.Run();
     }
 
-    public void Shield()
+    public void Shild()
     {
-        if (shieldTimer)
-        {
-            shield = true;
-            shieldTimer = false;
-            ShieldAnimation.ShildAn();
-            StartCoroutine("shieldTime");
-        }
+        StartCoroutine("stopshield");
     }
 
-    IEnumerator shieldTime()
+    IEnumerator stopshield()
     {
-        yield return new WaitForSeconds(1.5f);
+        yield return new WaitForSeconds(1);
         shield = false;
-        yield return new WaitForSeconds(2.5f);
-        shieldTimer = true;
+    }
+
+    public void Dash()
+    {
+        Instantiate(dash, transform.position, Quaternion.identity);
+        transform.position += new Vector3(3, 0, 0);
+        Instantiate(dash, transform.position, Quaternion.identity);
     }
 }

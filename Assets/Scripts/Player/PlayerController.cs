@@ -23,7 +23,7 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.D))
             _myPhysics.Attack();
 
-        if (Input.GetKeyDown(KeyCode.G))
-            _myPhysics.Shield();
+        if (Input.GetKeyDown(KeyCode.F))
+            _myPhysics.Dash();
     }
 }

@@ -31,10 +31,8 @@ public class EnnemyComportment : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collider)
     {
-        Debug.Log("Check enter trigger");
         if (collider.gameObject.CompareTag("Player"))
         {
-            Debug.Log("Check player detection");
             _myAnimations.Shoot();
             
         }
@@ -43,10 +41,8 @@ public class EnnemyComportment : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collider)
     {
-        Debug.Log("Check exit trigger");
         if (collider.gameObject.CompareTag("Player"))
         {
-            Debug.Log("Check player exit detection");
             _myAnimations.StopShoot();
             _myWeapon.CantShoot();
         }
