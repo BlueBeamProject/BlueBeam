@@ -6,11 +6,9 @@ using UnityEngine.SceneManagement;
 
 public class PlayerPhysics : MonoBehaviour
 {
-    public PlayerController thePlayer;
     public float jumpForce;
     public float moveSpeed;
     public float slideTime;
-    public bool shield;
     public GameObject death;
     public GameObject dash;
     public BoxCollider2D[] colliders;
@@ -28,8 +26,10 @@ public class PlayerPhysics : MonoBehaviour
     private float _startTime;
     private bool _dead;
     private float baseMoveSpeed;
-    private ShieldAnimation sA;
-    private bool candash;
+    private ShieldAnimation _myShieldAnimation;
+    private bool _canDash;
+    private bool _shield;
+
 
     // Start is called before the first frame update
     void Start()
@@ -44,12 +44,12 @@ public class PlayerPhysics : MonoBehaviour
         _dead = false;
         baseMoveSpeed = moveSpeed;
         attack.SetActive(false);
-        sA = GetComponent<ShieldAnimation>();
-        candash = true;
-        if (shield)
-            ShieldAnimation.ShildAn();
+        _myShieldAnimation = GetComponentInChildren<ShieldAnimation>();
+        _canDash = true;
+        if (_shield)
+            _myShieldAnimation.ShieldAn();
         else
-            ShieldAnimation.StopShildAn();
+            _myShieldAnimation.StopShieldAn();
     }
 
     // Update is called once per frame
@@ -112,14 +112,14 @@ public class PlayerPhysics : MonoBehaviour
             _soundManager.Land();
         }
 
-        if ((collision.gameObject.CompareTag("Obstacle") && !shield) || collision.gameObject.CompareTag("Laser") || (collision.gameObject.CompareTag("Ennemy") && !shield))
+        if ((collision.gameObject.CompareTag("Obstacle") && !_shield) || collision.gameObject.CompareTag("Laser") || (collision.gameObject.CompareTag("Ennemy") && !_shield))
         {
             Die();
         }
         else if (collision.gameObject.CompareTag("Obstacle") || collision.gameObject.CompareTag("Ennemy"))
         {
-            ShieldAnimation.StopShildAn();
-            Shild();
+            _myShieldAnimation.StopShieldAn();
+            Shield();
         }
     }
 
@@ -159,10 +159,9 @@ public class PlayerPhysics : MonoBehaviour
     {
         yield return new WaitForSeconds(0.3f);
         attack.SetActive(false);
-        _myAnimations.Run();
     }
 
-    public void Shild()
+    public void Shield()
     {
         StartCoroutine("stopshield");
     }
@@ -170,24 +169,24 @@ public class PlayerPhysics : MonoBehaviour
     IEnumerator stopshield()
     {
         yield return new WaitForSeconds(1);
-        shield = false;
+        _shield = false;
     }
 
     public void Dash()
     {
-        if (candash)
+        if (_canDash)
         {
-            candash = false;
+            _canDash = false;
             Instantiate(dash, transform.position, Quaternion.identity);
             transform.position += new Vector3(3, 0, 0);
             Instantiate(dash, transform.position, Quaternion.identity);
-            StartCoroutine("dashtimer");
+            StartCoroutine("DashTimer");
         }
     }
 
-    IEnumerator dashtimer()
+    IEnumerator DashTimer()
     {
         yield return new WaitForSeconds(2);
-        candash = true;
+        _canDash = true;
     }
 }

@@ -33,7 +33,7 @@ public class CameraShaker : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        camera = UnityEngine.Camera.main.transform;
+        camera = Camera.main.transform;
         startPosition = camera.localPosition;
         initialDuration = duration;
         if (shouldShake)

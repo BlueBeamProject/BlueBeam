@@ -5,8 +5,6 @@ using UnityEngine;
 public class Boom : MonoBehaviour
 {
     public GameObject Player;
-
-    private float devant;
     // Start is called before the first frame update
     void Start()
     {

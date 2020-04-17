@@ -8,7 +8,6 @@ public class ShieldAnimation : MonoBehaviour
     public GameObject shield;
     private SpriteRenderer _mySpriteRenderer;
     private static bool stp;
-    public GameObject player;
     public float animspeed;
     public static bool useless;
 
@@ -20,30 +19,26 @@ public class ShieldAnimation : MonoBehaviour
     void Update()
     {
         if (useless)
-        {
             shield.SetActive(false);
 
-        }
-
-        transform.position = new Vector3(player.transform.position.x, player.transform.position.y, player.transform.position.z-0.01f);
         if (stp)
         {
             shield.SetActive(true);
-            StartCoroutine(shildAnimation());
+            StartCoroutine(ShieldAnim());
         }
     }
 
-    public static void ShildAn()
+    public void ShieldAn()
     {
         stp = true;
     }
 
-    public static void StopShildAn()
+    public void StopShieldAn()
     {
         useless = true;
     }
 
-    IEnumerator shildAnimation()
+    IEnumerator ShieldAnim()
     {
         stp = false;
         _mySpriteRenderer.sprite = frames[0];
