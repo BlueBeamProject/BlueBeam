@@ -10,19 +10,27 @@ public class ShieldAnimation : MonoBehaviour
     private static bool stp;
     public GameObject player;
     public float animspeed;
+    public static bool useless;
 
     void Start()
     {
+        useless = false;
         _mySpriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     void Update()
     {
-        transform.position = player.transform.position;
+        transform.position = new Vector3(player.transform.position.x, player.transform.position.y, player.transform.position.z-0.01f);
         if (stp)
         {
             shield.SetActive(true);
             StartCoroutine(shildAnimation());
+        }
+        if (useless)
+        {
+            stp = false;
+            shield.SetActive(false);
+
         }
     }
 
@@ -33,11 +41,12 @@ public class ShieldAnimation : MonoBehaviour
 
     public static void StopShildAn()
     {
-        stp = false;
+        useless = true;
     }
 
     IEnumerator shildAnimation()
     {
+        stp = false;
         _mySpriteRenderer.sprite = frames[0];
         yield return new WaitForSeconds(animspeed);
         _mySpriteRenderer.sprite = frames[1];
@@ -52,5 +61,6 @@ public class ShieldAnimation : MonoBehaviour
         yield return new WaitForSeconds(animspeed);
         _mySpriteRenderer.sprite = frames[6];
         yield return new WaitForSeconds(animspeed);
+        stp = true;
     }
 }

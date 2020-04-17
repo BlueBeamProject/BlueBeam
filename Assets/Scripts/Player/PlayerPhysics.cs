@@ -115,6 +115,7 @@ public class PlayerPhysics : MonoBehaviour
         else if (collision.gameObject.CompareTag("Obstacle") || collision.gameObject.CompareTag("Ennemy"))
         {
             ShieldAnimation.StopShildAn();
+            Shild();
         }
     }
 

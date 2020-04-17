@@ -37,8 +37,6 @@ public class EnnemyAnimations : MonoBehaviour
 
     public void StopShoot()
     {
-        Debug.Log("Stop ennemi animation");
-        
         StopCoroutine(coroutineShoot);
     }
 
