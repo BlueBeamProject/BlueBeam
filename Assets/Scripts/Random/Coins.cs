@@ -7,11 +7,10 @@ public class Coins : MonoBehaviour
     public GameObject coins;
     public GameObject coinsboom;
 
-    private int money;
     // Start is called before the first frame update
     void Start()
     {
-        money = 0;
+
     }
 
     // Update is called once per frame
@@ -25,7 +24,7 @@ public class Coins : MonoBehaviour
 
         if (collision.gameObject.CompareTag("Player"))
         {
-            money += 1;
+            Money.Add();
             Destroy(coins);
             Instantiate(coinsboom, transform.position, Quaternion.identity);
         }
