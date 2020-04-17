@@ -14,23 +14,22 @@ public class ShieldAnimation : MonoBehaviour
 
     void Start()
     {
-        useless = false;
         _mySpriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     void Update()
     {
+        if (useless)
+        {
+            shield.SetActive(false);
+
+        }
+
         transform.position = new Vector3(player.transform.position.x, player.transform.position.y, player.transform.position.z-0.01f);
         if (stp)
         {
             shield.SetActive(true);
             StartCoroutine(shildAnimation());
-        }
-        if (useless)
-        {
-            stp = false;
-            shield.SetActive(false);
-
         }
     }
 

@@ -29,6 +29,7 @@ public class PlayerPhysics : MonoBehaviour
     private bool _dead;
     private float baseMoveSpeed;
     private ShieldAnimation sA;
+    private bool candash;
 
     // Start is called before the first frame update
     void Start()
@@ -44,8 +45,11 @@ public class PlayerPhysics : MonoBehaviour
         baseMoveSpeed = moveSpeed;
         attack.SetActive(false);
         sA = GetComponent<ShieldAnimation>();
+        candash = true;
         if (shield)
             ShieldAnimation.ShildAn();
+        else
+            ShieldAnimation.StopShildAn();
     }
 
     // Update is called once per frame
@@ -110,7 +114,7 @@ public class PlayerPhysics : MonoBehaviour
 
         if ((collision.gameObject.CompareTag("Obstacle") && !shield) || collision.gameObject.CompareTag("Laser") || (collision.gameObject.CompareTag("Ennemy") && !shield))
         {
-            //Die();
+            Die();
         }
         else if (collision.gameObject.CompareTag("Obstacle") || collision.gameObject.CompareTag("Ennemy"))
         {
@@ -171,8 +175,19 @@ public class PlayerPhysics : MonoBehaviour
 
     public void Dash()
     {
-        Instantiate(dash, transform.position, Quaternion.identity);
-        transform.position += new Vector3(3, 0, 0);
-        Instantiate(dash, transform.position, Quaternion.identity);
+        if (candash)
+        {
+            candash = false;
+            Instantiate(dash, transform.position, Quaternion.identity);
+            transform.position += new Vector3(3, 0, 0);
+            Instantiate(dash, transform.position, Quaternion.identity);
+            StartCoroutine("dashtimer");
+        }
+    }
+
+    IEnumerator dashtimer()
+    {
+        yield return new WaitForSeconds(2);
+        candash = true;
     }
 }
