@@ -15,6 +15,7 @@ public class PlayerPhysics : MonoBehaviour
     public GameObject follow;
     public GameObject prellow;
     public GameObject attack;
+    public bool shield;
 
     private Rigidbody2D _myBody;
     private Transform _transform;
@@ -28,7 +29,6 @@ public class PlayerPhysics : MonoBehaviour
     private float baseMoveSpeed;
     private ShieldAnimation _myShieldAnimation;
     private bool _canDash;
-    private bool _shield;
 
 
     // Start is called before the first frame update
@@ -46,7 +46,7 @@ public class PlayerPhysics : MonoBehaviour
         attack.SetActive(false);
         _myShieldAnimation = GetComponentInChildren<ShieldAnimation>();
         _canDash = true;
-        if (_shield)
+        if (shield)
             _myShieldAnimation.ShieldAn();
         else
             _myShieldAnimation.StopShieldAn();
@@ -112,7 +112,7 @@ public class PlayerPhysics : MonoBehaviour
             _soundManager.Land();
         }
 
-        if ((collision.gameObject.CompareTag("Obstacle") && !_shield) || collision.gameObject.CompareTag("Laser") || (collision.gameObject.CompareTag("Ennemy") && !_shield))
+        if ((collision.gameObject.CompareTag("Obstacle") && !shield) || collision.gameObject.CompareTag("Laser") || (collision.gameObject.CompareTag("Ennemy") && !shield))
         {
             Die();
         }
@@ -169,7 +169,7 @@ public class PlayerPhysics : MonoBehaviour
     IEnumerator stopshield()
     {
         yield return new WaitForSeconds(1);
-        _shield = false;
+        shield = false;
     }
 
     public void Dash()
