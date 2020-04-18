@@ -10,6 +10,7 @@ TagManager:
   - Obstacle
   - Attack
   - Laser
+  - CoinsUI
   layers:
   - Default
   - TransparentFX
