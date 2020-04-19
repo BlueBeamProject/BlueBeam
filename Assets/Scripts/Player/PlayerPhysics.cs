@@ -97,8 +97,8 @@ public class PlayerPhysics : MonoBehaviour
         if (_grounded && !_isSliding && !_dead)
         {
             _isSliding = true;
-            colliders[0].enabled = false;
             colliders[1].enabled = true;
+            colliders[0].enabled = false;
             _startTime = Time.time;
             _myAnimations.Slide();
         }
