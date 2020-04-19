@@ -8,18 +8,16 @@ public class EnnemyAnimations : MonoBehaviour
     private Weapon _myWeapon;
 
     public Sprite[] frames;
-    private int _countFrame;
     private bool _shoots = false;
     private IEnumerator coroutineShoot;
     public float animspeed;
-    
+
 
 
     void Start()
     {
         _mySpriteRenderer = GetComponent<SpriteRenderer>();
         _myWeapon = GetComponent<Weapon>();
-        _countFrame = 0;
         coroutineShoot = ShootAnimation();
     }
 
