@@ -103,7 +103,7 @@ public class PlayerAnimations : MonoBehaviour
         _attack = false;
         _countSlideFrame = 0;
     }
-    
+
     public void Attack()
     {
         _run = false;
