@@ -10,7 +10,8 @@ public class EnnemyAnimations : MonoBehaviour
     public Sprite[] frames;
     private int _countFrame;
     private bool _shoots = false;
-    private IEnumerator coroutineShoot; 
+    private IEnumerator coroutineShoot;
+    public float animspeed;
     
 
 
@@ -26,7 +27,7 @@ public class EnnemyAnimations : MonoBehaviour
     {
         if (_shoots)
         {
-            StartCoroutine(coroutineShoot);
+            StartCoroutine(ShootAnimation());
         }
     }
 
@@ -43,25 +44,16 @@ public class EnnemyAnimations : MonoBehaviour
 
     private IEnumerator ShootAnimation()
     {
+        Debug.Log("yes");
         _shoots = false;
 
-        while (_countFrame < frames.Length)
+        for (int i = 0; i < frames.Length; i++)
         {
-            
-            _mySpriteRenderer.sprite = frames[_countFrame];
-            _countFrame++;
-            if (_countFrame == 5)
-            {
-                _myWeapon.StartShoot();
-            }
-            
-            if (_countFrame >= frames.Length)
-            {
-                _countFrame = 0;
-            }
-            yield return new WaitForSeconds(0.05f);
+            _mySpriteRenderer.sprite = frames[i];
+            yield return new WaitForSeconds(animspeed);
         }
-        _shoots = true;
+        _myWeapon.StartShoot();
 
+        _shoots = true;
     }
 }
