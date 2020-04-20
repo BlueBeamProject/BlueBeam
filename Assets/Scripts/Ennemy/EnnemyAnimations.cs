@@ -42,7 +42,6 @@ public class EnnemyAnimations : MonoBehaviour
 
     private IEnumerator ShootAnimation()
     {
-        Debug.Log("yes");
         _shoots = false;
 
         for (int i = 0; i < frames.Length; i++)

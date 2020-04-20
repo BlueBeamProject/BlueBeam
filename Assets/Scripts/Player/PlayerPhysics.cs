@@ -29,6 +29,7 @@ public class PlayerPhysics : MonoBehaviour
     private float baseMoveSpeed;
     private ShieldAnimation _myShieldAnimation;
     private bool _canDash;
+    private static bool dashOnWall;
 
 
     // Start is called before the first frame update
@@ -174,7 +175,7 @@ public class PlayerPhysics : MonoBehaviour
 
     public void Dash()
     {
-        if (_canDash)
+        if (_canDash && !dashOnWall)
         {
             _canDash = false;
             Instantiate(dash, transform.position, Quaternion.identity);
@@ -188,5 +189,13 @@ public class PlayerPhysics : MonoBehaviour
     {
         yield return new WaitForSeconds(2);
         _canDash = true;
+    }
+
+    public static void DashWall(bool yes)
+    {
+        if (yes)
+            dashOnWall = true;
+        else
+            dashOnWall = false;
     }
 }

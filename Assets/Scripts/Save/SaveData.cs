@@ -40,8 +40,6 @@ public class SaveData : MonoBehaviour
         }
         else
         {
-
-            Debug.Log("[ReadValueInt]" + name + " n'existe pas dans le PlayerPrefs");
             return 0;
         }
     }
