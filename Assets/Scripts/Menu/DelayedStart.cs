@@ -26,7 +26,7 @@ public class DelayedStart : MonoBehaviour
             yield return 0;
         countDown.gameObject.SetActive(false);
         someSound.Play();
-        Time.timeScale = 1f;
+        Time.timeScale = 1;
 
     }
 }

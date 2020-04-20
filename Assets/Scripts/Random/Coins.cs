@@ -19,20 +19,20 @@ public class Coins : MonoBehaviour
         
     }
 
-    private void OnTriggerEnter2D(Collider2D collider)
+    void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collider.gameObject.CompareTag("Player"))
+
+        if (collision.gameObject.CompareTag("Player"))
         {
             Money.Add();
             Destroy(coins);
             Instantiate(coinsboom, transform.position, Quaternion.identity);
         }
 
-        if (collider.gameObject.CompareTag("Laser"))
+        if (collision.gameObject.CompareTag("Laser"))
         {
             Destroy(coins);
             Instantiate(coinsboom, transform.position, Quaternion.identity);
         }
-
     }
 }
