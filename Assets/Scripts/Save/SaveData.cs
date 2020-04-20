@@ -12,6 +12,10 @@ public class SaveData : MonoBehaviour
         //PlayerPrefs.SetInt("name", score);
         //dans le void start
         //puis exécuter le projet dans unity puis enlevé la ligne
+        if (!PlayerPrefs.HasKey("Money"))
+        {
+            PlayerPrefs.SetInt("Money", 0);
+        }
     }
 
     // Update is called once per frame
