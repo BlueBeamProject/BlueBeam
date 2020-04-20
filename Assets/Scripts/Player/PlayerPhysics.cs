@@ -98,7 +98,22 @@ public class PlayerPhysics : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Ground"))
         {
+<<<<<<< Updated upstream
             grounded = true;
+=======
+            _grounded = true;
+            _soundManager.Land();
+        }
+
+        if ((collision.gameObject.CompareTag("Obstacle") && !shield) || collision.gameObject.CompareTag("Laser") || (collision.gameObject.CompareTag("Ennemy") && !shield))
+        {
+            Die();
+        }
+        else if (collision.gameObject.CompareTag("Obstacle") || collision.gameObject.CompareTag("Ennemy"))
+        {
+            _myShieldAnimation.StopShieldAn();
+            Shield();
+>>>>>>> Stashed changes
         }
     }
 

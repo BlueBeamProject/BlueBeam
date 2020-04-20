@@ -5,16 +5,26 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     private PlayerPhysics _myPhysics;
+    private PauseMenu _myPause;
     // Start is called before the first frame update
     void Start()
     {
         _myPhysics = GetComponent<PlayerPhysics>();
+        _myPause = GetComponent<PauseMenu>();
     }
     
     // Update is called once per frame
     void Update()
     {
+<<<<<<< Updated upstream
         if (Input.GetKey(KeyCode.Space))
+=======
+        //if (Input.GetKeyDown(KeyCode.Escape))
+            //SceneManager.LoadScene("Menu");
+
+
+        if (Input.GetKeyDown(KeyCode.Space))
+>>>>>>> Stashed changes
             _myPhysics.Jump();
         else
             _myPhysics.StopJump();

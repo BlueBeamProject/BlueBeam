@@ -19,8 +19,28 @@ public class CameraController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+<<<<<<< Updated upstream
 		distanceToMove = thePlayer.transform.position.x - lastPlayerPosition.x;
 		transform.position = new Vector3(transform.position.x + distanceToMove, transform.position.y, transform.position.z);
         lastPlayerPosition = thePlayer.transform.position;
+=======
+        
+        if (!death)
+        {
+            _transform.position += _movement * Time.deltaTime * moveSpeed;
+            gameOver.SetActive(false);
+        }
+        
+        else
+        {
+            _transform.position += _movement * Time.deltaTime * (moveSpeed / 10 * (-1));
+            gameOver.SetActive(true);
+        }
+    }
+
+    public static void Death()
+    {
+        death = true;
+>>>>>>> Stashed changes
     }
 }
