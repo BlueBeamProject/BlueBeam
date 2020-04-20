@@ -31,8 +31,10 @@ public class EnnemyComportment : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collider)
     {
-        if (collider.gameObject.CompareTag("Player"))
+        int x = 0;
+        if (collider.gameObject.CompareTag("Player") && (x == 0))
         {
+            x++;
             _myAnimations.Shoot();
             
         }
