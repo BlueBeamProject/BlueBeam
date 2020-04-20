@@ -6,20 +6,17 @@ using UnityEngine.SceneManagement;
 public class PlayerController : MonoBehaviour
 {
     private PlayerPhysics _myPhysics;
-    private PauseMenu _myPause;
     // Start is called before the first frame update
     void Start()
     {
         _myPhysics = GetComponent<PlayerPhysics>();
-        _myPause = GetComponent<PauseMenu>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        //if (Input.GetKeyDown(KeyCode.Escape))
-            //SceneManager.LoadScene("Menu");
-
+        if (Input.GetKeyDown(KeyCode.Escape))
+            SceneManager.LoadScene("Menu");
 
         if (Input.GetKeyDown(KeyCode.Space))
             _myPhysics.Jump();
