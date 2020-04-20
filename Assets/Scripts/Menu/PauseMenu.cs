@@ -7,13 +7,12 @@ public class PauseMenu : MonoBehaviour
 {
     public static bool gameIsPaused = false;
     public GameObject pauseMenuUI;
-    public GameObject _startMusic;
+    private GameObject _startMusic;
     private DelayedStart _delayedStart;
 
     // Start is called before the first frame update
     void Start()
     {
-
         _delayedStart = _startMusic.GetComponent<DelayedStart>();
     }
 
