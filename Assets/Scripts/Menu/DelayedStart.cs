@@ -29,4 +29,8 @@ public class DelayedStart : MonoBehaviour
         Time.timeScale = 1f;
 
     }
+    public void PauseMusic()
+    {
+        someSound.Pause();
+    }
 }
