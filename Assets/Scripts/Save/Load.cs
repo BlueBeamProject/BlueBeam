@@ -1,0 +1,25 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class Load : MonoBehaviour
+{
+    // Start is called before the first frame update
+    void Start()
+    {
+        //Pour initialiser un nouvelle donné sauvergardé recopier les lignes en dessous
+        //et mettez une valeur par défaut si la "key" n'existe
+        
+        if (!PlayerPrefs.HasKey("Money"))
+        {
+            PlayerPrefs.SetInt("Money", 0);
+        }
+
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
+}
