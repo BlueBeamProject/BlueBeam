@@ -5,11 +5,7 @@ using UnityEngine;
 public class DelayedStart : MonoBehaviour
 {
     public GameObject countDown;
-<<<<<<< Updated upstream
-=======
     public AudioSource someSound;
-   
->>>>>>> Stashed changes
     // Start is called before the first frame update
     void Start()
     {
@@ -29,13 +25,8 @@ public class DelayedStart : MonoBehaviour
         while (!Input.anyKey)
             yield return 0;
         countDown.gameObject.SetActive(false);
-<<<<<<< Updated upstream
-        Time.timeScale = 1;
-=======
         someSound.Play();
         Time.timeScale = 1f;
-
->>>>>>> Stashed changes
     }
 
     public void PauseMusic()

@@ -23,14 +23,11 @@ public class SoundManager : MonoBehaviour
 
     public void Jump()
     {
-        audioSrc.clip = jumpSound;
-        audioSrc.Play();
+        audioSrc.PlayOneShot(jumpSound);
     }
 
     public void Land()
     {
-        audioSrc.clip = landSound;
-        audioSrc.Play();
+        audioSrc.PlayOneShot(landSound);
     }
-
 }

@@ -4,33 +4,29 @@ using UnityEngine;
 
 public class CameraController : MonoBehaviour
 {
-	public PlayerController thePlayer;
+    public float moveSpeed;
+    private Vector3 _movement;
+    private Transform _transform;
+    static bool death;
+    public GameObject gameOver;
 
-	private Vector3 lastPlayerPosition;
-	private float distanceToMove;
     // Start is called before the first frame update
     void Start()
     {
-		thePlayer = FindObjectOfType<PlayerController>();
-        lastPlayerPosition = thePlayer.transform.position;
-        
+        _movement = new Vector3(moveSpeed, 0, 0);
+        _transform = GetComponent<Transform>();
+        death = false;
     }
 
     // Update is called once per frame
     void Update()
     {
-<<<<<<< Updated upstream
-		distanceToMove = thePlayer.transform.position.x - lastPlayerPosition.x;
-		transform.position = new Vector3(transform.position.x + distanceToMove, transform.position.y, transform.position.z);
-        lastPlayerPosition = thePlayer.transform.position;
-=======
-        
         if (!death)
         {
             _transform.position += _movement * Time.deltaTime * moveSpeed;
             gameOver.SetActive(false);
         }
-        
+
         else
         {
             _transform.position += _movement * Time.deltaTime * (moveSpeed / 10 * (-1));
@@ -41,6 +37,5 @@ public class CameraController : MonoBehaviour
     public static void Death()
     {
         death = true;
->>>>>>> Stashed changes
     }
 }

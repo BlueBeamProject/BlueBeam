@@ -6,7 +6,6 @@ public class Laser : MonoBehaviour
 {
 
     public float newPos;
-    private float scrollSpeed = -30f;
     public GameObject logo;
 
     private Vector2 startPos;
@@ -28,9 +27,9 @@ public class Laser : MonoBehaviour
                 logo.SetActive(true);
             }
         }
-        
+
         transform.position = startPos + Vector2.left * newPos;
-        
-        
+
+
     }
 }

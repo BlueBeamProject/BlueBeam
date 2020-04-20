@@ -5,34 +5,27 @@ using UnityEngine;
 public class EnnemyAnimations : MonoBehaviour
 {
     private SpriteRenderer _mySpriteRenderer;
-    private LaserShotAnimations _myLaser;
+    private Weapon _myWeapon;
+
     public Sprite[] frames;
-    private int _countFrame;
-    private bool _shoots;
-    public int animationSpeed;
+    private bool _shoots = false;
+    private IEnumerator coroutineShoot;
+    public float animspeed;
+
 
 
     void Start()
     {
         _mySpriteRenderer = GetComponent<SpriteRenderer>();
-        _myLaser = GetComponentInChildren<LaserShotAnimations>();
-        _shoots = false;
+        _myWeapon = GetComponent<Weapon>();
+        coroutineShoot = ShootAnimation();
     }
 
     void Update()
     {
         if (_shoots)
         {
-            _mySpriteRenderer.sprite = frames[_countFrame / animationSpeed];
-            _countFrame++;
-            _myLaser.Activate();
-        }
-        else
-            _mySpriteRenderer.sprite = frames[0];
-        if (_countFrame == animationSpeed * frames.Length)
-        {
-            _countFrame = 0;
-            _shoots = false;
+            StartCoroutine(ShootAnimation());
         }
     }
 
@@ -41,5 +34,23 @@ public class EnnemyAnimations : MonoBehaviour
         _shoots = true;
     }
 
-  
+    public void StopShoot()
+    {
+        StopCoroutine(coroutineShoot);
+    }
+
+
+    private IEnumerator ShootAnimation()
+    {
+        _shoots = false;
+
+        for (int i = 0; i < frames.Length; i++)
+        {
+            _mySpriteRenderer.sprite = frames[i];
+            yield return new WaitForSeconds(animspeed);
+        }
+        _myWeapon.StartShoot();
+
+        _shoots = true;
+    }
 }

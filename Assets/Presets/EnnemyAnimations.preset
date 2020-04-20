@@ -1,0 +1,56 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!181963792 &2655988077585873504
+Preset:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: EnnemyAnimations
+  m_TargetType:
+    m_NativeTypeID: 114
+    m_ManagedTypePPtr: {fileID: 11500000, guid: 84fd45e5335cb4648b9bf2afb98afa1a,
+      type: 3}
+    m_ManagedTypeFallback: 
+  m_Properties:
+  - target: {fileID: 0}
+    propertyPath: m_Enabled
+    value: 1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_EditorHideFlags
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_EditorClassIdentifier
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: frames.Array.size
+    value: 5
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: frames.Array.data[0]
+    value: 
+    objectReference: {fileID: -9153832012875130086, guid: f146e2c68b5d1d14caf1635ea25b928a,
+      type: 3}
+  - target: {fileID: 0}
+    propertyPath: frames.Array.data[1]
+    value: 
+    objectReference: {fileID: 7215344975042491372, guid: f146e2c68b5d1d14caf1635ea25b928a,
+      type: 3}
+  - target: {fileID: 0}
+    propertyPath: frames.Array.data[2]
+    value: 
+    objectReference: {fileID: 1457948587468070788, guid: f146e2c68b5d1d14caf1635ea25b928a,
+      type: 3}
+  - target: {fileID: 0}
+    propertyPath: frames.Array.data[3]
+    value: 
+    objectReference: {fileID: 4308529338956304196, guid: f146e2c68b5d1d14caf1635ea25b928a,
+      type: 3}
+  - target: {fileID: 0}
+    propertyPath: frames.Array.data[4]
+    value: 
+    objectReference: {fileID: -7525808813816991585, guid: f146e2c68b5d1d14caf1635ea25b928a,
+      type: 3}
