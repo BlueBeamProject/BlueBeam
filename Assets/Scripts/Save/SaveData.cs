@@ -35,13 +35,11 @@ public class SaveData : MonoBehaviour
         if (PlayerPrefs.HasKey(name))
         {
                 
-            Debug.Log("[ReadValueInt]" +name + " : " + PlayerPrefs.GetInt(name));
             return PlayerPrefs.GetInt(name);
         }
         else
         {
            
-            Debug.Log("[ReadValueInt]" + name + " n'existe pas dans le PlayerPrefs");
             return 0;
         }
     }

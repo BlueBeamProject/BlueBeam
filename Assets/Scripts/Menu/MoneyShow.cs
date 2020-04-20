@@ -29,6 +29,7 @@ public class MoneyShow : MonoBehaviour
 
         if (IsShopActive)
         {
+            Debug.Log("Shop Refresh");
             Shop.RefreshShop();
         }
         

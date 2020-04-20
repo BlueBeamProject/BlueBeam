@@ -50,6 +50,7 @@ public class Shop : MonoBehaviour
     {
         PriceShield = GameObject.FindWithTag("ShieldCost");
         PriceShield.GetComponent<Text>().text = "" + ShieldCost;
+        Inventaire.Refresh();
         
         if (SaveData.ReadValueInt("Money") < ShieldCost)
         {
