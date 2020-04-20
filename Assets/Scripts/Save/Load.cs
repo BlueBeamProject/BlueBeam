@@ -10,9 +10,16 @@ public class Load : MonoBehaviour
         //Pour initialiser un nouvelle donné sauvergardé recopier les lignes en dessous
         //et mettez une valeur par défaut si la "key" n'existe
         
+        //Monney Load
         if (!PlayerPrefs.HasKey("Money"))
         {
             PlayerPrefs.SetInt("Money", 0);
+        }
+        
+        //Inventaire Item
+        if (!PlayerPrefs.HasKey("Shield"))
+        {
+            PlayerPrefs.SetInt("Shield", 0);
         }
 
     }
