@@ -7,9 +7,11 @@ public class MoneyShow : MonoBehaviour
 {
     // Start is called before the first frame update
     private static GameObject UI;
+    public static bool IsShopActive;
     void Start()
     {
         refreshMoney();
+        IsShopActive = false;
 
     }
 
@@ -24,5 +26,11 @@ public class MoneyShow : MonoBehaviour
         UI = GameObject.FindGameObjectWithTag("CoinsUI");
         int coinUI = SaveData.ReadValueInt("Money");
         UI.GetComponent<Text>().text = "" + coinUI;
+
+        if (IsShopActive)
+        {
+            Shop.RefreshShop();
+        }
+        
     }
 }

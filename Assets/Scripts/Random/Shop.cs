@@ -1,13 +1,15 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Shop : MonoBehaviour
 {
+    private static GameObject PriceShield;
     // Start is called before the first frame update
     void Start()
     {
-        
+        RefreshShop();
     }
 
     // Update is called once per frame
@@ -16,7 +18,7 @@ public class Shop : MonoBehaviour
         
     }
 
-    public int ShieldCost = 15;
+    public static int ShieldCost = 15;
 
     public void BuyItem(string name)
     {
@@ -41,5 +43,21 @@ public class Shop : MonoBehaviour
         }
         
         MoneyShow.refreshMoney();
+        RefreshShop();
+    }
+
+    public static void RefreshShop()
+    {
+        PriceShield = GameObject.FindWithTag("ShieldCost");
+        PriceShield.GetComponent<Text>().text = "" + ShieldCost;
+        
+        if (SaveData.ReadValueInt("Money") < ShieldCost)
+        {
+            PriceShield.GetComponent<Text>().color = Color.red;
+        }
+        else
+        {
+            PriceShield.GetComponent<Text>().color = Color.black;
+        }
     }
 }
