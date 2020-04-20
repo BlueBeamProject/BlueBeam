@@ -39,5 +39,6 @@ public class Money : MonoBehaviour
     {
         die = true;
         SaveData.WriteValueInt("Money", money);
+        SaveData.Save();
     }
 }

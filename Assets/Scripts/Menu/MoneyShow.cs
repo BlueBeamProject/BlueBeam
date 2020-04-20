@@ -9,9 +9,7 @@ public class MoneyShow : MonoBehaviour
     private static GameObject UI;
     void Start()
     {
-        UI = GameObject.FindGameObjectWithTag("CoinsUI");
-        int coinUI = SaveData.ReadValueInt("Money");
-        UI.GetComponent<Text>().text = "Money : " + coinUI;
+        refreshMoney();
 
     }
 
@@ -25,6 +23,6 @@ public class MoneyShow : MonoBehaviour
     {
         UI = GameObject.FindGameObjectWithTag("CoinsUI");
         int coinUI = SaveData.ReadValueInt("Money");
-        UI.GetComponent<Text>().text = "Money : " + coinUI;
+        UI.GetComponent<Text>().text = "" + coinUI;
     }
 }

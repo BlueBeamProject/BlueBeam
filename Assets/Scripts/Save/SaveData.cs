@@ -45,4 +45,9 @@ public class SaveData : MonoBehaviour
             return 0;
         }
     }
+
+    public static void Save()
+    {
+        PlayerPrefs.Save();
+    }
 }

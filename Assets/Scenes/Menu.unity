@@ -9342,7 +9342,7 @@ GameObject:
   - component: {fileID: 924986003}
   m_Layer: 5
   m_Name: Money
-  m_TagString: Menu
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12165,7 +12165,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1391519681
 RectTransform:
   m_ObjectHideFlags: 0
@@ -15119,6 +15119,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1838608154}
   - component: {fileID: 1838608153}
+  - component: {fileID: 1838608157}
+  - component: {fileID: 1838608156}
   - component: {fileID: 1838608152}
   - component: {fileID: 1838608155}
   m_Layer: 0
@@ -15203,6 +15205,30 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f19c619766e9bf04581ae53926e226fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1838608156
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1838608151}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc6025a43407b1e4c96c2ace58a6f92a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1838608157
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1838608151}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2539d72f882a8f54c853ba88d284223f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1862175957
