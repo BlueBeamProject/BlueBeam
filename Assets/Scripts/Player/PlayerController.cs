@@ -15,8 +15,8 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
-            SceneManager.LoadScene("Menu");
+        //if (Input.GetKeyDown(KeyCode.Escape))
+            //SceneManager.LoadScene("Menu");
 
         if (Input.GetKeyDown(KeyCode.Space))
             _myPhysics.Jump();

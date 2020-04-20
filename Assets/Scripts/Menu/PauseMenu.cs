@@ -7,11 +7,11 @@ public class PauseMenu : MonoBehaviour
 {
     public static bool GameIsPaused = false;
     public GameObject pauseMenuUI;
-    public DelayedStart _myMusic;
+    //public DelayedStart _myMusic;
     // Start is called before the first frame update
     void Start()
     {
-        _myMusic = GetComponent<DelayedStart>();
+        //_myMusic = GetComponent<DelayedStart>();
     }
 
     // Update is called once per frame
@@ -41,11 +41,11 @@ public class PauseMenu : MonoBehaviour
     void Pause()
     {
         Debug.Log("Suis je en pose");
-        Debug.Log("TEst");
+        
         pauseMenuUI.SetActive(true);
         Time.timeScale = 0f;
         GameIsPaused = true;
-        _myMusic.PauseMusic();
+        //_myMusic.PauseMusic();
 
     }
 
