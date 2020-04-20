@@ -15,6 +15,12 @@ public class Load : MonoBehaviour
         {
             PlayerPrefs.SetInt("Money", 0);
         }
+        
+        //Inventaire Item
+        if (!PlayerPrefs.HasKey("Shield"))
+        {
+            PlayerPrefs.SetInt("Shield", 0);
+        }
 
     }
 

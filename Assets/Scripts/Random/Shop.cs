@@ -15,4 +15,31 @@ public class Shop : MonoBehaviour
     {
         
     }
+
+    public int ShieldCost = 15;
+
+    public void BuyItem(string name)
+    {
+        switch (name)
+        {
+            case "Shield":
+                if (SaveData.ReadValueInt("Money") >= ShieldCost)
+                {
+                    SaveData.WriteValueInt("Money", -ShieldCost);
+                    SaveData.WriteValueInt("Shield", 1);
+                    Inventaire.ShieldInv();
+                }
+                else
+                {
+                    Debug.Log("[BuyItem] Tu n'as pas assez d'argent");
+                }
+                break;
+            default:
+                Debug.Log("[BuyItem] L'item demandé n'est pas enregistré");
+                break;
+                
+        }
+        
+        MoneyShow.refreshMoney();
+    }
 }
