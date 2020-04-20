@@ -29,6 +29,9 @@ public class PlayerController : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.F))
             _myPhysics.Dash();
+        
+        if (Input.GetKeyDown(KeyCode.P))
+            _myPhysics.Die();
 
     }
 }
