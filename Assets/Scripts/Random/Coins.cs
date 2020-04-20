@@ -19,8 +19,9 @@ public class Coins : MonoBehaviour
         
     }
 
-    private void OnTriggerEnter2D(Collider2D collider)
+    void OnTriggerEnter2D(Collider2D collider)
     {
+
         if (collider.gameObject.CompareTag("Player"))
         {
             Money.Add();
@@ -33,6 +34,5 @@ public class Coins : MonoBehaviour
             Destroy(coins);
             Instantiate(coinsboom, transform.position, Quaternion.identity);
         }
-
     }
 }
