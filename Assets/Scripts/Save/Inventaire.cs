@@ -25,7 +25,6 @@ public class Inventaire : MonoBehaviour
 
     public static void ShieldInv()
     {
-        Debug.Log("[ShieldInv]");
         ShieldInvShow = GameObject.FindWithTag("ShieldInv");
         int nbShield = SaveData.ReadValueInt("Shield");
         ShieldInvShow.GetComponent<Text>().text = "" + nbShield;
