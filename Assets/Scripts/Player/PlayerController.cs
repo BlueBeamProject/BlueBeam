@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
@@ -10,13 +11,16 @@ public class PlayerController : MonoBehaviour
     {
         _myPhysics = GetComponent<PlayerPhysics>();
     }
-    
+
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.Escape))
+            SceneManager.LoadScene("Menu");
+
         if (Input.GetKeyDown(KeyCode.Space))
             _myPhysics.Jump();
-            
+
         if (Input.GetKeyDown(KeyCode.S))
             _myPhysics.Slide();
 
@@ -25,6 +29,6 @@ public class PlayerController : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.F))
             _myPhysics.Dash();
-        
+
     }
 }

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class LaserShot : MonoBehaviour
 {
-    public float speed = 20f;
+    public float speed;
     public Rigidbody2D rb;
 
 

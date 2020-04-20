@@ -4819,11 +4819,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 69a5d2f7587bea34787b6094d05ffb6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  thePlayer: {fileID: 3533500266212892548}
   jumpForce: 18
   moveSpeed: 4
   slideTime: 0.8
-  shield: 0
   death: {fileID: 6469463975585009405}
   dash: {fileID: 0}
   colliders:
@@ -4832,6 +4830,7 @@ MonoBehaviour:
   follow: {fileID: 0}
   prellow: {fileID: 0}
   attack: {fileID: 0}
+  shield: 0
 --- !u!212 &3533500266212892546
 SpriteRenderer:
   m_ObjectHideFlags: 0

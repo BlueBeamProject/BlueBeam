@@ -6,7 +6,6 @@ public class Weapon : MonoBehaviour
 {
     public Transform firePoint;
     public GameObject laserShotPrefab;
-    private int fois = 0;
     private bool canShoot;
     private EnnemyAnimations _myAnimations;
     private Sprite[] frames;
@@ -21,9 +20,7 @@ public class Weapon : MonoBehaviour
     void Update()
     {
         if (canShoot)
-        {
             StartShoot();
-        }
     }
 
     public void CanShoot()
@@ -38,7 +35,5 @@ public class Weapon : MonoBehaviour
     public void StartShoot()
     {
         Instantiate(laserShotPrefab, firePoint.position, firePoint.rotation);
-
     }
-
 }
