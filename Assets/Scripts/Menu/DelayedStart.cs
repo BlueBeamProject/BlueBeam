@@ -33,4 +33,9 @@ public class DelayedStart : MonoBehaviour
     {
         someSound.Pause();
     }
+
+    public void PlayMusic()
+    {
+        someSound.Play();
+    }
 }
