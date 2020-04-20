@@ -15,10 +15,12 @@ public class Checkpoint : MonoBehaviour
         _transformPlayer = player.GetComponent<Transform>();
         _transformCamera = camera.GetComponent<Transform>();
 
-        if (SaveData.ReadValueInt("checkpoint1") == 1)
+        if (!PlayerPrefs.HasKey("checkpoint1"))
+          PlayerPrefs.SetInt("checkpoint1", 0);
+        else if (PlayerPrefs.GetInt("checkpoint1") == 1)
         {
-        _transformPlayer.position += new Vector3(200, 0, 0);
-        _transformCamera.position += new Vector3(200, 0, 0);
+          _transformPlayer.position += new Vector3(200, 0, 0);
+          _transformCamera.position += new Vector3(200, 0, 0);
         }
     }
 
@@ -26,6 +28,6 @@ public class Checkpoint : MonoBehaviour
     void Update()
     {
         if (_transformPlayer.position.x > 200)
-          SaveData.WriteValueInt("checkpoint1", 1);
+          PlayerPrefs.SetInt("checkpoint1", 1);
     }
 }
