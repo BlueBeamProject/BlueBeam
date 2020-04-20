@@ -5,13 +5,16 @@ using UnityEngine.SceneManagement;
 
 public class PauseMenu : MonoBehaviour
 {
-    public static bool GameIsPaused = false;
+    public static bool gameIsPaused = false;
     public GameObject pauseMenuUI;
-    private DelayedStart _myMusic;
+    public GameObject _startMusic;
+    private DelayedStart _delayedStart;
+
     // Start is called before the first frame update
     void Start()
     {
 
+        _delayedStart = _startMusic.GetComponent<DelayedStart>();
     }
 
     // Update is called once per frame
@@ -19,7 +22,7 @@ public class PauseMenu : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            if (GameIsPaused)
+            if (gameIsPaused)
             {
                 Resume();
             }
@@ -32,33 +35,31 @@ public class PauseMenu : MonoBehaviour
 
     public void Resume()
     {
-        Debug.Log("TEst");
+
         pauseMenuUI.SetActive(false);
         Time.timeScale = 1f;
-        GameIsPaused = false;
+        gameIsPaused = false;
+        _delayedStart.PlayMusic();
     }
 
-    void Pause()
+    public void Pause()
     {
-        _myMusic = GetComponent<DelayedStart>();
-        Debug.Log("Suis je en pose");
-        _myMusic.PauseMusic();
-        Debug.Log("Suite");
         pauseMenuUI.SetActive(true);
         Time.timeScale = 0f;
-        GameIsPaused = true;
+        gameIsPaused = true;
+        
     }
 
     public void LoadMenu()
     {
-        Debug.Log("TEst");
+        
         Time.timeScale = 1f;
         SceneManager.LoadScene("Menu");
     }
 
     public void QuitApplication()
     {
-        Debug.Log("TEst");
+
         Application.Quit();
     }
 }
