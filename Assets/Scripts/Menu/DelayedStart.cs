@@ -6,6 +6,7 @@ public class DelayedStart : MonoBehaviour
 {
     public GameObject countDown;
     public AudioSource someSound;
+   
     // Start is called before the first frame update
     void Start()
     {
@@ -26,7 +27,13 @@ public class DelayedStart : MonoBehaviour
             yield return 0;
         countDown.gameObject.SetActive(false);
         someSound.Play();
-        Time.timeScale = 1;
+        Time.timeScale = 1f;
 
+    }
+
+    public void PauseMusic()
+    {
+        Debug.Log("bb,");
+        someSound.Pause();
     }
 }

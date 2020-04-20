@@ -21,11 +21,13 @@ public class CameraController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
         if (!death)
         {
             _transform.position += _movement * Time.deltaTime * moveSpeed;
             gameOver.SetActive(false);
         }
+        
         else
         {
             _transform.position += _movement * Time.deltaTime * (moveSpeed / 10 * (-1));
