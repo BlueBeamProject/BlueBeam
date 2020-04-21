@@ -7,7 +7,7 @@ public class PauseMenu : MonoBehaviour
 {
     public static bool gameIsPaused = false;
     public GameObject pauseMenuUI;
-    private GameObject _startMusic;
+    public GameObject _startMusic;
     private DelayedStart _delayedStart;
 
     // Start is called before the first frame update
