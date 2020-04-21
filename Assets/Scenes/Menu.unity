@@ -236,7 +236,7 @@ GameObject:
   - component: {fileID: 3269225}
   m_Layer: 5
   m_Name: Text
-  m_TagString: SlideP1Button
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3938,6 +3938,7 @@ GameObject:
   - component: {fileID: 495133663}
   - component: {fileID: 495133662}
   - component: {fileID: 495133665}
+  - component: {fileID: 495133666}
   m_Layer: 5
   m_Name: P1Control
   m_TagString: Menu
@@ -4041,6 +4042,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 431a0266f2d526a4ab5f491449620978, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &495133666
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 495133660}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61085681b56285f4cae069205935e304, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  jump: {fileID: 922365876}
+  slide: {fileID: 1619305963}
+  attack: {fileID: 1567134598}
+  dash: {fileID: 1534797992}
 --- !u!1 &551859799
 GameObject:
   m_ObjectHideFlags: 0
@@ -5893,9 +5910,10 @@ GameObject:
   - component: {fileID: 922365877}
   - component: {fileID: 922365880}
   - component: {fileID: 922365879}
+  - component: {fileID: 922365881}
   - component: {fileID: 922365878}
   m_Layer: 5
-  m_Name: Button
+  m_Name: JumpButtonP1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5965,7 +5983,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 922365879}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 495133666}
+        m_MethodName: ChangeKey
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 922365876}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &922365879
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6003,6 +6032,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 922365876}
   m_CullTransparentMesh: 0
+--- !u!114 &922365881
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 922365876}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61085681b56285f4cae069205935e304, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  jump: {fileID: 0}
+  slide: {fileID: 0}
+  attack: {fileID: 0}
+  dash: {fileID: 0}
 --- !u!1 &924986001
 GameObject:
   m_ObjectHideFlags: 0
@@ -6975,7 +7020,7 @@ GameObject:
   - component: {fileID: 1127378325}
   m_Layer: 5
   m_Name: Text
-  m_TagString: AttackP1Button
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7206,7 +7251,7 @@ GameObject:
   - component: {fileID: 1168383092}
   m_Layer: 5
   m_Name: Text
-  m_TagString: JumpP1Button
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10286,7 +10331,7 @@ GameObject:
   - component: {fileID: 1534797995}
   - component: {fileID: 1534797994}
   m_Layer: 5
-  m_Name: Button
+  m_Name: DashButtonP1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10356,7 +10401,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1534797995}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 495133666}
+        m_MethodName: ChangeKey
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1534797992}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1534797995
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10630,7 +10686,7 @@ GameObject:
   - component: {fileID: 1567134601}
   - component: {fileID: 1567134600}
   m_Layer: 5
-  m_Name: Button
+  m_Name: AttackButtonP1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10700,7 +10756,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1567134601}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 495133666}
+        m_MethodName: ChangeKey
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1567134598}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1567134601
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11347,7 +11414,7 @@ GameObject:
   - component: {fileID: 1619305966}
   - component: {fileID: 1619305965}
   m_Layer: 5
-  m_Name: Button
+  m_Name: SlideButtonP1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11417,7 +11484,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1619305966}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 495133666}
+        m_MethodName: ChangeKey
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1619305963}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1619305966
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12602,7 +12680,7 @@ GameObject:
   - component: {fileID: 1805866749}
   m_Layer: 5
   m_Name: Text
-  m_TagString: DashP1Button
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
