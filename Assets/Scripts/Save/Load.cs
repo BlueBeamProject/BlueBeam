@@ -25,34 +25,37 @@ public class Load : MonoBehaviour
         //Controlle default
         if (!PlayerPrefs.HasKey("JumpP1"))
         {
-            PlayerPrefs.SetString("JumpP1", "space");
-            Debug.Log("set");
+            PlayerPrefs.SetInt("JumpP1", 32);
         }
-        else
-        {
-            Debug.Log("Déjà la : " + SaveData.ReadValueString("JumpP1"));
-        }
-        
+
         if (!PlayerPrefs.HasKey("SlideP1"))
         {
-            PlayerPrefs.SetString("SlideP1", "s");
+            PlayerPrefs.SetInt("SlideP1", 115);
         }
         
         if (!PlayerPrefs.HasKey("AttackP1"))
         {
-            PlayerPrefs.SetString("AttackP1", "d");
+            PlayerPrefs.SetInt("AttackP1", 100);
         }
         
         if (!PlayerPrefs.HasKey("DashP1"))
         {
-            PlayerPrefs.SetString("DashP1", "f");
+            PlayerPrefs.SetInt("DashP1", 102);
         }
-
     }
 
     // Update is called once per frame
     void Update()
     {
+        
+    }
+
+    void DefaultControlle()
+    {
+        PlayerPrefs.SetInt("JumpP1", 32);
+        PlayerPrefs.SetInt("SlideP1", 115);
+        PlayerPrefs.SetInt("AttackP1", 100);
+        PlayerPrefs.SetInt("DashP1", 102);
         
     }
 }
