@@ -11,6 +11,8 @@ TagManager:
   - Attack
   - Laser
   - CoinsUI
+  - ShieldInv
+  - ShieldCost
   layers:
   - Default
   - TransparentFX

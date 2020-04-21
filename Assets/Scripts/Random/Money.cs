@@ -38,5 +38,7 @@ public class Money : MonoBehaviour
     public static void Death()
     {
         die = true;
+        SaveData.WriteValueInt("Money", money);
+        SaveData.Save();
     }
 }

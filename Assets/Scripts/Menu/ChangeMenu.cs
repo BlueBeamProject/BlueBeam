@@ -42,36 +42,11 @@ public class ChangeMenu : MonoBehaviour
     {
         GameObject.FindGameObjectWithTag("Menu").SetActive(false);
         Menu.SetActive(true);
+        
+    }
 
-        /*
-        switch (menu)
-        {
-            case "MainMenu":
-                MainMenu.SetActive(true);
-                break;
-            case "CampagneMenu":
-                CampagneMenu.SetActive(true);
-                break;
-            case "EndlessMenu":
-                EndlessMenu.SetActive(true);
-                break;
-            case "BattleRoyaleMenu":
-                BattleRoyaleMenu.SetActive(true);
-                break;
-            case "OptionsMenu":
-                OptionsMenu.SetActive(true);
-                break;
-            case "PlayerNumberMenu":
-                PlayerNumberMenu.SetActive(true);
-                break;
-            case "PlayerConfigureMenu":
-                PlayerConfigureMenu.SetActive(true);
-                break;
-            default:
-                MainMenu.SetActive(true);
-                Debug.Log("Default --> Main menu");
-                break;
-        }*/
-
+    public void ShopActive(bool statut)
+    {
+        MoneyShow.IsShopActive = statut;
     }
 }

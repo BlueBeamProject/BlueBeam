@@ -5,17 +5,21 @@ using UnityEngine;
 public class DelayedStart : MonoBehaviour
 {
     public GameObject countDown;
-    public AudioSource someSound;
+    public  AudioSource someSound;
     // Start is called before the first frame update
     void Start()
     {
         StartCoroutine("StartDelay");
+        someSound = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
     void Update()
     {
-
+        if (PauseMenu.gameIsPaused)
+        {
+            someSound.Pause();
+        }
     }
 
     IEnumerator StartDelay()
@@ -26,7 +30,13 @@ public class DelayedStart : MonoBehaviour
             yield return 0;
         countDown.gameObject.SetActive(false);
         someSound.Play();
-        Time.timeScale = 1;
+        Time.timeScale = 1f;
 
+    }
+    
+
+    public void PlayMusic()
+    {
+        someSound.Play();
     }
 }

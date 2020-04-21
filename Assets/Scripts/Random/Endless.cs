@@ -18,7 +18,6 @@ public class Endless : MonoBehaviour
         pos = 0;
         SpawnPlat(new Vector3(0, -5.5f));
         SpawnPlat(new Vector3(largeur, -5.5f));
-        SpawnPlat(new Vector3(largeur+largeur, -5.5f));
     }
 
     // Update is called once per frame
@@ -42,7 +41,7 @@ public class Endless : MonoBehaviour
                 lastplat = Random.Range(0, 4);
             }
             pos += largeur;
-            SpawnPlat(new Vector3(12+pos, hauteur));
+            SpawnPlat(new Vector3(largeur+pos, hauteur));
         }
     }
 

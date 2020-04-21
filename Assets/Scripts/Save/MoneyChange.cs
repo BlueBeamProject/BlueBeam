@@ -20,14 +20,12 @@ public class MoneyChange : MonoBehaviour
     public void AddMoney(int count)
     {
         SaveData.WriteValueInt("Money",count);
-        Debug.Log("[AddMoney] Money set to " + SaveData.ReadValueInt("Money"));
         MoneyShow.refreshMoney();
     }
     
     public void ResetMoney()
     {
         SaveData.WriteValueInt("Money", - SaveData.ReadValueInt("Money"));
-        Debug.Log("[ResetMoney] Money set to " + SaveData.ReadValueInt("Money"));
         MoneyShow.refreshMoney();
     }
 }
