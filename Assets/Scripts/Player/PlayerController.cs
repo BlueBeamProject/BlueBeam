@@ -9,16 +9,28 @@ public class PlayerController : MonoBehaviour
     public GameObject pauseUI;
     private PauseMenu _pauseMenu;
 
-    public string jumpB = SaveData.ReadValueString("JumpP1");
-    public string slideB = SaveData.ReadValueString("SlideP1");
-    public string attackB = SaveData.ReadValueString("AttackP1");
-    public string dashB = SaveData.ReadValueString("DashP1");
+    private string jumpB;
+    private string slideB;
+    private string attackB;
+    private string dashB;
+
+    void Awake()
+    { 
+        jumpB = SaveData.ReadValueString("JumpP1");
+        slideB = SaveData.ReadValueString("SlideP1");
+        attackB = SaveData.ReadValueString("AttackP1");
+        dashB = SaveData.ReadValueString("DashP1");
+    }
+    
+
     
     // Start is called before the first frame update
     void Start()
     {
         _myPhysics = GetComponent<PlayerPhysics>();
         _pauseMenu = pauseUI.GetComponent<PauseMenu>();
+        Debug.Log("JumpB : " + jumpB);
+        Debug.Log("JumpP1 : " + SaveData.ReadValueString("JumpP1"));
 
     }
 

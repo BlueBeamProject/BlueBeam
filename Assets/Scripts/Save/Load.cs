@@ -26,6 +26,11 @@ public class Load : MonoBehaviour
         if (!PlayerPrefs.HasKey("JumpP1"))
         {
             PlayerPrefs.SetString("JumpP1", "space");
+            Debug.Log("set");
+        }
+        else
+        {
+            Debug.Log("Déjà la : " + SaveData.ReadValueString("JumpP1"));
         }
         
         if (!PlayerPrefs.HasKey("SlideP1"))
