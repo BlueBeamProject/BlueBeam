@@ -22,7 +22,6 @@ public class DashWall : MonoBehaviour
         if (collider.gameObject.CompareTag("Ground"))
         {
             PlayerPhysics.DashWall(true);
-            Debug.Log("youpi");
         }
     }
 
