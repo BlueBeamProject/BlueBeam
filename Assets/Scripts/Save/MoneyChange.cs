@@ -19,13 +19,13 @@ public class MoneyChange : MonoBehaviour
     //can be negative int for remove money
     public void AddMoney(int count)
     {
-        SaveData.WriteValueInt("Money",count);
+        SaveData.AddValueInt("Money",count);
         MoneyShow.refreshMoney();
     }
     
     public void ResetMoney()
     {
-        SaveData.WriteValueInt("Money", - SaveData.ReadValueInt("Money"));
+        SaveData.WriteValueInt("Money",0);
         MoneyShow.refreshMoney();
     }
 }

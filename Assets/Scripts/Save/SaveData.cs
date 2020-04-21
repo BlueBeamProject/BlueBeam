@@ -16,11 +16,25 @@ public class SaveData : MonoBehaviour
         
     }
     
-    public static void WriteValueInt(string name, int value)
+    public static void AddValueInt(string name, int value)
     {
         if (PlayerPrefs.HasKey(name))
         {
             PlayerPrefs.SetInt(name, PlayerPrefs.GetInt(name) + value);
+            Debug.Log("[WriteValueInt]" +name + " sauvergardé dans le PlayerPrefs \n Valeur : " + PlayerPrefs.GetInt(name));
+        }
+        else
+        {
+           
+            Debug.Log("[WriteValueInt]" + name + " n'est pas initialisé dans le PlayerPrefs");
+        }
+    }
+    
+    public static void WriteValueInt(string name, int value)
+    {
+        if (PlayerPrefs.HasKey(name))
+        {
+            PlayerPrefs.SetInt(name,value);
             Debug.Log("[WriteValueInt]" +name + " sauvergardé dans le PlayerPrefs \n Valeur : " + PlayerPrefs.GetInt(name));
         }
         else
