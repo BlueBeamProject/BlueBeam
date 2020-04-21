@@ -39,8 +39,35 @@ public class SaveData : MonoBehaviour
         }
         else
         {
-           
+            Debug.Log("[ReadValueInt]" + name + " n'est pas initialisé dans le PlayerPrefs");
             return 0;
+        }
+    }
+    
+    public static void WriteValueString(string name, string value)
+    {
+        if (PlayerPrefs.HasKey(name))
+        {
+            PlayerPrefs.SetString(name, value);
+        }
+        else
+        {
+           
+            Debug.Log("[WriteValueString]" + name + " n'est pas initialisé dans le PlayerPrefs");
+        }
+    }
+    
+    public static string ReadValueString(string name)
+    {
+        if (PlayerPrefs.HasKey(name))
+        {
+                
+            return PlayerPrefs.GetString(name);
+        }
+        else
+        {
+            Debug.Log("[ReadValueString]" + name + " n'est pas initialisé dans le PlayerPrefs");
+            return "";
         }
     }
 

@@ -21,6 +21,27 @@ public class Load : MonoBehaviour
         {
             PlayerPrefs.SetInt("Shield", 0);
         }
+        
+        //Controlle default
+        if (!PlayerPrefs.HasKey("JumpP1"))
+        {
+            PlayerPrefs.SetString("JumpP1", "space");
+        }
+        
+        if (!PlayerPrefs.HasKey("SlideP1"))
+        {
+            PlayerPrefs.SetString("SlideP1", "s");
+        }
+        
+        if (!PlayerPrefs.HasKey("AttackP1"))
+        {
+            PlayerPrefs.SetString("AttackP1", "d");
+        }
+        
+        if (!PlayerPrefs.HasKey("DashP1"))
+        {
+            PlayerPrefs.SetString("DashP1", "f");
+        }
 
     }
 

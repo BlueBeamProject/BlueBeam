@@ -8,6 +8,11 @@ public class PlayerController : MonoBehaviour
     private PlayerPhysics _myPhysics;
     public GameObject pauseUI;
     private PauseMenu _pauseMenu;
+
+    public string jumpB = SaveData.ReadValueString("JumpP1");
+    public string slideB = SaveData.ReadValueString("SlideP1");
+    public string attackB = SaveData.ReadValueString("AttackP1");
+    public string dashB = SaveData.ReadValueString("DashP1");
     
     // Start is called before the first frame update
     void Start()
@@ -22,16 +27,16 @@ public class PlayerController : MonoBehaviour
     {
         if (!PauseMenu.gameIsPaused)
         {
-            if (Input.GetKeyDown(KeyCode.Space))
+            if (Input.GetKeyDown(jumpB))
                 _myPhysics.Jump();
 
-            if (Input.GetKeyDown(KeyCode.S))
+            if (Input.GetKeyDown(slideB))
                 _myPhysics.Slide();
 
-            if (Input.GetKeyDown(KeyCode.D))
+            if (Input.GetKeyDown(attackB))
                 _myPhysics.Attack();
 
-            if (Input.GetKeyDown(KeyCode.F))
+            if (Input.GetKeyDown(dashB))
                 _myPhysics.Dash();
 
             if (Input.GetKeyDown(KeyCode.P))
