@@ -13,6 +13,10 @@ TagManager:
   - CoinsUI
   - ShieldInv
   - ShieldCost
+  - JumpP1Button
+  - SlideP1Button
+  - AttackP1Button
+  - DashP1Button
   layers:
   - Default
   - TransparentFX
