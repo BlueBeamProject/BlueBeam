@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class PlayerController : MonoBehaviour
 {
     private PlayerPhysics _myPhysics;
-    public GameObject pauseUI;
+    private GameObject pauseUI;
     private PauseMenu _pauseMenu;
     
     // Start is called before the first frame update
