@@ -19,13 +19,13 @@ public class PlayerController : MonoBehaviour
         
         ReloadControl();
         
-        Debug.Log("====Control====");
+        /*Debug.Log("====Control====");
         Debug.Log("Jump : " + ((KeyCode)jumpB).ToString());
         Debug.Log("Slide : " + ((KeyCode)slideB).ToString());
         Debug.Log("Attack : " + ((KeyCode)attackB).ToString());
         Debug.Log("Dash : " + ((KeyCode)dashB).ToString());
         Debug.Log("Suicide : P");
-        Debug.Log("Pause/Unpause : Escape");
+        Debug.Log("Pause/Unpause : Escape");*/
         
         
         
