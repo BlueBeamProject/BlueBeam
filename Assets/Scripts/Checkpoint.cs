@@ -12,6 +12,7 @@ public class Checkpoint : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        PlayerPrefs.SetInt("checkpoint1", 0);
         _transformPlayer = player.GetComponent<Transform>();
         _transformCamera = camera.GetComponent<Transform>();
 
