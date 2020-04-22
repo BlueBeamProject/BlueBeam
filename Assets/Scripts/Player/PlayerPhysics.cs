@@ -31,7 +31,6 @@ public class PlayerPhysics : MonoBehaviour
     private bool _canDash;
     private static bool dashOnWall;
 
-
     // Start is called before the first frame update
     void Start()
     {
@@ -127,8 +126,7 @@ public class PlayerPhysics : MonoBehaviour
     void OnCollisionExit2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Ground"))
-            _grounded = false;
-
+          _grounded = false;
     }
 
     public void Die()

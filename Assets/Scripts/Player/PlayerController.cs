@@ -8,7 +8,7 @@ using Debug = UnityEngine.Debug;
 public class PlayerController : MonoBehaviour
 {
     private PlayerPhysics _myPhysics;
-    private GameObject pauseUI;
+    public GameObject pauseUI;
     private PauseMenu _pauseMenu;
 
     public int PlayerID;
@@ -23,10 +23,10 @@ public class PlayerController : MonoBehaviour
     private static int dashBP2;
 
     void Awake()
-    { 
-        
+    {
+
         ReloadControl();
-        
+
         /*Debug.Log("====Control====");
         Debug.Log("Jump : " + ((KeyCode)jumpB).ToString());
         Debug.Log("Slide : " + ((KeyCode)slideB).ToString());
@@ -34,24 +34,22 @@ public class PlayerController : MonoBehaviour
         Debug.Log("Dash : " + ((KeyCode)dashB).ToString());
         Debug.Log("Suicide : P");
         Debug.Log("Pause/Unpause : Escape");*/
-        
-        
-        
-    }
-    
 
-    
+
+
+    }
+
+
+
     // Start is called before the first frame update
     void Start()
     {
         _myPhysics = GetComponent<PlayerPhysics>();
         _pauseMenu = pauseUI.GetComponent<PauseMenu>();
 
-        
-
     }
 
-    
+
     // Update is called once per frame
     void Update()
     {
@@ -89,10 +87,10 @@ public class PlayerController : MonoBehaviour
                 default:
                     Debug.Log("[PlayerController] t'as oublié le playerID ");
                     break;
-                    
+
             }
 
-                
+
 
             if (Input.GetKeyDown(KeyCode.P))
                 _myPhysics.Die();
@@ -102,7 +100,7 @@ public class PlayerController : MonoBehaviour
 
 
         }
-        
+
         if (Input.GetKeyDown(KeyCode.Escape))
             _pauseMenu.Resume();
 
@@ -116,7 +114,7 @@ public class PlayerController : MonoBehaviour
         slideBP1 = SaveData.ReadValueInt("SlideP1");
         attackBP1 = SaveData.ReadValueInt("AttackP1");
         dashBP1 = SaveData.ReadValueInt("DashP1");
-        
+
         jumpBP2 = SaveData.ReadValueInt("JumpP2");
         slideBP2 = SaveData.ReadValueInt("SlideP2");
         attackBP2 = SaveData.ReadValueInt("AttackP2");
