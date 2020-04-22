@@ -53,7 +53,7 @@ public class Intro : MonoBehaviour
                 StartCoroutine(SlowTime());
             }
         }
-        else if (third && player.transform.position.x > 89)
+        else if (third && player.transform.position.x > 88)
         {
             if (Input.GetKeyDown(KeyCode.F))
             {
