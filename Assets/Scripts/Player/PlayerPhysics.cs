@@ -131,6 +131,7 @@ public class PlayerPhysics : MonoBehaviour
 
     }
 
+    
     public void Die()
     {
         _dead = true;
