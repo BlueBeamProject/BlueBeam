@@ -27,8 +27,8 @@ public class Shop : MonoBehaviour
             case "Shield":
                 if (SaveData.ReadValueInt("Money") >= ShieldCost)
                 {
-                    SaveData.WriteValueInt("Money", -ShieldCost);
-                    SaveData.WriteValueInt("Shield", 1);
+                    SaveData.AddValueInt("Money", -ShieldCost);
+                    SaveData.AddValueInt("Shield", 1);
                     Inventaire.ShieldInv();
                 }
                 else

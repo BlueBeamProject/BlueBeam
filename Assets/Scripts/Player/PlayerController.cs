@@ -1,7 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using Debug = UnityEngine.Debug;
 
 public class PlayerController : MonoBehaviour
 {
@@ -9,10 +11,16 @@ public class PlayerController : MonoBehaviour
     private GameObject pauseUI;
     private PauseMenu _pauseMenu;
 
-    private static int jumpB;
-    private static int slideB;
-    private static int attackB;
-    private static int dashB;
+    public int PlayerID;
+
+    private static int jumpBP1;
+    private static int slideBP1;
+    private static int attackBP1;
+    private static int dashBP1;
+    private static int jumpBP2;
+    private static int slideBP2;
+    private static int attackBP2;
+    private static int dashBP2;
 
     void Awake()
     { 
@@ -49,17 +57,42 @@ public class PlayerController : MonoBehaviour
     {
         if (!PauseMenu.gameIsPaused)
         {
-            if (Input.GetKeyDown((KeyCode)jumpB))
-                _myPhysics.Jump();
 
-            if (Input.GetKeyDown((KeyCode)slideB))
-                _myPhysics.Slide();
+            switch (PlayerID)
+            {
+                case 1:
+                    if (Input.GetKeyDown((KeyCode)jumpBP1))
+                        _myPhysics.Jump();
 
-            if (Input.GetKeyDown((KeyCode)attackB))
-                _myPhysics.Attack();
+                    if (Input.GetKeyDown((KeyCode)slideBP1))
+                        _myPhysics.Slide();
 
-            if (Input.GetKeyDown((KeyCode)dashB))
-                _myPhysics.Dash();
+                    if (Input.GetKeyDown((KeyCode)attackBP1))
+                        _myPhysics.Attack();
+
+                    if (Input.GetKeyDown((KeyCode)dashBP1))
+                        _myPhysics.Dash();
+                    break;
+                case 2:
+                    if (Input.GetKeyDown((KeyCode)jumpBP2))
+                        _myPhysics.Jump();
+
+                    if (Input.GetKeyDown((KeyCode)slideBP2))
+                        _myPhysics.Slide();
+
+                    if (Input.GetKeyDown((KeyCode)attackBP2))
+                        _myPhysics.Attack();
+
+                    if (Input.GetKeyDown((KeyCode)dashBP2))
+                        _myPhysics.Dash();
+                    break;
+                default:
+                    Debug.Log("[PlayerController] t'as oublié le playerID ");
+                    break;
+                    
+            }
+
+                
 
             if (Input.GetKeyDown(KeyCode.P))
                 _myPhysics.Die();
@@ -69,6 +102,7 @@ public class PlayerController : MonoBehaviour
 
 
         }
+        
         if (Input.GetKeyDown(KeyCode.Escape))
             _pauseMenu.Resume();
 
@@ -78,9 +112,14 @@ public class PlayerController : MonoBehaviour
 
     public static void ReloadControl()
     {
-        jumpB = SaveData.ReadValueInt("JumpP1");
-        slideB = SaveData.ReadValueInt("SlideP1");
-        attackB = SaveData.ReadValueInt("AttackP1");
-        dashB = SaveData.ReadValueInt("DashP1");
+        jumpBP1 = SaveData.ReadValueInt("JumpP1");
+        slideBP1 = SaveData.ReadValueInt("SlideP1");
+        attackBP1 = SaveData.ReadValueInt("AttackP1");
+        dashBP1 = SaveData.ReadValueInt("DashP1");
+        
+        jumpBP2 = SaveData.ReadValueInt("JumpP2");
+        slideBP2 = SaveData.ReadValueInt("SlideP2");
+        attackBP2 = SaveData.ReadValueInt("AttackP2");
+        dashBP2 = SaveData.ReadValueInt("DashP2");
     }
 }

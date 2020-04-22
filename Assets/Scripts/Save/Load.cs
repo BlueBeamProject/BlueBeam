@@ -62,6 +62,8 @@ public class Load : MonoBehaviour
         {
             PlayerPrefs.SetInt("DashP2", 276);//leftarrow
         }
+        
+        PlayerController.ReloadControl();
     }
 
     // Update is called once per frame
