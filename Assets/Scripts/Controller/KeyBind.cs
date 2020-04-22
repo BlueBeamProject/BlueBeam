@@ -10,21 +10,23 @@ public class KeyBind : MonoBehaviour
     private Dictionary<string, KeyCode> keys = new Dictionary<string, KeyCode>();
 
     public GameObject jump, slide, attack, dash;
+    public int PlayerID;
 
     private GameObject currentKey;
     
     // Start is called before the first frame update
     void Start()
     {
-        keys.Add("JumpP1", (KeyCode)SaveData.ReadValueInt("JumpP1"));
-        keys.Add("SlideP1", (KeyCode)SaveData.ReadValueInt("SlideP1"));
-        keys.Add("AttackP1", (KeyCode)SaveData.ReadValueInt("AttackP1"));
-        keys.Add("DashP1", (KeyCode)SaveData.ReadValueInt("DashP1"));
-
-        jump.transform.GetChild(0).GetComponent<Text>().text = keys["JumpP1"].ToString();
-        slide.transform.GetChild(0).GetComponent<Text>().text = keys["SlideP1"].ToString();
-        attack.transform.GetChild(0).GetComponent<Text>().text = keys["AttackP1"].ToString();
-        dash.transform.GetChild(0).GetComponent<Text>().text = keys["DashP1"].ToString();
+        
+        keys.Add("JumpP"+PlayerID, (KeyCode)SaveData.ReadValueInt("JumpP"+PlayerID));
+        keys.Add("SlideP"+PlayerID, (KeyCode)SaveData.ReadValueInt("SlideP"+PlayerID));
+        keys.Add("AttackP"+PlayerID, (KeyCode)SaveData.ReadValueInt("AttackP"+PlayerID));
+        keys.Add("DashP"+PlayerID, (KeyCode)SaveData.ReadValueInt("DashP"+PlayerID));
+        
+        jump.transform.GetChild(0).GetComponent<Text>().text = keys["JumpP"+PlayerID].ToString();
+        slide.transform.GetChild(0).GetComponent<Text>().text = keys["SlideP"+PlayerID].ToString();
+        attack.transform.GetChild(0).GetComponent<Text>().text = keys["AttackP"+PlayerID].ToString();
+        dash.transform.GetChild(0).GetComponent<Text>().text = keys["DashP"+PlayerID].ToString();
     }
     
     // Update is called once per frame
@@ -56,6 +58,18 @@ public class KeyBind : MonoBehaviour
                         break;
                     case "DashButtonP1":
                         SaveData.WriteValueInt("DashP1",(int)e.keyCode);
+                        break;
+                    case "JumpButtonP2":
+                        SaveData.WriteValueInt("JumpP2",(int)e.keyCode);
+                        break;
+                    case "SlideButtonP2":
+                        SaveData.WriteValueInt("SlideP2", (int)e.keyCode);
+                        break;
+                    case "AttackButtonP2":
+                        SaveData.WriteValueInt("AttackP2",(int)e.keyCode);
+                        break;
+                    case "DashButtonP2":
+                        SaveData.WriteValueInt("DashP2",(int)e.keyCode);
                         break;
                     default:
                         Debug.Log("tu t'es fail bro + " + currentKey.name);
