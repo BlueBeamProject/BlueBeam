@@ -18,11 +18,11 @@ public class Laser : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Time.time > 19.7 && Time.time < 23.207)
+        if (Time.timeSinceLevelLoad > 19.7 && Time.timeSinceLevelLoad < 23.207)
         {
             //19.625 et 25.207
             newPos += 0.4f;
-            if (Time.time > 21)
+            if (Time.timeSinceLevelLoad > 21)
             {
                 logo.SetActive(true);
             }

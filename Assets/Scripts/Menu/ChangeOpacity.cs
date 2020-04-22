@@ -18,7 +18,7 @@ public class ChangeOpacity : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-		float time = Time.time;
+		float time = Time.timeSinceLevelLoad;
 		if ((time > 0 && time < 0.170) || (time > 2.668 && time < 2.84) || (time > 4.001 && time < 4.17) || (time > 5.334 && time < 5.493))
 			alphaLevel += .10f;
 		if (((time > (2.668 + 5.333*fois) && time < (2.84 + 5.333*fois)) || (time > (4.001 + 5.333*fois) && time < (4.17 + 5.333*fois)) || (time > (5.334 + 5.333*fois) && time < (5.493 + 5.333*fois))) && time < 53) 

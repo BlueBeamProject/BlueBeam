@@ -14,15 +14,15 @@ public class LightSCroll : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Time.time < 23)
+        if (Time.timeSinceLevelLoad < 23)
         {
-            if ((Time.time % 7 <= 1.5 && Time.time < 8) || Time.time > 10.5) transform.position = new Vector3(transform.position.x - .075f, transform.position.y, transform.position.z);
-            else if (Time.time < 5 || Time.time > 20) transform.position = startPos;
-            else if (Time.time > 9.3) transform.position = new Vector3(transform.position.x + .075f, transform.position.y, transform.position.z);
+            if ((Time.timeSinceLevelLoad % 7 <= 1.5 && Time.timeSinceLevelLoad < 8) || Time.timeSinceLevelLoad > 10.5) transform.position = new Vector3(transform.position.x - .075f, transform.position.y, transform.position.z);
+            else if (Time.timeSinceLevelLoad < 5 || Time.timeSinceLevelLoad > 20) transform.position = startPos;
+            else if (Time.timeSinceLevelLoad > 9.3) transform.position = new Vector3(transform.position.x + .075f, transform.position.y, transform.position.z);
         }
         else
         {
-            if (Time.time % 7 <= 1.5) transform.position = new Vector3(transform.position.x - .075f, transform.position.y, transform.position.z);
+            if (Time.timeSinceLevelLoad % 7 <= 1.5) transform.position = new Vector3(transform.position.x - .075f, transform.position.y, transform.position.z);
             else transform.position = startPos;
         }
     }
