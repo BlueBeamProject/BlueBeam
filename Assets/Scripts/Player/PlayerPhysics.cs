@@ -129,6 +129,7 @@ public class PlayerPhysics : MonoBehaviour
           _grounded = false;
     }
 
+    
     public void Die()
     {
         _dead = true;
