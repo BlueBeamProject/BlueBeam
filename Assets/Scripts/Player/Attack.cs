@@ -1,16 +1,16 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Follow : MonoBehaviour
+public class Attack : MonoBehaviour
 {
-    public float moveSpeed;
+    public GameObject player;
+    public Vector3 offset;
     private Vector3 _movement;
     private Transform _transform;
     // Start is called before the first frame update
     void Start()
     {
-        _movement = new Vector3(moveSpeed, 0, 0);
         _transform = GetComponent<Transform>();
     }
 
@@ -18,6 +18,15 @@ public class Follow : MonoBehaviour
     void Update()
     {
         //_transform.position = Vector3.MoveTowards(_transform.position, player.transform.position, 1000);
-        _transform.position += _movement * Time.deltaTime * moveSpeed;
+        _transform.position = player.transform.position + offset;
+    }
+
+    void OnTriggerStay2D(Collider2D collider)
+    {
+      if (collider.gameObject.CompareTag("Ennemy"))
+      {
+        collider.gameObject.GetComponent<EnnemyComportment>().Die();
+      }
+
     }
 }

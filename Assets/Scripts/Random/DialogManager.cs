@@ -9,7 +9,7 @@ public class DialogManager : MonoBehaviour
     public string[] sentences;
     private int index;
     public float typingSpeed;
-    private GameObject pauseUI;
+    public GameObject pauseUI;
     private PauseMenu _pauseMenu;
 
     void Start()

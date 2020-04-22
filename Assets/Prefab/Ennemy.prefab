@@ -47,7 +47,7 @@ GameObject:
   - component: {fileID: 4657427466946655077}
   - component: {fileID: 4657427466946655076}
   m_Layer: 0
-  m_Name: Ennemy 1
+  m_Name: Ennemy
   m_TagString: Ennemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -195,7 +195,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   death: {fileID: 8912441665412594792, guid: 22455608f4bc01242869d05f15c8277c, type: 3}
-  Ennemy: {fileID: 4657427466946655085}
+  ennemy: {fileID: 4657427466946655085}
 --- !u!114 &4657427466946655077
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -214,6 +214,7 @@ MonoBehaviour:
   - {fileID: 1457948587468070788, guid: f146e2c68b5d1d14caf1635ea25b928a, type: 3}
   - {fileID: 4308529338956304196, guid: f146e2c68b5d1d14caf1635ea25b928a, type: 3}
   - {fileID: -7525808813816991585, guid: f146e2c68b5d1d14caf1635ea25b928a, type: 3}
+  animspeed: 0
 --- !u!61 &4657427466946655076
 BoxCollider2D:
   m_ObjectHideFlags: 0

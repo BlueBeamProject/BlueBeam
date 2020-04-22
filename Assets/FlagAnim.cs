@@ -30,7 +30,7 @@ public class FlagAnim : MonoBehaviour
         {
           _activated = true;
           _countFrame = 4;
-          _transformLevel.position = _myTransform.position + new Vector3(15, 15, 0);
+          _transformLevel.position = _myTransform.position + new Vector3(15, 0, 0);
         }
     }
 

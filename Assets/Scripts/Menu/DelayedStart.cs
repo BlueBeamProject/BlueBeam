@@ -31,9 +31,8 @@ public class DelayedStart : MonoBehaviour
         countDown.gameObject.SetActive(false);
         someSound.Play();
         Time.timeScale = 1f;
-
     }
-    
+
 
     public void PlayMusic()
     {

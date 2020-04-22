@@ -30,6 +30,7 @@ public class PlayerPhysics : MonoBehaviour
     private ShieldAnimation _myShieldAnimation;
     private bool _canDash;
     private static bool dashOnWall;
+    private BoxCollider2D _weapon;
 
     // Start is called before the first frame update
     void Start()
@@ -38,12 +39,13 @@ public class PlayerPhysics : MonoBehaviour
         _myAnimations = GetComponent<PlayerAnimations>();
         _soundManager = GetComponent<SoundManager>();
         _transform = GetComponent<Transform>();
+        _weapon = attack.GetComponent<BoxCollider2D>();
         _movement = new Vector3(moveSpeed, 0, 0);
         _isSliding = false;
         _startTime = 0;
         _dead = false;
         baseMoveSpeed = moveSpeed;
-        attack.SetActive(false);
+        _weapon.enabled = false;
         _myShieldAnimation = GetComponentInChildren<ShieldAnimation>();
         _canDash = true;
         if (shield)
@@ -74,9 +76,9 @@ public class PlayerPhysics : MonoBehaviour
             {
                 colliders[0].enabled = true;
                 colliders[1].enabled = false;
-                if (_grounded)
+                if (_grounded && !_weapon.enabled)
                     _myAnimations.Run();
-                else
+                else if (!_weapon.enabled)
                     _myAnimations.Jump();
             }
         }
@@ -129,7 +131,7 @@ public class PlayerPhysics : MonoBehaviour
           _grounded = false;
     }
 
-    
+
     public void Die()
     {
         _dead = true;
@@ -151,14 +153,14 @@ public class PlayerPhysics : MonoBehaviour
     public void Attack()
     {
         _myAnimations.Attack();
-        attack.SetActive(true);
+        _weapon.enabled = true;
         StartCoroutine("attackTime");
     }
 
     IEnumerator attackTime()
     {
         yield return new WaitForSeconds(0.3f);
-        attack.SetActive(false);
+        _weapon.enabled = false;
     }
 
     public void Shield()

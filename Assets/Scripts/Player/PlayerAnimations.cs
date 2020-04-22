@@ -56,13 +56,16 @@ public class PlayerAnimations : MonoBehaviour
 
             if (_attack)
             {
-                if (_countAttackFrame / 8 < 2)
+                if (_countAttackFrame < 15)
                 {
-                    _mySpriteRenderer.sprite = attackFrames[_countAttackFrame/8];
+                    _mySpriteRenderer.sprite = attackFrames[0];
                     _countAttackFrame++;
                 }
-                else
-                    Run();
+                else if (_countAttackFrame < 30)
+                {
+                    _mySpriteRenderer.sprite = attackFrames[1];
+                    _countAttackFrame++;
+                }
             }
         }
     }
