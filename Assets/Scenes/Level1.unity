@@ -23524,6 +23524,11 @@ PrefabInstance:
       propertyPath: checkpoint1
       value: 
       objectReference: {fileID: 1742542685}
+    - target: {fileID: 3533500266212892550, guid: 1a8f793fdf87069489810e8c4e9717c5,
+        type: 3}
+      propertyPath: scene
+      value: Level1
+      objectReference: {fileID: 0}
     - target: {fileID: 3533500266212892551, guid: 1a8f793fdf87069489810e8c4e9717c5,
         type: 3}
       propertyPath: m_Enabled
