@@ -16,6 +16,7 @@ public class PlayerPhysics : MonoBehaviour
     public GameObject prellow;
     public GameObject attack;
     public bool shield;
+    public string scene;
 
     private Rigidbody2D _myBody;
     private Transform _transform;
@@ -147,7 +148,7 @@ public class PlayerPhysics : MonoBehaviour
     IEnumerator wait()
     {
         yield return new WaitForSeconds(3);
-        SceneManager.LoadScene("Level1");
+        SceneManager.LoadScene(scene);
     }
 
     public void Attack()
