@@ -11,8 +11,6 @@ public class TextHover : MonoBehaviour, IPointerEnterHandler, IPointerExitHandle
     // Start is called before the first frame update
     void Start()
     {
-        print("start");
-
         tm = text.GetComponent<Text>();
     }
 
@@ -26,16 +24,13 @@ public class TextHover : MonoBehaviour, IPointerEnterHandler, IPointerExitHandle
     {
         print(text.GetComponent<Text>().fontSize);
         
-        tm.fontSize = 50; //Or however you do your color
-       // tm.color = Color.red;
+        tm.fontSize = 50; 
         tm.fontStyle = FontStyle.Bold;
-        print("i'm here");
     }
  
     public void OnPointerExit(PointerEventData eventData)
     {
         tm.fontSize = 35;
-        tm.color = Color.white;
         tm.fontStyle = FontStyle.Normal;
     }
 }

@@ -11,8 +11,6 @@ public class ImageHover : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
     // Start is called before the first frame update
     void Start()
     {
-        print("start");
-
         im = text.GetComponent<Image>();
     }
 
