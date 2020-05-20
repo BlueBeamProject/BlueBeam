@@ -6,6 +6,7 @@ public class SkyLaser : MonoBehaviour
 {
     public GameObject death;
     // Start is called before the first frame update
+    public GameObject skyLaser;
     void Start()
     {
         
@@ -23,9 +24,13 @@ public class SkyLaser : MonoBehaviour
             Die();
     }
 
+    
+
+    
+
     private void Die()
     {
-        Destroy(this);
+        Destroy(skyLaser);
         Instantiate(death, transform.position, Quaternion.identity);
     }
 }
