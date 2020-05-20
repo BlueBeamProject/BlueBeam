@@ -28,7 +28,7 @@ public class PreLaserScript : MonoBehaviour
         {
             _grounded = true;
             Laser.transform.position += new Vector3(0, 2, 0);
-            double x = Camera.transform.position.x - 1.8;
+            double x = Camera.transform.position.x - 7.0;
             if (!death)
                 Laser.transform.position = new Vector3((float)x, Laser.transform.position.y, Laser.transform.position.z);
         }
