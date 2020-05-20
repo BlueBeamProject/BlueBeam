@@ -22,7 +22,6 @@ public class PlayerPhysics : MonoBehaviour
     private Transform _transform;
     private PlayerAnimations _myAnimations;
     private bool _grounded;
-    private SoundManager _soundManager;
     private Vector3 _movement;
     private bool _isSliding;
     private float _startTime;
@@ -38,7 +37,6 @@ public class PlayerPhysics : MonoBehaviour
     {
         _myBody = GetComponent<Rigidbody2D>();
         _myAnimations = GetComponent<PlayerAnimations>();
-        _soundManager = GetComponent<SoundManager>();
         _transform = GetComponent<Transform>();
         _weapon = attack.GetComponent<BoxCollider2D>();
         _movement = new Vector3(moveSpeed, 0, 0);
@@ -91,7 +89,6 @@ public class PlayerPhysics : MonoBehaviour
         {
             _myBody.AddForce(new Vector2(0f, jumpForce), ForceMode2D.Impulse);
             _myAnimations.CreateDust();
-            _soundManager.Jump();
         }
     }
 
@@ -112,7 +109,6 @@ public class PlayerPhysics : MonoBehaviour
         if (collision.gameObject.CompareTag("Ground"))
         {
             _grounded = true;
-            _soundManager.Land();
         }
 
         if ((collision.gameObject.CompareTag("Obstacle") && !shield) || collision.gameObject.CompareTag("Laser") || (collision.gameObject.CompareTag("Ennemy") && !shield))
