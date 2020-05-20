@@ -7,7 +7,7 @@ public class Load : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        SaveData.WriteValueInt("Money",40);
+        //SaveData.WriteValueInt("Money",40);
         //Pour initialiser un nouvelle donné sauvergardé recopier les lignes en dessous
         //et mettez une valeur par défaut si la "key" n'existe
 
