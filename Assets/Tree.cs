@@ -1,14 +1,17 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
-public class SkyLaser : MonoBehaviour
+public class Tree : MonoBehaviour
 {
+    public Sprite[] sprites;
     public GameObject death;
     // Start is called before the first frame update
     void Start()
     {
-        
+        SpriteRenderer _mySpriteRenderer = GetComponent<SpriteRenderer>();
+        _mySpriteRenderer.sprite = sprites[Random.Range(0, sprites.Length - 1)];
     }
 
     // Update is called once per frame
@@ -17,9 +20,9 @@ public class SkyLaser : MonoBehaviour
         
     }
 
-    void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Attack") || collision.gameObject.CompareTag("Laser"))
+        if (collision.CompareTag("Laser"))
             Die();
     }
 
