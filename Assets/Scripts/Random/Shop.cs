@@ -10,6 +10,7 @@ public class Shop : MonoBehaviour
     void Start()
     {
         RefreshShop();
+       
     }
 
     // Update is called once per frame
@@ -58,7 +59,7 @@ public class Shop : MonoBehaviour
         }
         else
         {
-            PriceShield.GetComponent<Text>().color = Color.black;
+            PriceShield.GetComponent<Text>().color = Color.white;
         }
     }
 }
