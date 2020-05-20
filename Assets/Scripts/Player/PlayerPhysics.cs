@@ -47,10 +47,23 @@ public class PlayerPhysics : MonoBehaviour
         _weapon.enabled = false;
         _myShieldAnimation = GetComponentInChildren<ShieldAnimation>();
         _canDash = true;
+
+
+        if (SaveData.ReadValueInt("Shield") > 0)
+        {
+            _myShieldAnimation.ShieldAn();
+            SaveData.WriteValueInt("Shield",(SaveData.ReadValueInt("Shield")-1));
+        }
+        else
+        {
+            _myShieldAnimation.StopShieldAn();
+        }
+        /*
         if (shield)
             _myShieldAnimation.ShieldAn();
         else
             _myShieldAnimation.StopShieldAn();
+        */
     }
 
     // Update is called once per frame
