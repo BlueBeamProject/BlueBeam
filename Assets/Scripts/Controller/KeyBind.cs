@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Diagnostics;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 using Debug = UnityEngine.Debug;
 
@@ -71,6 +72,30 @@ public class KeyBind : MonoBehaviour
                     case "DashButtonP2":
                         SaveData.WriteValueInt("DashP2",(int)e.keyCode);
                         break;
+                    case "JumpButtonP3":
+                        SaveData.WriteValueInt("JumpP3",(int)e.keyCode);
+                        break;
+                    case "SlideButtonP3":
+                        SaveData.WriteValueInt("SlideP3", (int)e.keyCode);
+                        break;
+                    case "AttackButtonP3":
+                        SaveData.WriteValueInt("AttackP3",(int)e.keyCode);
+                        break;
+                    case "DashButtonP3":
+                        SaveData.WriteValueInt("DashP3",(int)e.keyCode);
+                        break;
+                    case "JumpButtonP4":
+                        SaveData.WriteValueInt("JumpP4",(int)e.keyCode);
+                        break;
+                    case "SlideButtonP4":
+                        SaveData.WriteValueInt("SlideP4", (int)e.keyCode);
+                        break;
+                    case "AttackButtonP4":
+                        SaveData.WriteValueInt("AttackP4",(int)e.keyCode);
+                        break;
+                    case "DashButtonP4":
+                        SaveData.WriteValueInt("DashP4",(int)e.keyCode);
+                        break;
                     default:
                         Debug.Log("tu t'es fail bro + " + currentKey.name);
                         break;
@@ -87,5 +112,7 @@ public class KeyBind : MonoBehaviour
     {
         currentKey = clicked;
     }
+    
+    
     
 }

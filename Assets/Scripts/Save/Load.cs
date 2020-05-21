@@ -64,6 +64,48 @@ public class Load : MonoBehaviour
         {
             PlayerPrefs.SetInt("DashP2", 276);//leftarrow
         }
+        
+        /*
+        if (!PlayerPrefs.HasKey("JumpP3"))
+        {
+            PlayerPrefs.SetInt("JumpP3", );//
+        }
+
+        if (!PlayerPrefs.HasKey("SlideP3"))
+        {
+            PlayerPrefs.SetInt("SlideP3", );//
+        }
+
+        if (!PlayerPrefs.HasKey("AttackP3"))
+        {
+            PlayerPrefs.SetInt("AttackP3", );//
+        }
+
+        if (!PlayerPrefs.HasKey("DashP3"))
+        {
+            PlayerPrefs.SetInt("DashP3", );//
+        }
+        
+        if (!PlayerPrefs.HasKey("JumpP4"))
+        {
+            PlayerPrefs.SetInt("JumpP4", );//
+        }
+
+        if (!PlayerPrefs.HasKey("SlideP4"))
+        {
+            PlayerPrefs.SetInt("SlideP4", );//
+        }
+
+        if (!PlayerPrefs.HasKey("AttackP4"))
+        {
+            PlayerPrefs.SetInt("AttackP4", );//
+        }
+
+        if (!PlayerPrefs.HasKey("DashP4"))
+        {
+            PlayerPrefs.SetInt("DashP4", );//
+        }
+        */
 
         if (!PlayerPrefs.HasKey("Checkpoint1"))
         {
