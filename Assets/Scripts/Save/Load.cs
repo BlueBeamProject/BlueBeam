@@ -206,6 +206,11 @@ public class Load : MonoBehaviour
             PlayerPrefs.SetInt("MultiGame", 0);
         }
         
+        if (!PlayerPrefs.HasKey("BossKill"))
+        {
+            PlayerPrefs.SetInt("BossKill", 0);
+        }
+        
         
 
 

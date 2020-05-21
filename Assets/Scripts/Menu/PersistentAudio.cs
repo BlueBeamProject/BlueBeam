@@ -12,12 +12,10 @@ public class PersistentAudio : MonoBehaviour
          //Debug.Log("Awake music : " + music);
          //DontDestroyOnLoad(transform.gameObject);
          _audioSource = GetComponent<AudioSource>();
-         Debug.Log("Here");
          if (!music)
          {
              PlayMusic();
              music = true;
-             Debug.Log("Here2");
          }
          
          //Debug.Log("AwakeLatter music : " + music);*/

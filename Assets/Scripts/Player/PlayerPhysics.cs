@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -50,12 +51,18 @@ public class PlayerPhysics : MonoBehaviour
         
         SaveData.WriteValueInt("PlayerInGame",SaveData.ReadValueInt("PlayerInGameMemorie"));
         Debug.Log("[PlayerPhysics] Player in the game : " + SaveData.ReadValueInt("PlayerInGame"));
-        
-        Physics.IgnoreCollision(_myBody.GetComponent<Collider>(), _myBody.GetComponent<Collider>());
-        
-        Debug.Log("start");
 
-
+        if (SaveData.ReadValueInt("PlayerInGameMemorie") == 1)
+        {
+            SaveData.AddValueInt("SoloGame",1);
+        }
+        else
+        {
+            SaveData.AddValueInt("MultiGame",1);
+        }
+        
+        
+        
         if (SaveData.ReadValueInt("Shield") > 0)
         {
             _myShieldAnimation.ShieldAn();
@@ -71,6 +78,8 @@ public class PlayerPhysics : MonoBehaviour
         }
         
        
+        //j'ai pas trouvé mieux pour ignorer les collisions entre les joueurs si qqn à mieux je suis preneur 
+       // Physics.IgnoreCollision(_myBody.GetComponent<Collider>(), _myBody.GetComponent<Collider>());
     }
 
     // Update is called once per frame
@@ -149,6 +158,7 @@ public class PlayerPhysics : MonoBehaviour
         {
             _myShieldAnimation.StopShieldAn();
             Shield();
+            SaveData.AddValueInt("ShieldDestroy",1);
         }
     }
 
@@ -162,26 +172,22 @@ public class PlayerPhysics : MonoBehaviour
     public void Die()
     {
         
-        Debug.Log("Death ");
         SaveData.AddValueInt("DeathTime",1);
         SaveData.AddValueInt("PlayerInGame",-1);
         
         Debug.Log("[PlayerPhysics] Player left : " + SaveData.ReadValueInt("PlayerInGame"));
 
         _dead = true;
-        
         _myAnimations.Die();
+        
         if (SaveData.ReadValueInt("PlayerInGame") == 0)
         {
-            
-        
-        
-        Instantiate(death, transform.position, Quaternion.identity);
-        CameraController.Death();
-        QuadController.Death();
-        PreLaserScript.Death();
-        Money.Death();
-        StartCoroutine("wait");
+            Instantiate(death, transform.position, Quaternion.identity);
+            CameraController.Death();
+            QuadController.Death();
+            PreLaserScript.Death();
+            Money.Death();
+            StartCoroutine("wait");
         }
     }
 
