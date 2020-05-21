@@ -47,25 +47,25 @@ public class PlayerPhysics : MonoBehaviour
         _weapon.enabled = false;
         _myShieldAnimation = GetComponentInChildren<ShieldAnimation>();
         _canDash = true;
+        
+        Debug.Log("start");
 
 
         if (SaveData.ReadValueInt("Shield") > 0)
         {
             _myShieldAnimation.ShieldAn();
+            shield = true;
             SaveData.AddValueInt("Shield",-1);
             Console.WriteLine("shield on");
         }
         else
         {
+            shield = false;
             _myShieldAnimation.StopShieldAn();
             Console.WriteLine("no shield");
         }
-        /*
-        if (shield)
-            _myShieldAnimation.ShieldAn();
-        else
-            _myShieldAnimation.StopShieldAn();
-        */
+        
+       
     }
 
     // Update is called once per frame
@@ -134,7 +134,10 @@ public class PlayerPhysics : MonoBehaviour
             if (_dead == false)
             {
                  Die();
-                
+            }
+            else
+            {
+                Debug.Log("Call die fonction but already die");
             }
         }
         else if (collision.gameObject.CompareTag("Obstacle") || collision.gameObject.CompareTag("Ennemy"))

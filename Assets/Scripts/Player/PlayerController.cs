@@ -95,14 +95,14 @@ public class PlayerController : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.P))
                 _myPhysics.Die();
 
-            if (Input.GetKeyDown(KeyCode.Escape))
-                _pauseMenu.Pause();
+           /* if (Input.GetKeyDown(KeyCode.Escape))
+                _pauseMenu.Pause();*/
 
 
         }
 
-        if (Input.GetKeyDown(KeyCode.Escape))
-            _pauseMenu.Resume();
+        /*if (Input.GetKeyDown(KeyCode.Escape))
+            _pauseMenu.Resume();*/
 
 
 

@@ -17586,7 +17586,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pauseMenuUI: {fileID: 455840274}
-  _startMusic: {fileID: 1264533859}
+  _startMusic: {fileID: 753062063}
 --- !u!1 &1410394275
 GameObject:
   m_ObjectHideFlags: 0
@@ -23653,5 +23653,6 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3533500266212892551, guid: 1a8f793fdf87069489810e8c4e9717c5, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 1a8f793fdf87069489810e8c4e9717c5, type: 3}
