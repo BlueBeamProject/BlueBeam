@@ -7,8 +7,12 @@ public class Load : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        
+        
         //SaveData.WriteValueInt("Shield",0);
         //SaveData.WriteValueInt("Money",40);
+        
+        
         //Pour initialiser un nouvelle donné sauvergardé recopier les lignes en dessous
         //et mettez une valeur par défaut si la "key" n'existe
 
@@ -106,11 +110,92 @@ public class Load : MonoBehaviour
             PlayerPrefs.SetInt("DashP4", );//
         }
         */
-
+        
+        
+        
+        
+        //Checkpoint zone
         if (!PlayerPrefs.HasKey("Checkpoint1"))
         {
             PlayerPrefs.SetInt("Checkpoint1", 0);//checkpoint lvl 1
         }
+        
+        
+        //Avancement
+        if (!PlayerPrefs.HasKey("Level1"))
+        {
+            PlayerPrefs.SetInt("Level1", 0);
+        }
+        if (!PlayerPrefs.HasKey("Level2"))
+        {
+            PlayerPrefs.SetInt("Level2", 0);
+        }
+        if (!PlayerPrefs.HasKey("Level3"))
+        {
+            PlayerPrefs.SetInt("Level3", 0);
+        }
+        if (!PlayerPrefs.HasKey("Level4"))
+        {
+            PlayerPrefs.SetInt("Level4", 0);
+        }
+        if (!PlayerPrefs.HasKey("Level5"))
+        {
+            PlayerPrefs.SetInt("Level5", 0);
+        }
+        
+        
+        //Statisque
+        if (!PlayerPrefs.HasKey("JumpTime"))
+        {
+            PlayerPrefs.SetInt("JumpTime", 0);
+        }
+        
+        if (!PlayerPrefs.HasKey("DoSlide"))
+        {
+            PlayerPrefs.SetInt("DoSlide", 0);
+        }
+        
+        if (!PlayerPrefs.HasKey("KillEnnemie"))
+        {
+            PlayerPrefs.SetInt("KillEnnemie", 0);
+        }
+        
+        if (!PlayerPrefs.HasKey("CoinsPick"))
+        {
+            PlayerPrefs.SetInt("CoinsPick", 0);
+        }
+        
+        if (!PlayerPrefs.HasKey("UseDash"))
+        {
+            PlayerPrefs.SetInt("UseDash", 0);
+        }
+        
+        if (!PlayerPrefs.HasKey("ShieldDestroy"))
+        {
+            PlayerPrefs.SetInt("ShieldDestroy", 0);
+        }
+        
+        if (!PlayerPrefs.HasKey("LevelFinish"))
+        {
+            PlayerPrefs.SetInt("LevelFinish", 0);
+        }
+        
+        if (!PlayerPrefs.HasKey("DeathTime"))
+        {
+            PlayerPrefs.SetInt("DeathTime", 0);
+        }
+        
+        if (!PlayerPrefs.HasKey("SoloGame"))
+        {
+            PlayerPrefs.SetInt("SoloGame", 0);
+        }
+        
+        if (!PlayerPrefs.HasKey("MultiGame"))
+        {
+            PlayerPrefs.SetInt("MultiGame", 0);
+        }
+        
+        
 
 
         PlayerController.ReloadControl();

@@ -25,6 +25,8 @@ public class Coins : MonoBehaviour
         if (collider.gameObject.CompareTag("Player"))
         {
             Money.Add();
+            SaveData.AddValueInt("Money",1);
+            SaveData.AddValueInt("CoinsPick",1);
             Destroy(coins);
             Instantiate(coinsboom, transform.position, Quaternion.identity);
         }

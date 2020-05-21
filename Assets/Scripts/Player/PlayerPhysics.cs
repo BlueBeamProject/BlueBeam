@@ -52,11 +52,13 @@ public class PlayerPhysics : MonoBehaviour
         if (SaveData.ReadValueInt("Shield") > 0)
         {
             _myShieldAnimation.ShieldAn();
-            SaveData.WriteValueInt("Shield",(SaveData.ReadValueInt("Shield")-1));
+            SaveData.AddValueInt("Shield",-1);
+            Console.WriteLine("shield on");
         }
         else
         {
             _myShieldAnimation.StopShieldAn();
+            Console.WriteLine("no shield");
         }
         /*
         if (shield)
@@ -100,6 +102,8 @@ public class PlayerPhysics : MonoBehaviour
     {
         if (_grounded && !_dead)
         {
+            
+            SaveData.AddValueInt("JumpTime", 1);
             _myBody.AddForce(new Vector2(0f, jumpForce), ForceMode2D.Impulse);
             _myAnimations.CreateDust();
         }
@@ -114,6 +118,7 @@ public class PlayerPhysics : MonoBehaviour
             colliders[0].enabled = false;
             _startTime = Time.time;
             _myAnimations.Slide();
+            SaveData.AddValueInt("DoSlide", 1);
         }
     }
 
@@ -144,6 +149,8 @@ public class PlayerPhysics : MonoBehaviour
 
     public void Die()
     {
+        
+        SaveData.AddValueInt("DeathTime",1);
         _dead = true;
         Instantiate(death, transform.position, Quaternion.identity);
         CameraController.Death();
@@ -193,6 +200,7 @@ public class PlayerPhysics : MonoBehaviour
             transform.position += new Vector3(3, 0, 0);
             Instantiate(dash, transform.position, Quaternion.identity);
             StartCoroutine("DashTimer");
+            SaveData.AddValueInt("UseDash", 1);
         }
     }
 
