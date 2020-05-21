@@ -131,7 +131,11 @@ public class PlayerPhysics : MonoBehaviour
 
         if ((collision.gameObject.CompareTag("Obstacle") && !shield) || collision.gameObject.CompareTag("Laser") || (collision.gameObject.CompareTag("Ennemy") && !shield))
         {
-            Die();
+            if (_dead == false)
+            {
+                 Die();
+                
+            }
         }
         else if (collision.gameObject.CompareTag("Obstacle") || collision.gameObject.CompareTag("Ennemy"))
         {
@@ -150,6 +154,7 @@ public class PlayerPhysics : MonoBehaviour
     public void Die()
     {
         
+        Debug.Log("Death ");
         SaveData.AddValueInt("DeathTime",1);
         _dead = true;
         Instantiate(death, transform.position, Quaternion.identity);
