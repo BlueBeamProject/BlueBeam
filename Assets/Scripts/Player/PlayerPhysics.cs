@@ -48,6 +48,11 @@ public class PlayerPhysics : MonoBehaviour
         _myShieldAnimation = GetComponentInChildren<ShieldAnimation>();
         _canDash = true;
         
+        SaveData.WriteValueInt("PlayerInGame",SaveData.ReadValueInt("PlayerInGameMemorie"));
+        Debug.Log("[PlayerPhysics] Player in the game : " + SaveData.ReadValueInt("PlayerInGame"));
+        
+        Physics.IgnoreCollision(_myBody.GetComponent<Collider>(), _myBody.GetComponent<Collider>());
+        
         Debug.Log("start");
 
 
@@ -159,14 +164,25 @@ public class PlayerPhysics : MonoBehaviour
         
         Debug.Log("Death ");
         SaveData.AddValueInt("DeathTime",1);
+        SaveData.AddValueInt("PlayerInGame",-1);
+        
+        Debug.Log("[PlayerPhysics] Player left : " + SaveData.ReadValueInt("PlayerInGame"));
+
         _dead = true;
+        
+        _myAnimations.Die();
+        if (SaveData.ReadValueInt("PlayerInGame") == 0)
+        {
+            
+        
+        
         Instantiate(death, transform.position, Quaternion.identity);
         CameraController.Death();
         QuadController.Death();
         PreLaserScript.Death();
         Money.Death();
-        _myAnimations.Die();
         StartCoroutine("wait");
+        }
     }
 
     IEnumerator wait()

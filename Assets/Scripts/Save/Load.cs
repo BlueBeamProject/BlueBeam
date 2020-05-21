@@ -27,6 +27,17 @@ public class Load : MonoBehaviour
         {
             PlayerPrefs.SetInt("Shield", 0);
         }
+        
+        //GameInfo
+        if (!PlayerPrefs.HasKey("PlayerInGame"))
+        {
+            PlayerPrefs.SetInt("PlayerInGame", 1);
+        }
+        
+        if (!PlayerPrefs.HasKey("PlayerInGameMemorie"))
+        {
+            PlayerPrefs.SetInt("PlayerInGameMemorie", 1);
+        }
 
         //Controlle default
         if (!PlayerPrefs.HasKey("JumpP1"))
