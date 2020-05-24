@@ -7,20 +7,25 @@ public class Coins : MonoBehaviour
     public GameObject coins;
     public GameObject coinsboom;
 
+    Rigidbody2D rigidbody;
+
     // Start is called before the first frame update
     void Start()
     {
-
+        rigidbody = GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if (transform.position.y < -15.7)
+            transform.position += new Vector3(0, 30, 0);
     }
 
     void OnTriggerEnter2D(Collider2D collider)
     {
+        if (collider.gameObject.CompareTag("Ground"))
+            rigidbody.constraints = RigidbodyConstraints2D.FreezePositionY;
 
         if (collider.gameObject.CompareTag("Player"))
         {
