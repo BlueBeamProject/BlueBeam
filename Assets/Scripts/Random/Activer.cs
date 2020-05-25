@@ -6,7 +6,7 @@ public class Activer : MonoBehaviour
 {
 
     public GameObject toactive;
-    public string tag;
+    public string tagg;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,7 +20,7 @@ public class Activer : MonoBehaviour
     }
     void OnTriggerEnter2D(Collider2D collider)
     {
-        if (collider.gameObject.CompareTag(tag))
+        if (collider.gameObject.CompareTag(tagg))
         {
             toactive.SetActive(true);
         }

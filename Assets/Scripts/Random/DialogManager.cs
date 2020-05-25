@@ -14,6 +14,7 @@ public class DialogManager : MonoBehaviour
 
     void Start()
     {
+        index = 0;
         _pauseMenu = pauseUI.GetComponent<PauseMenu>();
         PauseMenu.gameIsPaused = false;
         StartCoroutine(Type());
