@@ -26,6 +26,7 @@ public class PlayerController : MonoBehaviour
     {
 
         ReloadControl();
+        Debug.Log("test");
 
         /*Debug.Log("====Control====");
         Debug.Log("Jump : " + ((KeyCode)jumpB).ToString());

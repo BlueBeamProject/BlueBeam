@@ -6126,7 +6126,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &679548054
 RectTransform:
   m_ObjectHideFlags: 0
@@ -8717,6 +8717,7 @@ GameObject:
   - component: {fileID: 988821491}
   - component: {fileID: 988821490}
   - component: {fileID: 988821488}
+  - component: {fileID: 988821489}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -8763,6 +8764,19 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &988821489
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 988821486}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54383587a2fc2bb4d96a9837d0ce0802, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SceneName: Endless
 --- !u!114 &988821490
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8806,8 +8820,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: ChangeMenuByName
+      - m_Target: {fileID: 988821489}
+        m_MethodName: ChangeSceneByName
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -14639,6 +14653,7 @@ GameObject:
   - component: {fileID: 1558387826}
   - component: {fileID: 1558387825}
   - component: {fileID: 1558387824}
+  - component: {fileID: 1558387827}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -14735,7 +14750,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Latter
+  m_Text: 1 joueur
 --- !u!222 &1558387826
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -14744,6 +14759,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1558387822}
   m_CullTransparentMesh: 0
+--- !u!114 &1558387827
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1558387822}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54383587a2fc2bb4d96a9837d0ce0802, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SceneName: 
 --- !u!1001 &1562680304
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17224,7 +17252,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1906712989
 RectTransform:
   m_ObjectHideFlags: 0

@@ -72,7 +72,6 @@ public class PlayerPhysics : MonoBehaviour
         else
         {
             shield = false;
-            _myShieldAnimation.StopShieldAn();
             Console.WriteLine("no shield");
         }
         
