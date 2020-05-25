@@ -8,28 +8,58 @@ using Debug = UnityEngine.Debug;
 
 public class KeyBind : MonoBehaviour
 {
-    private Dictionary<string, KeyCode> keys = new Dictionary<string, KeyCode>();
+    private static Dictionary<string, KeyCode> keys = new Dictionary<string, KeyCode>();
 
-    public GameObject jump, slide, attack, dash;
-    public int PlayerID;
+    public  GameObject jump, slide, attack, dash;
+    public  int PlayerID;
 
     private GameObject currentKey;
     
     // Start is called before the first frame update
     void Start()
     {
+        if (!keys.ContainsKey("JumpP"+PlayerID))
+        {
+            keys.Add("JumpP"+PlayerID, (KeyCode)SaveData.ReadValueInt("JumpP"+PlayerID));
+        }
         
-        keys.Add("JumpP"+PlayerID, (KeyCode)SaveData.ReadValueInt("JumpP"+PlayerID));
-        keys.Add("SlideP"+PlayerID, (KeyCode)SaveData.ReadValueInt("SlideP"+PlayerID));
-        keys.Add("AttackP"+PlayerID, (KeyCode)SaveData.ReadValueInt("AttackP"+PlayerID));
-        keys.Add("DashP"+PlayerID, (KeyCode)SaveData.ReadValueInt("DashP"+PlayerID));
+        
+        if (!keys.ContainsKey("SlideP"+PlayerID))
+        {
+            keys.Add("SlideP"+PlayerID, (KeyCode)SaveData.ReadValueInt("SlideP"+PlayerID));
+        }
+        
+        if (!keys.ContainsKey("AttackP"+PlayerID))
+        {
+            keys.Add("AttackP"+PlayerID, (KeyCode)SaveData.ReadValueInt("AttackP"+PlayerID));
+        }
+        
+        if (!keys.ContainsKey("DashP"+PlayerID))
+        {
+            keys.Add("DashP"+PlayerID, (KeyCode)SaveData.ReadValueInt("DashP"+PlayerID));
+        }
         
         jump.transform.GetChild(0).GetComponent<Text>().text = keys["JumpP"+PlayerID].ToString();
         slide.transform.GetChild(0).GetComponent<Text>().text = keys["SlideP"+PlayerID].ToString();
         attack.transform.GetChild(0).GetComponent<Text>().text = keys["AttackP"+PlayerID].ToString();
         dash.transform.GetChild(0).GetComponent<Text>().text = keys["DashP"+PlayerID].ToString();
     }
-    
+
+    public void RefreshDisp(int playerID)
+    {
+        
+        Debug.Log(playerID);
+        
+        keys["JumpP"+playerID] = (KeyCode)SaveData.ReadValueInt("JumpP"+playerID);
+        keys["SlideP"+playerID] = (KeyCode)SaveData.ReadValueInt("SlideP"+playerID);
+        keys["AttackP"+playerID] = (KeyCode)SaveData.ReadValueInt("AttackP"+playerID);
+        keys["DashP"+playerID] = (KeyCode)SaveData.ReadValueInt("DashP"+playerID);
+        
+        jump.transform.GetChild(0).GetComponent<Text>().text = keys["JumpP"+playerID].ToString();
+        slide.transform.GetChild(0).GetComponent<Text>().text = keys["SlideP"+playerID].ToString();
+        attack.transform.GetChild(0).GetComponent<Text>().text = keys["AttackP"+playerID].ToString();
+        dash.transform.GetChild(0).GetComponent<Text>().text = keys["DashP"+playerID].ToString();
+    }
     // Update is called once per frame
     void Update()
     {
@@ -113,6 +143,48 @@ public class KeyBind : MonoBehaviour
         currentKey = clicked;
     }
     
+    public void DefaultPlayer1()
+    {
+        PlayerPrefs.SetInt("JumpP1", 32);
+        PlayerPrefs.SetInt("SlideP1", 115);
+        PlayerPrefs.SetInt("AttackP1", 100);
+        PlayerPrefs.SetInt("DashP1", 102);
+        
+        RefreshDisp(1);
+
+    }
+    
+    public void DefaultPlayer2()
+    {
+        PlayerPrefs.SetInt("JumpP2", 273);
+        PlayerPrefs.SetInt("SlideP2", 274);
+        PlayerPrefs.SetInt("AttackP2", 275);
+        PlayerPrefs.SetInt("DashP2", 276);
+
+        RefreshDisp(2);
+    }
+    
+    public void DefaultPlayer3()
+    {
+        PlayerPrefs.SetInt("JumpP3", 13);
+        PlayerPrefs.SetInt("SlideP3", 106);
+        PlayerPrefs.SetInt("AttackP3", 108);
+        PlayerPrefs.SetInt("DashP3", 109);
+        
+        RefreshDisp(3);
+
+    }
+    
+    public void DefaultPlayer4()
+    {
+        PlayerPrefs.SetInt("JumpP4", 116);
+        PlayerPrefs.SetInt("SlideP4", 97);
+        PlayerPrefs.SetInt("AttackP4", 122);
+        PlayerPrefs.SetInt("DashP4", 101);
+        
+        RefreshDisp(4);
+
+    }
     
     
 }
