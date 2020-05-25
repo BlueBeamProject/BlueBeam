@@ -11273,6 +11273,11 @@ PrefabInstance:
       propertyPath: _startMusic
       value: 
       objectReference: {fileID: 1264533859}
+    - target: {fileID: 3727840760912205006, guid: 6cd3d922f6dea0c42bc7926ccde7ea2e,
+        type: 3}
+      propertyPath: _startMusic1
+      value: 
+      objectReference: {fileID: 1264533862}
     - target: {fileID: 3727840760912205007, guid: 6cd3d922f6dea0c42bc7926ccde7ea2e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -17587,6 +17592,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pauseMenuUI: {fileID: 455840274}
   _startMusic: {fileID: 1264533859}
+  _startMusic1: {fileID: 0}
 --- !u!1 &1410394275
 GameObject:
   m_ObjectHideFlags: 0
