@@ -67,12 +67,18 @@ public class Dialog : MonoBehaviour
         Debug.Log("OK2");
         while (textDisplay.text != sentences[index])
         {
-            if (_countFrame == head1.Length )
-                _countFrame = 0;
+            if (head1.Length ==1)
+                _mySpriteRenderer.sprite = head1[0];
+            else
+            {
+                if (_countFrame == head1.Length)
+                    _countFrame = 0;
+
+                _mySpriteRenderer.sprite = head1[_countFrame];
+                _countFrame++;
+                yield return new WaitForSeconds(animationSpeed);
+            }
             
-            _mySpriteRenderer.sprite = head1[_countFrame];
-            _countFrame++;
-            yield return new WaitForSeconds(animationSpeed);
         }
         
 
@@ -84,12 +90,20 @@ public class Dialog : MonoBehaviour
         
         while (textDisplay.text != sentences[index])
         {
-            if (_countFrame == head2.Length)
-                _countFrame = 0;
+            if (head2.Length == 1)
+            {
+                _mySpriteRenderer.sprite = head2[0];
+            }
+            else
+            {
+                if (_countFrame == head2.Length)
+                    _countFrame = 0;
+
+                _mySpriteRenderer.sprite = head2[_countFrame];
+                _countFrame++;
+                yield return new WaitForSeconds(animationSpeed);
+            }
             
-            _mySpriteRenderer.sprite = head2[_countFrame];
-            _countFrame++;
-            yield return new WaitForSeconds(animationSpeed);
         }
         
 
