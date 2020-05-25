@@ -14310,6 +14310,11 @@ MonoBehaviour:
   deathtime: {fileID: 451188011}
   killennemies: {fileID: 598021368}
   coinspick: {fileID: 1351993724}
+  shielddestroy: {fileID: 0}
+  levelfinish: {fileID: 0}
+  sologame: {fileID: 0}
+  multigame: {fileID: 0}
+  bosskill: {fileID: 0}
 --- !u!1 &1558387822
 GameObject:
   m_ObjectHideFlags: 0
@@ -17541,7 +17546,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1974797917
 MonoBehaviour:
   m_ObjectHideFlags: 0
