@@ -113,8 +113,13 @@ public class Dialog : MonoBehaviour
         {
             textDisplay.text = "";
             continueButton.SetActive(false);
-            SceneManager.LoadScene(Level1);
+            PassLvl();
         }
         isTalking = true;
+    }
+
+    public void PassLvl()
+    {
+        SceneManager.LoadScene(Level1);
     }
 }
