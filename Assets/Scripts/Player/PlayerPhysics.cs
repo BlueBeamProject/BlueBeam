@@ -141,25 +141,37 @@ public class PlayerPhysics : MonoBehaviour
         {
             _grounded = true;
         }
-
         if ((collision.gameObject.CompareTag("Obstacle") && !shield) || collision.gameObject.CompareTag("Laser") || (collision.gameObject.CompareTag("Ennemy") && !shield))
         {
             if (_dead == false)
             {
-                 Die();
-            }
-            else
-            {
-
+                Die();
             }
         }
         else if (collision.gameObject.CompareTag("Obstacle") || collision.gameObject.CompareTag("Ennemy"))
         {
             _myShieldAnimation.StopShieldAn();
             Shield();
-            SaveData.AddValueInt("ShieldDestroy",1);
+            SaveData.AddValueInt("ShieldDestroy", 1);
         }
     }
+
+    /*void OnTriggerEnter2D(Collider2D collider)
+    {
+        if ((collider.gameObject.CompareTag("Obstacle") && !shield) || collider.gameObject.CompareTag("Laser") || (collider.gameObject.CompareTag("Ennemy") && !shield))
+        {
+            if (_dead == false)
+            {
+                Die();
+            }
+        }
+        else if (collider.gameObject.CompareTag("Obstacle") || collider.gameObject.CompareTag("Ennemy"))
+        {
+            _myShieldAnimation.StopShieldAn();
+            Shield();
+            SaveData.AddValueInt("ShieldDestroy", 1);
+        }
+    }*/
 
     void OnCollisionExit2D(Collision2D collision)
     {

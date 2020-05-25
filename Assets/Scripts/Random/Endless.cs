@@ -34,7 +34,6 @@ public class Endless : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(dash);
         if (player.transform.position.x + 300 > pos)
         {
             if (lastplat == 0)
