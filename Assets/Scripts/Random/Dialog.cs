@@ -20,7 +20,6 @@ public class Dialog : MonoBehaviour
     private int _countFrame = 0;
     private bool isTalking = true;
     public string Level1;
-    public GameObject dialogManager;
     private Transform _transform;
 
     void Start()
@@ -67,12 +66,14 @@ public class Dialog : MonoBehaviour
         Debug.Log("OK2");
         while (textDisplay.text != sentences[index])
         {
-            if (_countFrame == head1.Length )
-                _countFrame = 0;
+                if (_countFrame == head1.Length)
+                    _countFrame = 0;
+
+                _mySpriteRenderer.sprite = head1[_countFrame];
+                _countFrame++;
+                yield return new WaitForSeconds(animationSpeed);
             
-            _mySpriteRenderer.sprite = head1[_countFrame];
-            _countFrame++;
-            yield return new WaitForSeconds(animationSpeed);
+            
         }
         
 
@@ -84,12 +85,14 @@ public class Dialog : MonoBehaviour
         
         while (textDisplay.text != sentences[index])
         {
-            if (_countFrame == head2.Length)
-                _countFrame = 0;
+                if (_countFrame == head2.Length)
+                    _countFrame = 0;
+
+                _mySpriteRenderer.sprite = head2[_countFrame];
+                _countFrame++;
+                yield return new WaitForSeconds(animationSpeed);
+           
             
-            _mySpriteRenderer.sprite = head2[_countFrame];
-            _countFrame++;
-            yield return new WaitForSeconds(animationSpeed);
         }
         
 
@@ -110,8 +113,13 @@ public class Dialog : MonoBehaviour
         {
             textDisplay.text = "";
             continueButton.SetActive(false);
-            SceneManager.LoadScene(Level1);
+            PassLvl();
         }
         isTalking = true;
+    }
+
+    public void PassLvl()
+    {
+        SceneManager.LoadScene(Level1);
     }
 }
