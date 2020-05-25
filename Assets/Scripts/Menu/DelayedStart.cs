@@ -5,7 +5,7 @@ using UnityEngine;
 public class DelayedStart : MonoBehaviour
 {
     public GameObject countDown;
-    public  AudioSource someSound;
+    public AudioSource someSound;
     // Start is called before the first frame update
     void Start()
     {
