@@ -61,23 +61,21 @@ public class PlayerPhysics : MonoBehaviour
         }
         
         
+        Debug.Log(SaveData.ReadValueInt("Shield"));
         
+        shield = false;
+
         if (SaveData.ReadValueInt("Shield") > 0)
         {
-            _myShieldAnimation.ShieldAn();
+            //²_myShieldAnimation.ShieldAn();
             shield = true;
-            SaveData.AddValueInt("Shield",-1);
+            SaveData.AddValueInt("Shield", -1);
             Console.WriteLine("shield on");
         }
-        else
-        {
-            shield = false;
-            Console.WriteLine("no shield");
-        }
-        
-       
-        //j'ai pas trouvé mieux pour ignorer les collisions entre les joueurs si qqn à mieux je suis preneur 
-       // Physics.IgnoreCollision(_myBody.GetComponent<Collider>(), _myBody.GetComponent<Collider>());
+
+
+
+
     }
 
     // Update is called once per frame

@@ -8,7 +8,7 @@ public class MultiDisplayPlayer : MonoBehaviour
 {
 
 
-    public GameObject p1, p2 /*,p3,p4*/ ;
+    public GameObject p1, p2 , p3 , p4;
     
     // Start is called before the first frame update
     void Start()
@@ -27,13 +27,13 @@ public class MultiDisplayPlayer : MonoBehaviour
             case 3:
                 p1.SetActive(true);
                 p2.SetActive(true);
-                //p3.setActive(true);
+                p3.SetActive(true);
                 break;
             case 4:   
                 p1.SetActive(true);
                 p2.SetActive(true);
-                //p3.setActive(true);
-                //p4.setActive(true);
+                p3.SetActive(true);
+                p4.SetActive(true);
                 break;
             default:
                 Debug.Log("[MultiDisplayPlayer] Erreur sur le nombre de joueur(s) : " + SaveData.ReadValueInt("PlayerInMemorie"));
