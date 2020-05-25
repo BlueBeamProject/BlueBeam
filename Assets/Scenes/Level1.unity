@@ -3743,7 +3743,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dbb65c53e09aeb443a81ae1af65df282, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 3.5
 --- !u!1 &349832077
 GameObject:
   m_ObjectHideFlags: 0
@@ -11263,6 +11262,16 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3727840760912205000, guid: 6cd3d922f6dea0c42bc7926ccde7ea2e,
+        type: 3}
+      propertyPath: m_AdditionalShaderChannelsFlag
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 3727840760912205001, guid: 6cd3d922f6dea0c42bc7926ccde7ea2e,
+        type: 3}
+      propertyPath: m_UiScaleMode
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3727840760912205003, guid: 6cd3d922f6dea0c42bc7926ccde7ea2e,
         type: 3}
       propertyPath: m_Name
@@ -15249,7 +15258,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dbb65c53e09aeb443a81ae1af65df282, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 4
 --- !u!212 &1188880748
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -17002,7 +17010,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dbb65c53e09aeb443a81ae1af65df282, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 3
 --- !u!1001 &1362270801
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -21240,7 +21247,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dbb65c53e09aeb443a81ae1af65df282, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 4
 --- !u!212 &1798395244
 SpriteRenderer:
   m_ObjectHideFlags: 0
