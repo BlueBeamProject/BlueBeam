@@ -18,11 +18,9 @@ public class Endless : MonoBehaviour
     private bool dash;
     private bool slide;
     private float coinspos;
-    private int coinsfall;
 
     void Start()
     {
-        coinsfall = 0;
         coinspos = 0;
         dash = true;
         slide = true;

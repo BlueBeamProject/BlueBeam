@@ -18,9 +18,9 @@ public class SkyLaser : MonoBehaviour
         
     }
 
-    void OnCollisionEnter2D(Collision2D collision)
+    void OnTriggerEnter2D(Collider2D collider)
     {
-        if (collision.gameObject.CompareTag("Attack") || collision.gameObject.CompareTag("Laser"))
+        if (collider.gameObject.CompareTag("Attack") || collider.gameObject.CompareTag("Laser"))
             Die();
     }
 

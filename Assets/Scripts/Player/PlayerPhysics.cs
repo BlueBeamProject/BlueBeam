@@ -50,7 +50,6 @@ public class PlayerPhysics : MonoBehaviour
         _canDash = true;
         
         SaveData.WriteValueInt("PlayerInGame",SaveData.ReadValueInt("PlayerInGameMemorie"));
-        Debug.Log("[PlayerPhysics] Player in the game : " + SaveData.ReadValueInt("PlayerInGame"));
 
         if (SaveData.ReadValueInt("PlayerInGameMemorie") == 1)
         {
@@ -151,7 +150,7 @@ public class PlayerPhysics : MonoBehaviour
             }
             else
             {
-                Debug.Log("Call die fonction but already die");
+
             }
         }
         else if (collision.gameObject.CompareTag("Obstacle") || collision.gameObject.CompareTag("Ennemy"))
@@ -174,8 +173,6 @@ public class PlayerPhysics : MonoBehaviour
         
         SaveData.AddValueInt("DeathTime",1);
         SaveData.AddValueInt("PlayerInGame",-1);
-        
-        Debug.Log("[PlayerPhysics] Player left : " + SaveData.ReadValueInt("PlayerInGame"));
 
         _dead = true;
         _myAnimations.Die();
