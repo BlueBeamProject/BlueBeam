@@ -18,7 +18,6 @@ public class MultiPlayerChoose : MonoBehaviour
 
     public void chosePlayerInGame(int n)
     {
-        Debug.Log("Player set to " + n);
         SaveData.WriteValueInt("PlayerInGame",n);
         SaveData.WriteValueInt("PlayerInGameMemorie",n);
     }
