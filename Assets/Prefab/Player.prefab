@@ -4768,7 +4768,6 @@ GameObject:
   - component: {fileID: 3533500266212892546}
   - component: {fileID: 3533500266212892545}
   - component: {fileID: 3533500266212892549}
-  - component: {fileID: 3533500266212892551}
   - component: {fileID: 3533500266212892568}
   - component: {fileID: 3533500266212892544}
   - component: {fileID: 3533500266212892569}
@@ -4807,6 +4806,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a02dc1b34bc8e4cb980595531244091, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pauseUI: {fileID: 0}
+  PlayerID: 0
 --- !u!114 &3533500266212892550
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4831,6 +4832,7 @@ MonoBehaviour:
   prellow: {fileID: 0}
   attack: {fileID: 0}
   shield: 0
+  scene: 
 --- !u!212 &3533500266212892546
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4929,20 +4931,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &3533500266212892551
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3533500266212892559}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8b1121a7da202ee48b13a646811b4e30, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  jumpSound: {fileID: 8300000, guid: ee4a4945e9ddd104e9b2904e1fa18743, type: 3}
-  landSound: {fileID: 8300000, guid: 254e397d7bb8800479a156af569db6a9, type: 3}
 --- !u!61 &3533500266212892568
 BoxCollider2D:
   m_ObjectHideFlags: 0

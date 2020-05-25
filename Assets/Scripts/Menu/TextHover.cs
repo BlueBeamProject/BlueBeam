@@ -22,7 +22,6 @@ public class TextHover : MonoBehaviour, IPointerEnterHandler, IPointerExitHandle
     
     public void OnPointerEnter(PointerEventData eventData)
     {
-        print(text.GetComponent<Text>().fontSize);
         
         tm.fontSize = 50; 
         tm.fontStyle = FontStyle.Bold;

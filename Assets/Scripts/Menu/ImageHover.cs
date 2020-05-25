@@ -6,12 +6,12 @@ using UnityEngine.UI;
 
 public class ImageHover : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
-    public GameObject text;
+    public GameObject image;
     private Image im;
     // Start is called before the first frame update
     void Start()
     {
-        im = text.GetComponent<Image>();
+        im = image.GetComponent<Image>();
     }
 
     // Update is called once per frame
@@ -19,6 +19,7 @@ public class ImageHover : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
     {
         
     }
+
     
     public void OnPointerEnter(PointerEventData eventData)
     {

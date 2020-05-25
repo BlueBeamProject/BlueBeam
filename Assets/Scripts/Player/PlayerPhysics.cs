@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -47,10 +48,34 @@ public class PlayerPhysics : MonoBehaviour
         _weapon.enabled = false;
         _myShieldAnimation = GetComponentInChildren<ShieldAnimation>();
         _canDash = true;
-        if (shield)
-            _myShieldAnimation.ShieldAn();
+        
+        SaveData.WriteValueInt("PlayerInGame",SaveData.ReadValueInt("PlayerInGameMemorie"));
+
+        if (SaveData.ReadValueInt("PlayerInGameMemorie") == 1)
+        {
+            SaveData.AddValueInt("SoloGame",1);
+        }
         else
-            _myShieldAnimation.StopShieldAn();
+        {
+            SaveData.AddValueInt("MultiGame",1);
+        }
+        
+        
+        Debug.Log(SaveData.ReadValueInt("Shield"));
+        
+        shield = false;
+
+        if (SaveData.ReadValueInt("Shield") > 0)
+        {
+            _myShieldAnimation.ShieldAn();
+            shield = true;
+            SaveData.AddValueInt("Shield", -1);
+            Console.WriteLine("shield on");
+        }
+
+
+
+
     }
 
     // Update is called once per frame
@@ -87,6 +112,8 @@ public class PlayerPhysics : MonoBehaviour
     {
         if (_grounded && !_dead)
         {
+            
+            SaveData.AddValueInt("JumpTime", 1);
             _myBody.AddForce(new Vector2(0f, jumpForce), ForceMode2D.Impulse);
             _myAnimations.CreateDust();
         }
@@ -101,6 +128,7 @@ public class PlayerPhysics : MonoBehaviour
             colliders[0].enabled = false;
             _startTime = Time.time;
             _myAnimations.Slide();
+            SaveData.AddValueInt("DoSlide", 1);
         }
     }
 
@@ -110,17 +138,37 @@ public class PlayerPhysics : MonoBehaviour
         {
             _grounded = true;
         }
-
         if ((collision.gameObject.CompareTag("Obstacle") && !shield) || collision.gameObject.CompareTag("Laser") || (collision.gameObject.CompareTag("Ennemy") && !shield))
         {
-            Die();
+            if (_dead == false)
+            {
+                Die();
+            }
         }
         else if (collision.gameObject.CompareTag("Obstacle") || collision.gameObject.CompareTag("Ennemy"))
         {
             _myShieldAnimation.StopShieldAn();
             Shield();
+            SaveData.AddValueInt("ShieldDestroy", 1);
         }
     }
+
+    /*void OnTriggerEnter2D(Collider2D collider)
+    {
+        if ((collider.gameObject.CompareTag("Obstacle") && !shield) || collider.gameObject.CompareTag("Laser") || (collider.gameObject.CompareTag("Ennemy") && !shield))
+        {
+            if (_dead == false)
+            {
+                Die();
+            }
+        }
+        else if (collider.gameObject.CompareTag("Obstacle") || collider.gameObject.CompareTag("Ennemy"))
+        {
+            _myShieldAnimation.StopShieldAn();
+            Shield();
+            SaveData.AddValueInt("ShieldDestroy", 1);
+        }
+    }*/
 
     void OnCollisionExit2D(Collision2D collision)
     {
@@ -131,14 +179,22 @@ public class PlayerPhysics : MonoBehaviour
 
     public void Die()
     {
+        
+        SaveData.AddValueInt("DeathTime",1);
+        SaveData.AddValueInt("PlayerInGame",-1);
+
         _dead = true;
-        Instantiate(death, transform.position, Quaternion.identity);
-        CameraController.Death();
-        QuadController.Death();
-        PreLaserScript.Death();
-        Money.Death();
         _myAnimations.Die();
-        StartCoroutine("wait");
+        
+        if (SaveData.ReadValueInt("PlayerInGame") == 0)
+        {
+            Instantiate(death, transform.position, Quaternion.identity);
+            CameraController.Death();
+            QuadController.Death();
+            PreLaserScript.Death();
+            Money.Death();
+            StartCoroutine("wait");
+        }
     }
 
     IEnumerator wait()
@@ -180,6 +236,7 @@ public class PlayerPhysics : MonoBehaviour
             transform.position += new Vector3(3, 0, 0);
             Instantiate(dash, transform.position, Quaternion.identity);
             StartCoroutine("DashTimer");
+            SaveData.AddValueInt("UseDash", 1);
         }
     }
 

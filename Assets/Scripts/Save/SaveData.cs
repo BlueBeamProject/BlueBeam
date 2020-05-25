@@ -21,7 +21,6 @@ public class SaveData : MonoBehaviour
         if (PlayerPrefs.HasKey(name))
         {
             PlayerPrefs.SetInt(name, PlayerPrefs.GetInt(name) + value);
-            Debug.Log("[WriteValueInt]" +name + " sauvergardé dans le PlayerPrefs \n Valeur : " + PlayerPrefs.GetInt(name));
         }
         else
         {
@@ -35,7 +34,6 @@ public class SaveData : MonoBehaviour
         if (PlayerPrefs.HasKey(name))
         {
             PlayerPrefs.SetInt(name,value);
-            Debug.Log("[WriteValueInt]" +name + " sauvergardé dans le PlayerPrefs \n Valeur : " + PlayerPrefs.GetInt(name));
         }
         else
         {

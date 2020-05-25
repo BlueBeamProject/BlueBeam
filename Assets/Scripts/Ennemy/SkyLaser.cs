@@ -24,10 +24,6 @@ public class SkyLaser : MonoBehaviour
             Die();
     }
 
-    
-
-    
-
     private void Die()
     {
         Destroy(skyLaser);

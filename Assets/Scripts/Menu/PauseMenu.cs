@@ -34,24 +34,7 @@ public class PauseMenu : MonoBehaviour
             }
         }
     }
-
     
-
-    public void Resume1()
-    {
-        if (gameIsPaused)
-        {
-            pauseMenuUI.SetActive(false);
-            Time.timeScale = 1f;
-            gameIsPaused = false;
-            _delayedStart1.PlayMusic();
-        }
-        else
-        {
-            Pause();
-        }
-
-    }
     public void Resume()
     {
         if (gameIsPaused)
@@ -59,7 +42,7 @@ public class PauseMenu : MonoBehaviour
             pauseMenuUI.SetActive(false);
             Time.timeScale = 1f;
             gameIsPaused = false;
-            _delayedStart.PlayMusic();
+            _delayedStart1.PlayMusic();
         }
         else
         {
@@ -78,7 +61,6 @@ public class PauseMenu : MonoBehaviour
 
     public void LoadMenu()
     {
-        
         Time.timeScale = 1f;
         SceneManager.LoadScene("Menu");
     }
@@ -87,5 +69,10 @@ public class PauseMenu : MonoBehaviour
     {
 
         Application.Quit();
+    }
+
+    public void onClickButton()
+    {
+        gameIsPaused = false;
     }
 }

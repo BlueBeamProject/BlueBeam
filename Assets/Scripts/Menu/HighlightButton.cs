@@ -8,7 +8,7 @@ public class HighlightButton : MonoBehaviour
 {
     
 
-    public GameObject gameObject;
+    public GameObject gameObjectt;
     // Start is called before the first frame update
     void Start()
     {
@@ -25,14 +25,14 @@ public class HighlightButton : MonoBehaviour
     {
         
         Debug.Log("Show");
-        gameObject.SetActive(true);
+        gameObjectt.SetActive(true);
     }
 
     public void OnExit()
     {
         
         Debug.Log("Unshow");
-        gameObject.SetActive(false);
+        gameObjectt.SetActive(false);
     }
 
     
