@@ -26,18 +26,7 @@ public class PlayerController : MonoBehaviour
     {
 
         ReloadControl();
-        Debug.Log("test");
-
-        /*Debug.Log("====Control====");
-        Debug.Log("Jump : " + ((KeyCode)jumpB).ToString());
-        Debug.Log("Slide : " + ((KeyCode)slideB).ToString());
-        Debug.Log("Attack : " + ((KeyCode)attackB).ToString());
-        Debug.Log("Dash : " + ((KeyCode)dashB).ToString());
-        Debug.Log("Suicide : P");
-        Debug.Log("Pause/Unpause : Escape");*/
-
-
-
+        
     }
 
 
@@ -92,21 +81,15 @@ public class PlayerController : MonoBehaviour
             }
 
 
-
+            /*
             if (Input.GetKeyDown(KeyCode.P))
-                _myPhysics.Die();
+                _myPhysics.Die();*/
 
-           /* if (Input.GetKeyDown(KeyCode.Escape))
-                _pauseMenu.Pause();*/
+           
 
 
         }
-
-        /*if (Input.GetKeyDown(KeyCode.Escape))
-            _pauseMenu.Resume();*/
-
-
-
+        
     }
 
     public static void ReloadControl()
