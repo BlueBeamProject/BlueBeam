@@ -188,7 +188,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2f7462cb9d89c44eb7a5ba4639fe3cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
+  player: {fileID: 643213712}
   routes: {fileID: 1265725235}
   obstacle: {fileID: 188660803}
   obstacle2: {fileID: 1391626051}
@@ -1163,6 +1163,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &643213712 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4241959085026737808, guid: 9d699b989faa5fc45bd1ebd0f2bd5c6d,
+    type: 3}
+  m_PrefabInstance: {fileID: 428540272}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &712639713
 GameObject:
   m_ObjectHideFlags: 0

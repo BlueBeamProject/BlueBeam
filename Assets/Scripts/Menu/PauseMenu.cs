@@ -42,7 +42,7 @@ public class PauseMenu : MonoBehaviour
             pauseMenuUI.SetActive(false);
             Time.timeScale = 1f;
             gameIsPaused = false;
-            _delayedStart.PlayMusic();
+            _delayedStart1.PlayMusic();
         }
         else
         {
