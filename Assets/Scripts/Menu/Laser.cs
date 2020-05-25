@@ -4,32 +4,41 @@ using UnityEngine;
 
 public class Laser : MonoBehaviour
 {
-
-    public float newPos;
     public GameObject logo;
 
     private Vector2 startPos;
+    private bool laser;
+    private bool logob;
     // Start is called before the first frame update
     void Start()
     {
         startPos = transform.position;
+        laser = true;
+        logob = true;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Time.timeSinceLevelLoad > 19.7 && Time.timeSinceLevelLoad < 23.207)
+        if (logob && Time.timeSinceLevelLoad > 21)
         {
-            //19.625 et 25.207
-            newPos += 0.4f;
-            if (Time.timeSinceLevelLoad > 21)
-            {
-                logo.SetActive(true);
-            }
+            logo.SetActive(true);
         }
 
-        transform.position = startPos + Vector2.left * newPos;
+        if (laser && Time.timeSinceLevelLoad > 19.7 && Time.timeSinceLevelLoad < 23.207)
+        {
+            //19.625 et 25.207
+            laser = false;
+            StartCoroutine(Move());
+        }
+    }
 
-
+    IEnumerator Move()
+    {
+        while (transform.position.x > -55)
+        {
+            yield return new WaitForSeconds(0.01f);
+            transform.position += new Vector3(-0.7f, 0, 0);
+        }
     }
 }

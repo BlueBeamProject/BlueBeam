@@ -7249,7 +7249,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7832c0a765f36f499bc0aab5ff11ddf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  newPos: 0
   logo: {fileID: 1974797916}
 --- !u!1 &841669561
 GameObject:
@@ -17539,7 +17538,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1974797919}
   - component: {fileID: 1974797918}
-  - component: {fileID: 1974797917}
   m_Layer: 0
   m_Name: logo blue beam final
   m_TagString: Untagged
@@ -17547,18 +17545,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
---- !u!114 &1974797917
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1974797916}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 25744943847f70141aa0ba3871342d52, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!212 &1974797918
 SpriteRenderer:
   m_ObjectHideFlags: 0
