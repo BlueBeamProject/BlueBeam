@@ -12,9 +12,12 @@ EditorBuildSettings:
     path: Assets/Scenes/Level1.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
-    path: Assets/Scenes/Level1MultiTest.unity
-    guid: e7e37e1014f80ad49b4c6fbedc6a8623
-  - enabled: 1
     path: Assets/Scenes/Endless.unity
     guid: ceb3d029a8905d94aa40d8d72d65a80c
+  - enabled: 1
+    path: Assets/Scenes/Tutorial.unity
+    guid: 3b6aad1057321dc48b3ac82881c4af38
+  - enabled: 1
+    path: Assets/Scenes/Level2.unity
+    guid: 326c86f303d3b834dbd3552f8662a9dd
   m_configObjects: {}
