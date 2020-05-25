@@ -10613,7 +10613,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   toactive: {fileID: 1571622116}
-  tagg: 
+  tagg: Player
 --- !u!212 &555168405
 SpriteRenderer:
   m_ObjectHideFlags: 0
