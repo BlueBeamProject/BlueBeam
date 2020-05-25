@@ -8,10 +8,10 @@ using Debug = UnityEngine.Debug;
 
 public class KeyBind : MonoBehaviour
 {
-    private Dictionary<string, KeyCode> keys = new Dictionary<string, KeyCode>();
+    private static Dictionary<string, KeyCode> keys = new Dictionary<string, KeyCode>();
 
-    public GameObject jump, slide, attack, dash;
-    public int PlayerID;
+    public  GameObject jump, slide, attack, dash;
+    public  int PlayerID;
 
     private GameObject currentKey;
     
@@ -29,7 +29,21 @@ public class KeyBind : MonoBehaviour
         attack.transform.GetChild(0).GetComponent<Text>().text = keys["AttackP"+PlayerID].ToString();
         dash.transform.GetChild(0).GetComponent<Text>().text = keys["DashP"+PlayerID].ToString();
     }
-    
+
+    public void RefreshDisp(int playerID)
+    {
+        
+        
+        keys["JumpP"+playerID] = (KeyCode)SaveData.ReadValueInt("JumpP"+playerID);
+        keys["SlideP"+playerID] = (KeyCode)SaveData.ReadValueInt("SlideP"+playerID);
+        keys["AttackP"+playerID] = (KeyCode)SaveData.ReadValueInt("AttackP"+playerID);
+        keys["DashP"+playerID] = (KeyCode)SaveData.ReadValueInt("DashP"+playerID);
+        
+        jump.transform.GetChild(0).GetComponent<Text>().text = keys["JumpP"+playerID].ToString();
+        slide.transform.GetChild(0).GetComponent<Text>().text = keys["SlideP"+playerID].ToString();
+        attack.transform.GetChild(0).GetComponent<Text>().text = keys["AttackP"+playerID].ToString();
+        dash.transform.GetChild(0).GetComponent<Text>().text = keys["DashP"+playerID].ToString();
+    }
     // Update is called once per frame
     void Update()
     {
@@ -113,6 +127,48 @@ public class KeyBind : MonoBehaviour
         currentKey = clicked;
     }
     
+    public void DefaultPlayer1()
+    {
+        PlayerPrefs.SetInt("JumpP1", 32);
+        PlayerPrefs.SetInt("SlideP1", 115);
+        PlayerPrefs.SetInt("AttackP1", 100);
+        PlayerPrefs.SetInt("DashP1", 102);
+        
+        RefreshDisp(1);
+
+    }
+    
+    public void DefaultPlayer2()
+    {
+        PlayerPrefs.SetInt("JumpP1", 273);
+        PlayerPrefs.SetInt("SlideP1", 274);
+        PlayerPrefs.SetInt("AttackP1", 275);
+        PlayerPrefs.SetInt("DashP1", 276);
+
+        RefreshDisp(2);
+    }
+    
+    public void DefaultPlayer3()
+    {
+        PlayerPrefs.SetInt("JumpP1", 13);
+        PlayerPrefs.SetInt("SlideP1", 106);
+        PlayerPrefs.SetInt("AttackP1", 108);
+        PlayerPrefs.SetInt("DashP1", 109);
+        
+        RefreshDisp(3);
+
+    }
+    
+    public void DefaultPlayer4()
+    {
+        PlayerPrefs.SetInt("JumpP1", 116);
+        PlayerPrefs.SetInt("SlideP1", 97);
+        PlayerPrefs.SetInt("AttackP1", 122);
+        PlayerPrefs.SetInt("DashP1", 101);
+        
+        RefreshDisp(4);
+
+    }
     
     
 }

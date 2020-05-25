@@ -59,71 +59,66 @@ public class Load : MonoBehaviour
         {
             PlayerPrefs.SetInt("DashP1", 102);//f
         }
-
+        
         if (!PlayerPrefs.HasKey("JumpP2"))
         {
-            PlayerPrefs.SetInt("JumpP2", 13);//return
+            PlayerPrefs.SetInt("JumpP2", 273);//up arrow
         }
 
         if (!PlayerPrefs.HasKey("SlideP2"))
         {
-            PlayerPrefs.SetInt("SlideP2", 108);//l
+            PlayerPrefs.SetInt("SlideP2", 274);//down arrow
         }
 
         if (!PlayerPrefs.HasKey("AttackP2"))
         {
-            PlayerPrefs.SetInt("AttackP2", 105);//i
+            PlayerPrefs.SetInt("AttackP2", 275);//left arrow
         }
 
         if (!PlayerPrefs.HasKey("DashP2"))
         {
-            PlayerPrefs.SetInt("DashP2", 276);//leftarrow
+            PlayerPrefs.SetInt("DashP2", 276);//right arrow
         }
-        
-        /*
+
         if (!PlayerPrefs.HasKey("JumpP3"))
         {
-            PlayerPrefs.SetInt("JumpP3", );//
+            PlayerPrefs.SetInt("JumpP3", 13);//return
         }
 
         if (!PlayerPrefs.HasKey("SlideP3"))
         {
-            PlayerPrefs.SetInt("SlideP3", );//
+            PlayerPrefs.SetInt("SlideP3", 106);//j
         }
 
         if (!PlayerPrefs.HasKey("AttackP3"))
         {
-            PlayerPrefs.SetInt("AttackP3", );//
+            PlayerPrefs.SetInt("AttackP3", 108);//l
         }
 
         if (!PlayerPrefs.HasKey("DashP3"))
         {
-            PlayerPrefs.SetInt("DashP3", );//
+            PlayerPrefs.SetInt("DashP3", 109);//m
         }
         
         if (!PlayerPrefs.HasKey("JumpP4"))
         {
-            PlayerPrefs.SetInt("JumpP4", );//
+            PlayerPrefs.SetInt("JumpP4", 116);//t
         }
 
         if (!PlayerPrefs.HasKey("SlideP4"))
         {
-            PlayerPrefs.SetInt("SlideP4", );//
+            PlayerPrefs.SetInt("SlideP4", 97);//a
         }
 
         if (!PlayerPrefs.HasKey("AttackP4"))
         {
-            PlayerPrefs.SetInt("AttackP4", );//
+            PlayerPrefs.SetInt("AttackP4", 122);//z
         }
 
         if (!PlayerPrefs.HasKey("DashP4"))
         {
-            PlayerPrefs.SetInt("DashP4", );//
+            PlayerPrefs.SetInt("DashP4", 101);//e
         }
-        */
-        
-        
-        
         
         //Checkpoint zone
         if (!PlayerPrefs.HasKey("Checkpoint1"))
@@ -223,12 +218,5 @@ public class Load : MonoBehaviour
 
     }
 
-    void DefaultControlle()
-    {
-        PlayerPrefs.SetInt("JumpP1", 32);
-        PlayerPrefs.SetInt("SlideP1", 115);
-        PlayerPrefs.SetInt("AttackP1", 100);
-        PlayerPrefs.SetInt("DashP1", 102);
-
-    }
+    
 }
