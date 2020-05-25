@@ -8,12 +8,15 @@ public class PauseMenu : MonoBehaviour
     public static bool gameIsPaused = false;
     public GameObject pauseMenuUI;
     public GameObject _startMusic;
+    public AudioSource _startMusic1;
     private DelayedStart _delayedStart;
+    private DelayedStart _delayedStart1;
 
     // Start is called before the first frame update
     void Start()
     {
         _delayedStart = _startMusic.GetComponent<DelayedStart>();
+        _delayedStart1 = _startMusic1.GetComponent<DelayedStart>();
     }
 
     // Update is called once per frame
@@ -32,13 +35,37 @@ public class PauseMenu : MonoBehaviour
         }
     }
 
+    
+
+    public void Resume1()
+    {
+        if (gameIsPaused)
+        {
+            pauseMenuUI.SetActive(false);
+            Time.timeScale = 1f;
+            gameIsPaused = false;
+            _delayedStart1.PlayMusic();
+        }
+        else
+        {
+            Pause();
+        }
+
+    }
     public void Resume()
     {
+        if (gameIsPaused)
+        {
+            pauseMenuUI.SetActive(false);
+            Time.timeScale = 1f;
+            gameIsPaused = false;
+            _delayedStart.PlayMusic();
+        }
+        else
+        {
+            Pause();
+        }
 
-        pauseMenuUI.SetActive(false);
-        Time.timeScale = 1f;
-        gameIsPaused = false;
-        _delayedStart.PlayMusic();
     }
 
     public void Pause()
