@@ -67,7 +67,7 @@ public class PlayerPhysics : MonoBehaviour
 
         if (SaveData.ReadValueInt("Shield") > 0)
         {
-            //_myShieldAnimation.ShieldAn();
+            _myShieldAnimation.ShieldAn();
             shield = true;
             SaveData.AddValueInt("Shield", -1);
             Console.WriteLine("shield on");
