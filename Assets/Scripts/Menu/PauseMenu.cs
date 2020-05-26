@@ -26,7 +26,7 @@ public class PauseMenu : MonoBehaviour
         {
             if (gameIsPaused)
             {
-                Resume();
+                Resume2();
             }
             else
             {
@@ -48,7 +48,21 @@ public class PauseMenu : MonoBehaviour
         {
             Pause();
         }
+    }
 
+    public void Resume2()
+    {
+        if (gameIsPaused)
+        {
+            pauseMenuUI.SetActive(false);
+            Time.timeScale = 1f;
+            gameIsPaused = false;
+            _delayedStart.PlayMusic();
+        }
+        else
+        {
+            Pause();
+        }
     }
 
     public void Pause()
@@ -62,6 +76,7 @@ public class PauseMenu : MonoBehaviour
     public void LoadMenu()
     {
         Time.timeScale = 1f;
+        gameIsPaused = false;
         SceneManager.LoadScene("Menu");
     }
 

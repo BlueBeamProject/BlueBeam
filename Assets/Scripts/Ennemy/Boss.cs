@@ -8,6 +8,7 @@ public class Boss : MonoBehaviour
     private Vector3 _movement;
     private Transform _transform;
     public GameObject player;
+    public GameObject boss;
     private float x;
     private float val;
     private float val2;
@@ -52,5 +53,17 @@ public class Boss : MonoBehaviour
         val = (Mathf.Sin(x)) / 30;
         val2 = (Mathf.Sin(x/2)) / 40;
         attendre = true;
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        Debug.Log("yes");
+        if (collision.gameObject.CompareTag("Attack"))
+            Die();
+    }
+
+    public void Die()
+    {
+        Destroy(boss);
     }
 }
