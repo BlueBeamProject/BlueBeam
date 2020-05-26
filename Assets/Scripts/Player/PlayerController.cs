@@ -8,8 +8,7 @@ using Debug = UnityEngine.Debug;
 public class PlayerController : MonoBehaviour
 {
     private PlayerPhysics _myPhysics;
-    public GameObject pauseUI;
-    private PauseMenu _pauseMenu;
+    
 
     public int PlayerID;
 
@@ -43,7 +42,7 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         _myPhysics = GetComponent<PlayerPhysics>();
-        _pauseMenu = pauseUI.GetComponent<PauseMenu>();
+        
 
     }
 
@@ -115,9 +114,7 @@ public class PlayerController : MonoBehaviour
             }
 
 
-            /*
-            if (Input.GetKeyDown(KeyCode.P))
-                _myPhysics.Die();*/
+            
 
            
 
