@@ -2764,7 +2764,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54383587a2fc2bb4d96a9837d0ce0802, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SceneName: Level1
+  SceneName: Dialog 1
 --- !u!114 &250043417
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12489,7 +12489,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54383587a2fc2bb4d96a9837d0ce0802, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SceneName: Level1
+  SceneName: Dialog 1
 --- !u!1 &1279039201
 GameObject:
   m_ObjectHideFlags: 0
@@ -13513,7 +13513,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54383587a2fc2bb4d96a9837d0ce0802, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SceneName: Level1
+  SceneName: Dialog 1
 --- !u!224 &1341768323 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 2673708765757533550, guid: 58701a39e27a19141996ca974038b86b,
@@ -19647,7 +19647,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54383587a2fc2bb4d96a9837d0ce0802, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SceneName: Level1
+  SceneName: Dialog 1
 --- !u!114 &1896748017
 MonoBehaviour:
   m_ObjectHideFlags: 0

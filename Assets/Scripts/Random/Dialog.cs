@@ -8,7 +8,7 @@ public class Dialog : MonoBehaviour
 {
     public TextMeshProUGUI textDisplay;
     public string[] sentences;
-    private int index;
+    private int index = 0;
     public float typingSpeed;
     public GameObject continueButton;
     public Sprite[] head1;
@@ -21,6 +21,7 @@ public class Dialog : MonoBehaviour
     private bool isTalking = true;
     public string Level1;
     private Transform _transform;
+    private bool isFinish = false;
 
     void Start()
     {
@@ -31,24 +32,32 @@ public class Dialog : MonoBehaviour
 
     void Update()
     {
-        if (textDisplay.text == sentences[index])
+        
+            
+        if ((textDisplay.text == sentences[index]) && !isFinish)
         {
             continueButton.SetActive(true);
         }
 
-        if ((countSentences%2 != 0) && isTalking)
+        if (((countSentences%2 != 0) && isTalking) && !isFinish)
         {
             Debug.Log("OK");
             _transform.position = new Vector3(transform.position.x - 642, transform.position.y, transform.position.z);
             StartCoroutine(Anim1());
             
         }
-        else if (((countSentences % 2 == 0) && isTalking))
+        else if ((((countSentences % 2 == 0) && isTalking)) && !isFinish)
         {
             _transform.position = new Vector3(transform.position.x + 642, transform.position.y, transform.position.z);
             StartCoroutine(Anim2());
             
         }
+        
+
+        /*if (Input.GetKey(KeyCode.Return))
+        {
+            NextSentence();
+        }*/
     }
 
     IEnumerator Type()
@@ -62,8 +71,10 @@ public class Dialog : MonoBehaviour
 
     IEnumerator Anim1()
     {
+        
         isTalking = false;
         Debug.Log("OK2");
+        _countFrame = 0;
         while (textDisplay.text != sentences[index])
         {
                 if (_countFrame == head1.Length)
@@ -77,12 +88,14 @@ public class Dialog : MonoBehaviour
         }
         
 
+
     }
 
     IEnumerator Anim2()
     {
-        isTalking = false;
         
+        isTalking = false;
+        _countFrame = 0;
         while (textDisplay.text != sentences[index])
         {
                 if (_countFrame == head2.Length)
@@ -96,10 +109,15 @@ public class Dialog : MonoBehaviour
         }
         
 
+
     }
     public void NextSentence()
     {
-        
+        if (index == sentences.Length - 1)
+        {
+            isFinish = true;
+        }
+
         countSentences++;
         continueButton.SetActive(false);
  
@@ -111,11 +129,15 @@ public class Dialog : MonoBehaviour
         }
         else
         {
+            _mySpriteRenderer.sprite = null;
             textDisplay.text = "";
             continueButton.SetActive(false);
             PassLvl();
         }
         isTalking = true;
+
+        
+
     }
 
     public void PassLvl()
