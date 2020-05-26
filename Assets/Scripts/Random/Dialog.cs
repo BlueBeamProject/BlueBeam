@@ -19,7 +19,7 @@ public class Dialog : MonoBehaviour
     public float animationSpeed;
     private int _countFrame = 0;
     private bool isTalking = true;
-    public string Level1;
+    public string LevelToLoad;
     private Transform _transform;
     private bool isFinish = false;
 
@@ -142,6 +142,6 @@ public class Dialog : MonoBehaviour
 
     public void PassLvl()
     {
-        SceneManager.LoadScene(Level1);
+        SceneManager.LoadScene(LevelToLoad);
     }
 }

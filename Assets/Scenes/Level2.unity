@@ -11571,7 +11571,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 3.9
-  player: {fileID: 0}
+  player: {fileID: 1653701529}
 --- !u!4 &1571622124 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7360382257556509287, guid: 189c0744b64ed3e42913d319a47fc0fb,
@@ -11713,6 +11713,12 @@ Transform:
   m_Father: {fileID: 1886857855}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1653701529 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4241959085026737808, guid: 9d699b989faa5fc45bd1ebd0f2bd5c6d,
+    type: 3}
+  m_PrefabInstance: {fileID: 220861934}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1687802519
 GameObject:
   m_ObjectHideFlags: 0
@@ -14152,6 +14158,11 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3088366561868448923, guid: 189c0744b64ed3e42913d319a47fc0fb,
+        type: 3}
+      propertyPath: ennemy
+      value: 
+      objectReference: {fileID: 1571622116}
     - target: {fileID: 3422054323218323981, guid: 189c0744b64ed3e42913d319a47fc0fb,
         type: 3}
       propertyPath: m_Name
