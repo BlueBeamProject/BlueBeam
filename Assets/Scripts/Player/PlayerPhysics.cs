@@ -20,6 +20,13 @@ public class PlayerPhysics : MonoBehaviour
     public bool shield;
     public string scene;
 
+    public Collider2D player;
+    public Collider2D player2;
+    public Collider2D player3;
+    public Collider2D player4;
+    
+   
+
     private Rigidbody2D _myBody;
     private Transform _transform;
     private PlayerAnimations _myAnimations;
@@ -153,11 +160,11 @@ public class PlayerPhysics : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        /*
-        if (collision.gameObject.CompareTag("Player"))
-        {
-            Physics2D.IgnoreCollision( , );
-        }*/
+        
+        
+        
+        
+        
         
         if (collision.gameObject.CompareTag("Ground"))
         {
