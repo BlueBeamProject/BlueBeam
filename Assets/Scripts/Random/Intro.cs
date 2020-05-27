@@ -27,7 +27,7 @@ public class Intro : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (first && player.transform.position.x > 30)
+        if (first && player.transform.position.x > 30) //30
         {
             if (Input.GetKeyDown(KeyCode.Space))
             {
@@ -40,7 +40,7 @@ public class Intro : MonoBehaviour
                 StartCoroutine(SlowTime());
             }
         }
-        else if (second && player.transform.position.x > 58)
+        else if (second && player.transform.position.x > 58) //58
         {
             if (Input.GetKeyDown(KeyCode.S))
             {
@@ -53,7 +53,7 @@ public class Intro : MonoBehaviour
                 StartCoroutine(SlowTime());
             }
         }
-        else if (third && player.transform.position.x > 88)
+        else if (third && player.transform.position.x > 88) //88
         {
             if (Input.GetKeyDown(KeyCode.F))
             {

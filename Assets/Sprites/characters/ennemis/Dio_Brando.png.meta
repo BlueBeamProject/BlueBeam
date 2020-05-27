@@ -1,7 +1,28 @@
 fileFormatVersion: 2
 guid: 5ee75889663c96347ba4d849ef44c9e7
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -826529459723714449
+    second: Dio_Brando_0
+  - first:
+      213: 5164644972057505643
+    second: Dio_Brando_1
+  - first:
+      213: 8420283506136547214
+    second: Dio_Brando_2
+  - first:
+      213: 4908564838132433449
+    second: Dio_Brando_3
+  - first:
+      213: -5506084107180371941
+    second: Dio_Brando_4
+  - first:
+      213: -6549478067777763297
+    second: Dio_Brando_5
+  - first:
+      213: 5111670186187737444
+    second: Dio_Brando_6
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -40,7 +61,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -70,9 +91,168 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Dio_Brando_0
+      rect:
+        serializedVersion: 2
+        x: 122
+        y: 626
+        width: 227
+        height: 412
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f60c5c4e5d39784f0800000000000000
+      internalID: -826529459723714449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dio_Brando_1
+      rect:
+        serializedVersion: 2
+        x: 579
+        y: 627
+        width: 209
+        height: 412
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6fae761d318ca740800000000000000
+      internalID: 5164644972057505643
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dio_Brando_2
+      rect:
+        serializedVersion: 2
+        x: 990
+        y: 627
+        width: 224
+        height: 412
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8f795b7c3bdad470800000000000000
+      internalID: 8420283506136547214
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dio_Brando_3
+      rect:
+        serializedVersion: 2
+        x: 1473
+        y: 628
+        width: 209
+        height: 412
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9224bdda6b9be1440800000000000000
+      internalID: 4908564838132433449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dio_Brando_4
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 99
+        width: 218
+        height: 412
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1017105da57693b0800000000000000
+      internalID: -5506084107180371941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dio_Brando_5
+      rect:
+        serializedVersion: 2
+        x: 663
+        y: 117
+        width: 269
+        height: 412
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1805e1e5649b15a0800000000000000
+      internalID: -6549478067777763297
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dio_Brando_6
+      rect:
+        serializedVersion: 2
+        x: 1106
+        y: 98
+        width: 312
+        height: 412
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 469cca893fc40f640800000000000000
+      internalID: 5111670186187737444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []

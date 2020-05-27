@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Boss : MonoBehaviour
 {
@@ -63,7 +64,7 @@ public class Boss : MonoBehaviour
 
     public void Die()
     {
-        Debug.Log("sdgdfgdf");
         Destroy(boss);
+        SceneManager.LoadScene("Dialog 2");
     }
 }

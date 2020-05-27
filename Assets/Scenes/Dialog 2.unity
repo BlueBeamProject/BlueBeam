@@ -271,7 +271,7 @@ MonoBehaviour:
   - {fileID: 959051662908826037, guid: 5bab88e99ac735b418818a092e0ccffd, type: 3}
   speak: {fileID: 0}
   animationSpeed: 0.1
-  LevelToLoad: Level1
+  LevelToLoad: Level2
 --- !u!212 &313969334
 SpriteRenderer:
   m_ObjectHideFlags: 0
