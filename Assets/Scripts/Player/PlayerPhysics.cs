@@ -142,7 +142,7 @@ public class PlayerPhysics : MonoBehaviour
         {
             if (_dead == false)
             {
-                //Die();
+                Die();
             }
         }
         else if (collision.gameObject.CompareTag("Obstacle") || collision.gameObject.CompareTag("Ennemy"))
