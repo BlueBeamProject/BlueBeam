@@ -14,7 +14,6 @@ GameObject:
   - component: {fileID: 3088366561868448923}
   - component: {fileID: 169779131254862101}
   - component: {fileID: 2451696667895241766}
-  - component: {fileID: 2200541555184668418}
   - component: {fileID: 8436956719693760665}
   m_Layer: 0
   m_Name: Geoffroy Bezout
@@ -123,7 +122,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   death: {fileID: 8912441665412594792, guid: 22455608f4bc01242869d05f15c8277c, type: 3}
-  Ennemy: {fileID: 3422054323218323981}
+  ennemy: {fileID: 0}
 --- !u!61 &169779131254862101
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -165,27 +164,6 @@ MonoBehaviour:
   firePoint: {fileID: 6478975708271563683}
   laserShotPrefab: {fileID: 3017826695885680614, guid: 7ae5d6a523385a44d8102de1c22a4e8e,
     type: 3}
---- !u!50 &2200541555184668418
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3422054323218323981}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1000000
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 4
 --- !u!61 &8436956719693760665
 BoxCollider2D:
   m_ObjectHideFlags: 0

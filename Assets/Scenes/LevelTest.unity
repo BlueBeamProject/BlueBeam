@@ -139,7 +139,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f8012058171106042ad6f539e5aa3b17, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 3.9
+  moveSpeed: 3.95
   player: {fileID: 1240257811}
   boss: {fileID: 1397128}
 --- !u!4 &1397136 stripped
@@ -579,6 +579,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4241959085982738427, guid: 9d699b989faa5fc45bd1ebd0f2bd5c6d,
+        type: 3}
+      propertyPath: ennemy
+      value: 
+      objectReference: {fileID: 1397128}
     - target: {fileID: 4241959086384947758, guid: 9d699b989faa5fc45bd1ebd0f2bd5c6d,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -638,6 +643,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Player1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241959086384947759, guid: 9d699b989faa5fc45bd1ebd0f2bd5c6d,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9d699b989faa5fc45bd1ebd0f2bd5c6d, type: 3}
@@ -1028,6 +1038,11 @@ PrefabInstance:
     - target: {fileID: 169779131254862101, guid: 189c0744b64ed3e42913d319a47fc0fb,
         type: 3}
       propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 169779131254862101, guid: 189c0744b64ed3e42913d319a47fc0fb,
+        type: 3}
+      propertyPath: m_IsTrigger
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 769846688119545123, guid: 189c0744b64ed3e42913d319a47fc0fb,
@@ -1045,6 +1060,11 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3088366561868448923, guid: 189c0744b64ed3e42913d319a47fc0fb,
+        type: 3}
+      propertyPath: ennemy
+      value: 
+      objectReference: {fileID: 1397128}
     - target: {fileID: 3422054323218323981, guid: 189c0744b64ed3e42913d319a47fc0fb,
         type: 3}
       propertyPath: m_Name
@@ -1054,6 +1074,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3422054323218323981, guid: 189c0744b64ed3e42913d319a47fc0fb,
+        type: 3}
+      propertyPath: m_TagString
+      value: Boss
       objectReference: {fileID: 0}
     - target: {fileID: 7360382257556509287, guid: 189c0744b64ed3e42913d319a47fc0fb,
         type: 3}
@@ -1115,8 +1140,7 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 2200541555184668418, guid: 189c0744b64ed3e42913d319a47fc0fb, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 189c0744b64ed3e42913d319a47fc0fb, type: 3}
 --- !u!1 &166323847
 GameObject:
