@@ -18710,7 +18710,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f8012058171106042ad6f539e5aa3b17, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 3.9
+  moveSpeed: 3.95
   player: {fileID: 771358279}
   boss: {fileID: 1571622116}
 --- !u!4 &1571622124 stripped
