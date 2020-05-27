@@ -158,8 +158,8 @@ public class KeyBind : MonoBehaviour
     {
         PlayerPrefs.SetInt("JumpP2", 273);
         PlayerPrefs.SetInt("SlideP2", 274);
-        PlayerPrefs.SetInt("AttackP2", 275);
-        PlayerPrefs.SetInt("DashP2", 276);
+        PlayerPrefs.SetInt("AttackP2", 276);
+        PlayerPrefs.SetInt("DashP2", 275);
 
         RefreshDisp(2);
     }
