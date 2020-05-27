@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -49,9 +50,13 @@ public class PlayerPhysics : MonoBehaviour
         _myShieldAnimation = GetComponentInChildren<ShieldAnimation>();
         _canDash = true;
         
+        
+        
         SaveData.WriteValueInt("PlayerInGame",SaveData.ReadValueInt("PlayerInGameMemorie"));
+        
+        int PlayerIG = SaveData.ReadValueInt("PlayerInGameMemorie");
 
-        if (SaveData.ReadValueInt("PlayerInGameMemorie") == 1)
+        if (PlayerIG == 1)
         {
             SaveData.AddValueInt("SoloGame",1);
         }
@@ -61,16 +66,30 @@ public class PlayerPhysics : MonoBehaviour
         }
         
         
-        Debug.Log(SaveData.ReadValueInt("Shield"));
+        Debug.Log("Shield :" + SaveData.ReadValueInt("Shield"));
         
         shield = false;
 
         if (SaveData.ReadValueInt("Shield") > 0)
         {
-            _myShieldAnimation.ShieldAn();
-            shield = true;
-            SaveData.AddValueInt("Shield", -1);
-            Console.WriteLine("shield on");
+            if (SaveData.ReadValueInt("PlayerShield") < PlayerIG)
+            {
+                _myShieldAnimation.ShieldAn();
+                shield = true;
+                SaveData.AddValueInt("PlayerShield", 1);
+                Debug.Log(SaveData.ReadValueInt("PlayerShield") + " and " + PlayerIG);
+            }
+
+
+            if (SaveData.ReadValueInt("PlayerShield") == PlayerIG)
+            {
+                SaveData.AddValueInt("Shield", -1);
+            }
+            
+        }
+        else
+        {
+            Debug.Log("not here");
         }
 
 
@@ -134,6 +153,12 @@ public class PlayerPhysics : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision)
     {
+        /*
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            Physics2D.IgnoreCollision( , );
+        }*/
+        
         if (collision.gameObject.CompareTag("Ground"))
         {
             _grounded = true;
@@ -165,6 +190,7 @@ public class PlayerPhysics : MonoBehaviour
         
         SaveData.AddValueInt("DeathTime",1);
         SaveData.AddValueInt("PlayerInGame",-1);
+        SaveData.WriteValueInt("PlayerShield",0);
 
         _dead = true;
         _myAnimations.Die();
@@ -197,6 +223,11 @@ public class PlayerPhysics : MonoBehaviour
     {
         yield return new WaitForSeconds(0.3f);
         _weapon.enabled = false;
+    }
+
+    public void takeShield()
+    {
+        
     }
 
     public void Shield()

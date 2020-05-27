@@ -9,8 +9,8 @@ public class Load : MonoBehaviour
     {
         
         
-        //SaveData.WriteValueInt("Shield",0);
-        //SaveData.WriteValueInt("Money",40);
+        SaveData.WriteValueInt("Shield",0);
+        //SaveData.WriteValueInt("Money",400);
         
         
         //Pour initialiser un nouvelle donné sauvergardé recopier les lignes en dessous
@@ -38,6 +38,14 @@ public class Load : MonoBehaviour
         {
             PlayerPrefs.SetInt("PlayerInGameMemorie", 1);
         }
+        
+        if (!PlayerPrefs.HasKey("GameGO"))
+        {
+            PlayerPrefs.SetInt("GameGO", 0);
+        }
+
+        PlayerPrefs.SetInt("PlayerShield", 0);
+        
 
         //Controlle default
         if (!PlayerPrefs.HasKey("JumpP1"))
