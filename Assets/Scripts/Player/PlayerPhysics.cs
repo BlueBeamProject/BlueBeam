@@ -60,9 +60,6 @@ public class PlayerPhysics : MonoBehaviour
             SaveData.AddValueInt("MultiGame",1);
         }
         
-        
-        Debug.Log(SaveData.ReadValueInt("Shield"));
-        
         shield = false;
 
         if (SaveData.ReadValueInt("Shield") > 0)
@@ -142,7 +139,7 @@ public class PlayerPhysics : MonoBehaviour
         {
             if (_dead == false)
             {
-                //Die();
+                Die();
             }
         }
         else if (collision.gameObject.CompareTag("Obstacle") || collision.gameObject.CompareTag("Ennemy"))

@@ -25,8 +25,12 @@ public class Attack : MonoBehaviour
     {
       if (collider.gameObject.CompareTag("Ennemy"))
       {
-        collider.gameObject.GetComponent<EnnemyComportment>().Die();
+            collider.gameObject.GetComponent<EnnemyComportment>().Die();
       }
 
+      if (collider.gameObject.CompareTag("Obstacle"))
+      {
+            collider.gameObject.GetComponent<LaserShot>().Die();
+      }
     }
 }

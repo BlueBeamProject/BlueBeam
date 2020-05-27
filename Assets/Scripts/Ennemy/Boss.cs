@@ -55,15 +55,15 @@ public class Boss : MonoBehaviour
         attendre = true;
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    void OnCollisionEnter2D(Collision2D collider)
     {
-        Debug.Log("yes");
-        if (collision.gameObject.CompareTag("Attack"))
+        if (collider.gameObject.CompareTag("Player"))
             Die();
     }
 
     public void Die()
     {
+        Debug.Log("sdgdfgdf");
         Destroy(boss);
     }
 }

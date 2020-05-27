@@ -14,7 +14,12 @@ public class LaserShot : MonoBehaviour
         rb.velocity = (transform.right * speed)*(-0.5f);
     }
 
-    void OnCollisionEnter2D(Collision2D collision)
+    void OnCollisionStay2D(Collision2D collision)
+    {
+        Destroy(gameObject);
+    }
+
+    public void Die()
     {
         Destroy(gameObject);
     }

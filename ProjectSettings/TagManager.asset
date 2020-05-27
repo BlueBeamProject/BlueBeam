@@ -15,6 +15,7 @@ TagManager:
   - ShieldCost
   - Checkpoint
   - Checkpoint1
+  - Boss
   layers:
   - Default
   - TransparentFX
