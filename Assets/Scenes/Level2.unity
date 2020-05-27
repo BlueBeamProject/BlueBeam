@@ -17490,7 +17490,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pauseMenuUI: {fileID: 455840274}
-  _startMusic: {fileID: 753062063}
+  _startMusic: {fileID: 1264533859}
   _startMusic1: {fileID: 1264533862}
 --- !u!1 &1410394275
 GameObject:

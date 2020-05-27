@@ -1853,8 +1853,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pauseMenuUI: {fileID: 862716450}
-  _startMusic: {fileID: 0}
-  _startMusic1: {fileID: 0}
+  _startMusic: {fileID: 2099538276}
+  _startMusic1: {fileID: 2099538277}
 --- !u!1 &1048143518
 GameObject:
   m_ObjectHideFlags: 0
@@ -3876,6 +3876,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 3.9
   player: {fileID: 0}
+  boss: {fileID: 0}
 --- !u!4 &1916255174 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7360382257556509287, guid: 189c0744b64ed3e42913d319a47fc0fb,
