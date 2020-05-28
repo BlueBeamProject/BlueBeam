@@ -9,7 +9,7 @@ public class Load : MonoBehaviour
     {
         
         
-        SaveData.WriteValueInt("Shield",0);
+        //SaveData.WriteValueInt("Shield",0);
         //SaveData.WriteValueInt("Money",400);
         
         
